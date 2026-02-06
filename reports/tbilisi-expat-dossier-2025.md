@@ -367,6 +367,278 @@ Tbilisi, Georgia presents an exceptional case for tax optimization and business 
 
 ---
 
+## **LIFESTYLE AMENITIES QUALITY ASSESSMENT**
+
+### **Shopping & Product Availability**
+
+| Category | Tbilisi Options | Quality Assessment | Brands Available |
+|----------|----------------|-------------------|------------------|
+| **Premium Grocery** | Carrefour, Europroduct, Goodwill | High - European standards | International brands, organic options |
+| **Specialty Foods** | Europroduct (European imports) | Excellent - wide EU product range | French wines, Italian products, British goods |
+| **Luxury Shopping** | Galleria Tbilisi, Vardzia Shopping Gallery | Good - designer boutiques | Michael Kors, Guess, Tommy Hilfiger |
+| **Home Furnishings** | IKEA delivery, local premium stores | Adequate - international shipping available | European furniture, custom options |
+| **Beauty & Personal Care** | L'Occitane, Sephora-level stores | Good - international cosmetics | French/European beauty brands |
+
+**Key Shopping Districts:**
+- **Galleria Tbilisi:** International brands, department store quality
+- **Rustaveli Avenue:** Luxury boutiques, jewelry, designer accessories  
+- **Vake District:** Premium local shopping, European product stores
+- **Europroduct Chain:** Specialized European imports (German, French, Italian products)
+
+**Product Availability Assessment:**
+✅ **European groceries:** Full range available through Europroduct  
+✅ **Wine selection:** Excellent Georgian wines plus French/Italian imports  
+✅ **Beauty products:** International brands readily available  
+✅ **Home goods:** IKEA delivery, local furniture makers for custom work  
+⚠️ **US-specific brands:** Limited, but international shipping reliable  
+⚠️ **Luxury fashion:** Fewer options than major European capitals  
+
+### **Personal Services Quality**
+
+| Service Type | Availability | Quality Level | Cost vs Marbella |
+|-------------|-------------|---------------|------------------|
+| **Hair Salons** | High-end European-trained stylists | Excellent | 60-70% lower |
+| **Spa Services** | Multiple luxury day spas | Very good | 70-80% lower |
+| **Personal Training** | International certified trainers | Good | 75% lower |
+| **Interior Design** | Local designers, European training | Good-Excellent | 80% lower |
+| **House Cleaning** | Professional services available | Good | 85% lower |
+| **Tailoring** | Skilled local craftspeople | Excellent value | 90% lower |
+
+---
+
+## **HEALTHCARE SPECIFICS FOR FAMILIES**
+
+### **English-Speaking Medical Facilities**
+
+| Facility | Specialization | Languages | International Standards |
+|----------|---------------|-----------|------------------------|
+| **American Medical Centers (AMC)** | Family medicine, pediatrics, gynecology | English, German, Russian | Yes - EU/US trained doctors |
+| **International Medical Support Services (IMSS)** | Emergency, general practice | English, German, French | Yes - UK/US trained physicians |
+| **Aversi Clinic** | Full-service hospital | English available | Good - modern facilities |
+| **PSP Medical** | Private hospital network | English-speaking staff | Good - European equipment |
+
+### **Family-Specific Healthcare**
+
+#### **Pediatric Care for Jack**
+- **Dr. Michael McCarthy (IMSS):** US-trained emergency & pediatric physician
+- **AMC Pediatric Department:** 24/7 availability, US/European trained doctors
+- **Vaccination programs:** Full international vaccination schedules available
+- **Sports medicine:** Available for teenage athletes
+- **Mental health:** English-speaking adolescent psychologists available
+
+#### **Women's Health for Stephanie**
+- **AMC Gynecology Department:** Female doctors available, English-speaking
+- **IMSS Women's Health:** European-trained gynecologists
+- **Annual screenings:** All standard preventive care available
+- **Specialized care:** Access to European medical tourism (2-hour flight to Istanbul/Dubai)
+
+### **Healthcare Costs & Insurance**
+
+| Service Type | Cost (USD) | International Insurance Coverage |
+|-------------|------------|----------------------------------|
+| **General Practice Visit** | $30-50 | Covered by most international plans |
+| **Specialist Consultation** | $50-100 | Covered by premium plans |
+| **Annual Family Checkups** | $200-300 | Typically covered |
+| **Emergency Care** | $200-500 | Emergency coverage standard |
+| **International Insurance** | $300-500/month family | Recommended: Cigna Global, Allianz |
+| **Dental Care** | $50-150/visit | Often separate coverage needed |
+
+**Medical Tourism Advantages:**
+- **Istanbul:** 1.5-hour flight for specialized procedures
+- **Dubai:** 2-hour flight for premium healthcare
+- **European clinics:** 3-4 hour flights for complex care
+- **Cost savings:** Enable premium care with Georgian cost base
+
+---
+
+## **JACK'S SOCIAL TRANSITION STRATEGY**
+
+### **New School International Social Integration**
+
+| Integration Aspect | Timeline | Strategy | Support Available |
+|------------------|----------|----------|------------------|
+| **Friend-Making** | 1-3 months | 850 students, 40+ nationalities | School buddy system |
+| **Extracurricular Activities** | Immediate | Sports, arts, academic clubs | Wide variety available |
+| **Academic Transition** | 1-2 months | IB MYP continuation | Academic counseling support |
+| **Cultural Adaptation** | 3-6 months | International student community | Established expat teen network |
+
+### **Available Activities for Teenagers**
+
+#### **School-Based (New School International)**
+- **Sports Teams:** Swimming (school has pool), basketball, football
+- **Academic Clubs:** Debate, Model UN, Science Olympics
+- **Arts Programs:** Theater productions, music ensembles, art exhibitions
+- **Community Service:** Local charity projects, environmental initiatives
+- **International Events:** Cultural festivals, international food days
+
+#### **Community-Based Activities**
+- **Tbilisi Sports and Youth Center:** Youth programs, sports leagues
+- **International Youth Clubs:** American, British, European youth groups
+- **Language Exchange:** Georgian, Russian, European language clubs
+- **Outdoor Activities:** Hiking clubs (Caucasus Mountains nearby), skiing in winter
+- **Music Scene:** International music lessons, youth orchestras
+
+### **American Teen Community**
+
+| Community Aspect | Size/Quality | Activities | Integration Timeline |
+|------------------|-------------|-----------|----------------------|
+| **American Families** | ~500-700 families | Regular gatherings, BBQs, holidays | 2-3 months |
+| **International School Kids** | ~200 American students | Sports leagues, social events | 1-2 months |
+| **Embassy Community** | US Embassy families | 4th of July events, American holidays | 3-6 months |
+| **Teen Activities** | Monthly organized events | Movie nights, gaming, sports | 1 month |
+
+**Transition Support Strategy:**
+1. **Pre-arrival connection:** Online introductions through school
+2. **School buddy system:** Paired with current American student
+3. **Family networking:** Connect with established American families
+4. **Activity immersion:** Immediate enrollment in 2-3 activities Jack enjoys
+5. **Regular check-ins:** Monthly assessment of social adaptation
+
+---
+
+## **TRIAL PERIOD LOGISTICS**
+
+### **6-Month Trial Structure**
+
+| Logistics Component | Trial Option | Full Commitment Difference | Flexibility Benefits |
+|-------------------|-------------|---------------------------|---------------------|
+| **Housing** | 6-month furnished lease | 12+ month commitment | Easy exit if needed |
+| **School Enrollment** | Semester trial enrollment | Full year commitment | Academic year flexibility |
+| **Marbella Property** | Rent out furnished | Sell or long-term rent | Revenue generation |
+| **Banking Setup** | Basic multi-currency | Full business optimization | Low commitment |
+| **Tax Status** | Tourist status | IE registration/residency | No tax complications if exit |
+
+### **Housing Trial Logistics**
+
+#### **Short-Term Rental Options**
+
+| Provider | Lease Terms | Quality Level | Cost (USD/month) |
+|----------|------------|---------------|------------------|
+| **Citizen Tbilisi** | 1-12 month furnished | Premium expat-focused | $1,200-1,800 |
+| **Korter.ge** | Flexible lease terms | Good variety | $800-1,500 |
+| **Airbnb (extended)** | 1+ months | Variable | $1,000-2,000 |
+| **Local Property Managers** | 6+ month terms | Highest quality | $1,500-2,500 |
+
+**Recommended Trial Approach:**
+- **Location:** Vake district (premium area, close to New School)
+- **Type:** 3-4 bedroom furnished apartment
+- **Duration:** 6-month initial lease with 6-month extension option
+- **Features:** Premium finishes, international appliances, housekeeping service
+
+### **Marbella Property Management During Trial**
+
+| Management Option | Revenue Potential | Commitment Level | Risk Assessment |
+|------------------|------------------|------------------|-----------------|
+| **Short-term rental** | $3,000-4,000/month | Low - monthly bookings | Market dependent |
+| **6-12 month lease** | $2,500-3,500/month | Medium - lease security | Tenant risk |
+| **Property management** | 85% of rental income | Low - professional handled | Management fees |
+| **Family use** | Break-even | Flexible | No revenue |
+
+### **School Trial Enrollment**
+
+**New School International Trial Strategy:**
+- **Mid-year enrollment:** February 2026 start possible
+- **Academic assessment:** Placement testing for proper level
+- **Trial period:** One semester with full-year option
+- **Academic records:** Easy transfer back to European system if needed
+- **IB continuity:** MYP program continuation ensures no academic disruption
+
+### **Business Operations During Trial**
+
+| Business Component | Trial Configuration | Risk Mitigation | Optimization Timing |
+|-------------------|-------------------|----------------|-------------------|
+| **Tax Status** | Remain Spanish resident | No Georgia tax obligations | After 6-month success |
+| **Bank Accounts** | Tourist accounts only | Easy closure if needed | IE registration after trial |
+| **Client Operations** | Remote/travel model | No service disruption | Regional expansion post-trial |
+| **Legal Setup** | Minimal commitments | Low exit costs | Full setup after commitment |
+
+---
+
+## **STEPHANIE'S PERSONAL OPPORTUNITIES**
+
+### **Social & Community Integration**
+
+#### **International Women's Association Georgia (IWAG)**
+- **Founded:** 1996, well-established expat women's network
+- **Members:** 3,370+ active participants (diplomatic, expat, local international community)
+- **Activities:** Cultural events, charity work, business networking, social gatherings
+- **Focus:** Welcoming new expat families, cultural integration, community service
+- **Networking:** Access to business women, diplomatic spouses, entrepreneurs
+
+#### **Professional & Creative Opportunities**
+
+| Opportunity Type | Organizations | Activities | Time Commitment |
+|-----------------|--------------|------------|----------------|
+| **Volunteer Work** | IWAG, local NGOs, international schools | Charity events, education support | 5-15 hours/week |
+| **Cultural Activities** | National Museum, Opera House, Cultural Centers | Art appreciation, cultural events | 3-5 hours/week |
+| **Business Networking** | American Chamber, British Chamber | Professional development, business contacts | 2-4 hours/week |
+| **Language Learning** | Georgian, Russian language schools | Cultural integration, communication | 3-6 hours/week |
+| **Arts & Crafts** | Local studios, international groups | Pottery, painting, traditional Georgian crafts | 2-4 hours/week |
+
+### **Personal Development Opportunities**
+
+#### **Educational Pursuits**
+- **Georgian Culture Studies:** University programs available in English
+- **Wine Education:** Georgia is one of the world's oldest wine regions - sommelier courses
+- **Art History:** Rich Georgian and regional art history programs
+- **Language Immersion:** Georgian, Russian, or improve other European languages
+- **Business Development:** Consulting opportunities in growing international community
+
+#### **Wellness & Lifestyle**
+- **Spa & Wellness:** Multiple high-end facilities at fraction of European costs
+- **Fitness & Yoga:** International-standard facilities, English-speaking trainers
+- **Hiking & Outdoor:** Caucasus Mountains, organized international hiking groups
+- **Cooking Classes:** Georgian cuisine instruction, wine pairing courses
+
+### **Creative & Cultural Engagement**
+
+| Activity Category | Opportunities | Quality Level | Community Size |
+|------------------|--------------|---------------|----------------|
+| **Art Scene** | Galleries, exhibitions, artist studios | Growing/vibrant | 200+ expat art community |
+| **Music & Theater** | Opera house, concerts, international performances | High quality | Active expat attendance |
+| **Literature** | Book clubs, writing groups, literary events | Good - English language groups | 50+ regular participants |
+| **Photography** | Stunning landscapes, cultural documentation | Exceptional subjects | Growing photography clubs |
+| **Interior Design** | Consulting for expat community | Business opportunity | High demand |
+
+### **Business & Entrepreneurial Opportunities**
+
+#### **Consulting & Services for Expat Community**
+- **Relocation consulting:** Help other families navigate move to Tbilisi
+- **Interior design services:** High demand from expat community
+- **Cultural integration coaching:** Unique niche with growing expat population
+- **Event planning:** Weddings, corporate events, social gatherings
+- **Writing/Content creation:** Travel, expat life, cultural experiences
+
+#### **Regional Business Development**
+- **Import/Export opportunities:** European products to Georgia market
+- **Tourism services:** Luxury travel planning for expat visitors
+- **Real estate consulting:** Helping other expats find housing
+- **Education consulting:** International school placement services
+
+### **Social Calendar & Integration Timeline**
+
+#### **Month 1-3: Foundation Building**
+- **IWAG membership:** Immediate integration into established network
+- **Cultural orientation:** Museum visits, city exploration, cultural events
+- **Service provider establishment:** Hair, beauty, wellness services
+- **Language learning:** Begin Georgian basics for daily life
+
+#### **Month 4-6: Community Engagement**
+- **Volunteer work:** Choose 1-2 causes aligned with interests
+- **Professional networking:** American Chamber events, business connections
+- **Creative pursuits:** Join art class, book club, or cultural group
+- **Social hosting:** Begin hosting other expat families
+
+#### **Month 7-12: Leadership & Growth**
+- **Community leadership:** Take on IWAG committee role or volunteer leadership
+- **Business development:** Launch consulting or creative business if desired
+- **Cultural expertise:** Become resource for other arriving expat families
+- **Regional exploration:** Extended trips to Dubai, Istanbul, European capitals
+
+**Assessment:** Tbilisi offers rich opportunities for personal growth, community engagement, and professional development at significantly lower costs than comparable international cities. The established expat community provides immediate social integration, while the growing international business environment offers entrepreneurial opportunities.
+
+---
+
 ## **IMPLEMENTATION STRATEGY**
 
 ### **Phase 1: Assessment & Setup (Months 1-3)**
