@@ -973,6 +973,163 @@ Tbilisi, Georgia presents an exceptional case for tax optimization and business 
 
 ---
 
+## **BUSINESS TRAVEL: TBILISI TO BUFFALO (1-2x ANNUALLY)**
+
+### **Flight Routing & Airlines Analysis**
+
+#### **Primary Route Options**
+
+| Route | Airline | Connections | Total Travel Time | Business Class Pricing |
+|-------|---------|-------------|------------------|----------------------|
+| **TBS → IST → JFK → BUF** | Turkish Airlines + Domestic | 2 connections | 18-22 hours | $3,500-5,500 |
+| **TBS → DOH → JFK → BUF** | Qatar Airways + Domestic | 2 connections | 20-24 hours | $4,000-6,000 |
+| **TBS → FRA → JFK → BUF** | Lufthansa + Domestic | 2 connections | 19-23 hours | $4,200-6,200 |
+| **TBS → IST → YYZ → BUF** | Turkish Airlines + Domestic | 2 connections | 17-21 hours | $3,200-4,800 |
+
+#### **Detailed Routing Analysis**
+
+**Option 1: Turkish Airlines via Istanbul (Recommended)**
+- **TBS → IST:** 2.5 hours (Turkish Airlines, multiple daily flights)
+- **IST → JFK:** 11.5 hours (Turkish Airlines Business Class)
+- **JFK → BUF:** 1.5 hours (JetBlue, Delta, American)
+- **Total Travel Time:** 18-22 hours (including connections)
+- **Business Class Features:** Turkish Airlines' acclaimed business class with lie-flat seats
+
+**Option 2: Via Toronto (Alternative)**  
+- **TBS → IST:** 2.5 hours (Turkish Airlines)
+- **IST → YYZ:** 11 hours (Turkish Airlines Business Class)
+- **YYZ → BUF:** 1 hour drive or short flight (45 minutes)
+- **Total Travel Time:** 17-21 hours
+- **Advantage:** Toronto is only 2.5 hours from Buffalo by car
+
+### **Business Class Pricing Analysis**
+
+#### **Annual Cost Breakdown (2 Round Trips)**
+
+| Route Option | Round Trip Cost | Annual Cost (2 trips) | Loyalty Benefits |
+|-------------|----------------|-------------------|------------------|
+| **Turkish Airlines via JFK** | $3,500-5,500 | $7,000-11,000 | Miles & Smiles program |
+| **Qatar Airways via JFK** | $4,000-6,000 | $8,000-12,000 | Privilege Club benefits |
+| **Lufthansa via JFK** | $4,200-6,200 | $8,400-12,400 | Miles & More program |
+| **Turkish Airlines via Toronto** | $3,200-4,800 | $6,400-9,600 | Miles & Smiles + shorter ground transport |
+
+#### **Peak vs Off-Peak Pricing**
+- **Peak Season** (June-August, December): +30-50% premium
+- **Off-Peak Season** (January-March, October-November): Base pricing
+- **Advance Booking:** 60-90 days optimal for business class deals
+- **Last-Minute:** Premium pricing (+50-100%)
+
+### **Travel Time & Scheduling Considerations**
+
+#### **Optimal Scheduling**
+- **Eastbound (TBS → BUF):** Depart Tbilisi early morning, arrive Buffalo evening same day
+- **Westbound (BUF → TBS):** Depart Buffalo evening, arrive Tbilisi following evening
+- **Jet Lag Management:** 8-hour time difference (TBS ahead)
+- **Business Day Loss:** 1.5-2 days travel time per round trip
+
+#### **Connection Timing**
+- **Istanbul (IST):** 2-4 hour layovers recommended for international connections
+- **New York (JFK):** 3-4 hours for international-to-domestic connections
+- **Toronto (YYZ):** 2-3 hours for connections, or drive option
+
+### **Airport & Ground Transportation**
+
+#### **Buffalo Niagara International Airport (BUF)**
+- **Size:** Regional airport with limited international service
+- **Major Carriers:** Southwest, JetBlue, Delta, American (domestic routes)
+- **Ground Transport:** 20 minutes to downtown Buffalo, ride services available
+- **Business Facilities:** Basic amenities, no premium lounges
+
+#### **Connection Airports**
+- **Istanbul (IST):** World-class hub, Turkish Airlines lounges, excellent facilities
+- **JFK New York:** Major international gateway, multiple lounge options
+- **Toronto (YYZ):** Premium international airport, short drive to Buffalo
+
+### **Business Class Experience Comparison**
+
+| Airline | Seat Type | Dining | Lounge Access | WiFi | Entertainment |
+|---------|-----------|--------|---------------|------|---------------|
+| **Turkish Airlines** | Lie-flat, direct aisle | Chef-designed meals | IST CIP Lounge (world-class) | Complimentary | Extensive selection |
+| **Qatar Airways** | QSuite (private pods) | Michelin-star catering | Al Mourjan Lounge (DOH) | Complimentary | 4,000+ options |
+| **Lufthansa** | Lie-flat seats | Premium dining | Senator/Business Lounges | Complimentary | Good selection |
+
+### **Practical Business Travel Considerations**
+
+#### **Visa & Documentation**
+- **US Citizens:** No visa required for Georgia (365 days)
+- **ESTA/Global Entry:** Expedited US re-entry
+- **Business Purpose:** Tourism classification sufficient
+
+#### **Time Zone Management**
+- **Georgia (GET):** UTC+4
+- **Buffalo (EST):** UTC-5 (winter), UTC-4 (summer)
+- **Total Difference:** 8-9 hours
+- **Jet Lag Strategy:** Eastbound generally easier than westbound
+
+#### **Productivity During Travel**
+- **Turkish Airlines Business:** WiFi throughout, power outlets, workspace
+- **Qatar Airways Business:** Private suites ideal for work/rest
+- **Airport Lounges:** Business centers, quiet work areas, meeting rooms
+
+### **Cost-Benefit Analysis**
+
+#### **Annual Business Travel Budget**
+| Cost Component | Annual Amount (USD) |
+|----------------|-------------------|
+| **Business Class Flights** | $7,000-11,000 |
+| **Ground Transportation** | $400-600 |
+| **Airport Hotels** (if needed) | $400-800 |
+| **Meals/Incidentals** | $300-500 |
+| **Total Annual Travel Cost** | $8,100-12,900 |
+
+#### **Comparison to Current Marbella → Buffalo**
+- **Marbella Route:** MAD → JFK → BUF or MAD → YYZ → BUF
+- **Current Travel Time:** 12-16 hours (shorter than Tbilisi)
+- **Current Cost:** $2,500-4,000 business class (shorter distance)
+- **Tbilisi Premium:** +$4,500-7,500 annually for business travel
+
+### **Scheduling & Frequency Recommendations**
+
+#### **Optimal Travel Timing**
+- **Spring Visit:** April-May (avoid winter weather, good pricing)
+- **Fall Visit:** September-October (comfortable weather, peak business season)
+- **Avoid:** December-January (winter weather, peak pricing)
+
+#### **Business Efficiency**
+- **Consolidated Trips:** Plan 5-7 day visits to maximize time investment
+- **Regional Connections:** Leverage Buffalo location for broader Northeast business
+- **Remote Work:** Tbilisi time zone allows early morning US calls (afternoon local time)
+
+### **Risk Mitigation**
+
+#### **Flight Disruptions**
+- **Multiple Daily Options:** Turkish Airlines offers 2-3 daily TBS-IST flights
+- **Alternative Routing:** Qatar/Lufthansa as backup options
+- **Travel Insurance:** Business travel coverage recommended
+- **Flexible Tickets:** Business class typically includes change/cancel options
+
+#### **Seasonal Considerations**
+- **Winter Weather:** Buffalo snow can delay connections (December-March)
+- **Turkish Airlines Reliability:** Generally excellent on-time performance
+- **Hub Advantages:** Istanbul's size provides multiple connection options
+
+### **Strategic Business Advantages**
+
+#### **Regional Positioning**
+- **Buffalo → Northeast Corridor:** Easy access to NYC, Boston, Washington DC
+- **Georgian Time Zone:** 8 hours ahead allows early morning US business calls
+- **Connection Quality:** Premium business class enables productive travel
+- **Cost Structure:** Higher travel costs offset by Georgian tax savings
+
+#### **Annual Travel ROI**
+- **Additional Travel Cost:** $4,500-7,500 vs current Marbella base
+- **Tax Savings Offset:** $75,000-150,000 Georgian tax optimization
+- **Net Benefit:** Travel premium represents 3-10% of tax savings
+
+**Assessment:** Business travel from Tbilisi to Buffalo is highly feasible with excellent business class options, though requires 1.5-2 additional travel days per trip compared to current Marbella base. The travel premium is easily justified by Georgian tax optimization benefits.
+
+---
+
 ## **IMPLEMENTATION STRATEGY**
 
 ### **Phase 1: Assessment & Setup (Months 1-3)**
