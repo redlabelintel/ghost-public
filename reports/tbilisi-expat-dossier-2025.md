@@ -1090,13 +1090,13 @@ Tbilisi, Georgia presents an exceptional case for tax optimization and business 
 
 ---
 
-## **BUSINESS TRAVEL: TBILISI TO BUFFALO (1-2x ANNUALLY)**
+## **FAMILY TRAVEL: TBILISI TO BUFFALO (1-2x ANNUALLY)**
 
 ### **Flight Routing & Airlines Analysis**
 
 #### **Primary Route Options**
 
-| Route | Airline | Connections | Total Travel Time | Business Class Pricing |
+| Route | Airline | Connections | Total Travel Time | Premium Class Pricing |
 |-------|---------|-------------|------------------|----------------------|
 | **TBS → IST → JFK → BUF** | Turkish Airlines + Domestic | 2 connections | 18-22 hours | $3,500-5,500 |
 | **TBS → DOH → JFK → BUF** | Qatar Airways + Domestic | 2 connections | 20-24 hours | $4,000-6,000 |
@@ -1119,9 +1119,9 @@ Tbilisi, Georgia presents an exceptional case for tax optimization and business 
 - **Total Travel Time:** 17-21 hours
 - **Advantage:** Toronto is only 2.5 hours from Buffalo by car
 
-### **Business Class Pricing Analysis**
+### **Premium Travel Pricing Analysis**
 
-#### **Annual Cost Breakdown (2 Round Trips)**
+#### **Annual Family Travel Cost Breakdown (1-2 Round Trips)**
 
 | Route Option | Round Trip Cost | Annual Cost (2 trips) | Loyalty Benefits |
 |-------------|----------------|-------------------|------------------|
@@ -1133,7 +1133,7 @@ Tbilisi, Georgia presents an exceptional case for tax optimization and business 
 #### **Peak vs Off-Peak Pricing**
 - **Peak Season** (June-August, December): +30-50% premium
 - **Off-Peak Season** (January-March, October-November): Base pricing
-- **Advance Booking:** 60-90 days optimal for business class deals
+- **Advance Booking:** 60-90 days optimal for premium class deals
 - **Last-Minute:** Premium pricing (+50-100%)
 
 ### **Travel Time & Scheduling Considerations**
