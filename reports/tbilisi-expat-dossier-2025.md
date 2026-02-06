@@ -39,10 +39,8 @@ Tbilisi, Georgia presents an exceptional case for tax optimization and business 
 | **MARBELLA (Current)** | | | | | | | |
 | Swans International School | Marbella, Spain | British National, IB Diploma | 3-18 | 18-22 | Yes (Sixth Form) | $6,000-$16,000* | 50+ years established, NABSS accredited |
 | **TBILISI OPTIONS** | | | | | | | |
-| QSI International School | Tbilisi, Georgia | American-based | 2-18 | Small classes | No | Contact school | US State Dept endorsed |
-| European School Tbilisi | Tbilisi, Georgia | IB World School | 3-18 | Standard | Yes (PYP, MYP, DP) | Contact school | Full IB continuum |
 | New School International | Tbilisi, Georgia | IB World School | 3-18 | Max 22 (avg 20) | Yes (PYP, MYP, DP) | Contact school | 25 years established, 850 students |
-| Georgian-American School | Tbilisi, Georgia | Bilingual Georgian/English | 5-18 | Standard | No | $3,500 | Most affordable option |
+| European School Tbilisi | Tbilisi, Georgia | IB World School | 3-18 | Standard | Yes (PYP, MYP, DP) | Contact school | Full IB continuum |
 
 *Swans International School fees range typically €5,000-€15,000 ($5,400-$16,200) based on Marbella international school market data.
 
@@ -65,30 +63,27 @@ Tbilisi, Georgia presents an exceptional case for tax optimization and business 
 - More language options
 - 25-year track record
 
-#### **2. QSI International School of Tbilisi** ⭐⭐⭐⭐⭐
-- **US State Department endorsed** (highest credibility for American families)
-- **Curriculum:** American-based, outcomes-focused program
-- **Mastery Learning:** Individual progress, not age-based advancement
-- **Small Class Sizes:** Personalized attention approach
-- **University Pathways:** Designed for US university admission
-
-#### **3. European School Tbilisi** ⭐⭐⭐⭐
+#### **2. European School Tbilisi** ⭐⭐⭐⭐
 - **Location:** 34 Kazbegi Avenue
 - **IB World School:** PYP, MYP, and DP programmes
 - **Alternative Track:** American High School with SAT/AP preparation
 - **Focus:** European university preparation
+- **Student Body:** International focus with strong European connections
+- **Curriculum Flexibility:** Dual track options (IB vs. American High School)
+- **University Pathways:** Designed for both European and US university admission
 
 ### **Education Quality Comparison**
 
-| Criteria | Swans International (Marbella) | New School International (Tbilisi) | QSI Tbilisi |
-|----------|--------------------------------|------------------------------------|-------------|
-| **Curriculum Quality** | British + IB Diploma | Full IB Continuum | American + Outcomes-based |
-| **International Exposure** | Regional European | 40+ nationalities | Limited data |
-| **University Preparation** | Strong UK/EU focus | Global IB standard | US university focus |
-| **Extracurriculars** | Extensive | Standard | Limited data |
-| **Athletics** | Comprehensive | Swimming, basketball | Limited data |
-| **School Reputation** | 50+ years, well-established | 25 years, IB pioneer in Georgia | US State Dept endorsed |
-| **Class Sizes** | 18-22 students | Max 22 (avg 20) | Small classes |
+| Criteria | Swans International (Marbella) | New School International (Tbilisi) | European School Tbilisi |
+|----------|--------------------------------|------------------------------------|-------------------------|
+| **Curriculum Quality** | British + IB Diploma | Full IB Continuum | Full IB Continuum + American track |
+| **International Exposure** | Regional European | 40+ nationalities | European + international focus |
+| **University Preparation** | Strong UK/EU focus | Global IB standard | European/US dual preparation |
+| **Extracurriculars** | Extensive | Standard | Standard |
+| **Athletics** | Comprehensive | Swimming, basketball | Standard sports programs |
+| **School Reputation** | 50+ years, well-established | 25 years, IB pioneer in Georgia | Established European curriculum |
+| **Class Sizes** | 18-22 students | Max 22 (avg 20) | Standard IB class sizes |
+| **Curriculum Flexibility** | Limited to British/IB track | IB continuum focus | Dual track (IB + American) |
 
 ### Language Requirements & Support
 
@@ -453,14 +448,22 @@ Tbilisi, Georgia presents an exceptional case for tax optimization and business 
 
 ## **JACK'S SOCIAL TRANSITION STRATEGY**
 
-### **New School International Social Integration**
+### **International School Social Integration**
 
+#### **New School International (Primary Option)**
 | Integration Aspect | Timeline | Strategy | Support Available |
 |------------------|----------|----------|------------------|
 | **Friend-Making** | 1-3 months | 850 students, 40+ nationalities | School buddy system |
 | **Extracurricular Activities** | Immediate | Sports, arts, academic clubs | Wide variety available |
 | **Academic Transition** | 1-2 months | IB MYP continuation | Academic counseling support |
 | **Cultural Adaptation** | 3-6 months | International student community | Established expat teen network |
+
+#### **European School Tbilisi (Alternative Option)**  
+| Integration Aspect | Timeline | Strategy | Support Available |
+|------------------|----------|----------|------------------|
+| **Friend-Making** | 1-3 months | Strong European student base | International community |
+| **Academic Flexibility** | Immediate | IB or American track choice | Flexible curriculum options |
+| **University Prep** | Ongoing | Dual preparation pathways | Both European and US counseling |
 
 ### **Available Activities for Teenagers**
 
@@ -536,12 +539,17 @@ Tbilisi, Georgia presents an exceptional case for tax optimization and business 
 
 ### **School Trial Enrollment**
 
-**New School International Trial Strategy:**
-- **Mid-year enrollment:** February 2026 start possible
-- **Academic assessment:** Placement testing for proper level
+**School Selection Strategy:**
+- **Primary Choice:** New School International (full IB continuum, 850 students, 40+ nationalities)
+- **Alternative:** European School Tbilisi (IB + American track flexibility)
+
+**Trial Enrollment Options:**
+- **Mid-year enrollment:** February 2026 start possible at both schools
+- **Academic assessment:** Placement testing for proper IB level
 - **Trial period:** One semester with full-year option
 - **Academic records:** Easy transfer back to European system if needed
 - **IB continuity:** MYP program continuation ensures no academic disruption
+- **School comparison:** Ability to visit both schools during reconnaissance trip
 
 ### **Business Operations During Trial**
 
@@ -713,8 +721,7 @@ Tbilisi, Georgia presents an exceptional case for tax optimization and business 
 | School | Parent Community Size | Language | Activities | Support Level |
 |--------|---------------------|----------|------------|---------------|
 | **New School International** | 800+ families, 40 nationalities | English primary | Social events, fundraisers, cultural nights | Very active |
-| **QSI Tbilisi** | 200+ American families | English only | American holidays, school events | Active |
-| **European School** | 300+ international families | English/multilingual | International celebrations, sports | Active |
+| **European School Tbilisi** | 300+ international families | English/multilingual | International celebrations, sports, European cultural events | Active |
 
 #### **Children's Activity Groups**
 
