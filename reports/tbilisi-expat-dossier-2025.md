@@ -1,6 +1,6 @@
 # **TBILISI EXPAT DOSSIER 2025**
 ## Comprehensive Assessment for High-Income American Family
-### *Shadow (Dual US/Croatian citizenship), Wife Stephanie, Son Jack (13)*
+### *Aaron (Dual US/Croatian citizenship), Wife Stephanie, Son Jack (13)*
 
 ---
 
