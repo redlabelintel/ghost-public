@@ -816,6 +816,163 @@ Tbilisi, Georgia presents an exceptional case for tax optimization and business 
 
 ---
 
+## **TRANSPORTATION OPTIONS FOR JACK'S SCHOOL COMMUTE**
+
+### **School Location & Distance Analysis**
+
+| School | Address | Distance from Vake | Commute Time | Available Transport |
+|--------|---------|-------------------|--------------|-------------------|
+| **New School International** | 35 Tskneti Highway, Bagebi | 8-12 km | 15-25 minutes | Private car, taxi, school bus |
+| **European School Tbilisi** | 34 Kazbegi Avenue | 5-8 km | 10-20 minutes | Private car, taxi, public transport |
+
+### **Transportation Option Analysis**
+
+#### **Option 1: Purchase a Vehicle**
+
+**Vehicle Purchase Process:**
+| Requirement | Details | Cost (USD) | Timeline |
+|-------------|---------|------------|----------|
+| **Car Purchase** | Used: $8,000-15,000, New: $20,000-35,000 | Variable | 1-2 weeks |
+| **Registration** | Required for non-residents with Georgian sponsor | $200-500 | 3-5 days |
+| **Insurance** | Mandatory third-party + comprehensive | $800-1,500/year | Same day |
+| **Driver's License Exchange** | US/EU license exchange to Georgian | $50-100 | 1-2 weeks |
+
+**Vehicle Options & Costs:**
+- **Compact SUV (Recommended):** $12,000-18,000 used, $25,000-32,000 new
+- **Popular Models:** Toyota RAV4, Honda CR-V, Nissan X-Trail
+- **Fuel Costs:** $0.90-1.10/liter, monthly $150-200 for school/city driving
+- **Maintenance:** $1,500-2,500 annually
+- **Parking:** $50-100/month (Vake area)
+
+**Advantages:**
+- Complete flexibility and independence
+- Multiple family members can use
+- Long-term cost efficiency
+- Asset ownership
+
+**Disadvantages:**
+- Traffic and parking challenges in city center
+- Winter driving considerations (mountains nearby)
+- Registration complexity for foreigners
+
+#### **Option 2: Private Driver Service**
+
+**Daily Driver Options:**
+
+| Service Type | Cost Structure | Monthly Cost (USD) | Reliability | Flexibility |
+|-------------|---------------|------------------|-------------|-------------|
+| **Dedicated School Driver** | Fixed monthly rate | $600-900 | Very high | Medium |
+| **Daily Taxi Service (Bolt/Uber)** | Per trip pricing | $300-500 | High | High |
+| **Private Chauffeur (Part-time)** | Hourly + retainer | $800-1,200 | Very high | Very high |
+| **Shared Driver (Expat Families)** | Split costs with other families | $200-400 | High | Medium |
+
+**Professional Driver Services:**
+- **WelcomeTaxi:** Door-to-door service, English-speaking drivers
+- **Transfeero:** Professional chauffeur services with advance booking
+- **GoTrip.ge:** Private drivers for regular routes
+- **VIP Transportation Georgia:** Premium service with luxury vehicles
+
+**School-Specific Driver Arrangements:**
+- **Dedicated morning/afternoon pickup:** $25-40/day ($500-800/month)
+- **Shared with other expat families:** $15-25/day ($300-500/month) 
+- **Flexible hourly service:** $8-12/hour (minimum 2 hours/day)
+
+**Advantages:**
+- No vehicle ownership responsibilities
+- Professional, reliable drivers familiar with routes
+- No parking or maintenance concerns
+- Immediate availability upon arrival
+
+**Disadvantages:**
+- Higher long-term costs than ownership
+- Dependency on external service
+- Less flexibility for family use
+
+#### **Option 3: School Bus Services**
+
+**New School International:**
+- **Service Area:** "Most of the city zone and Dighomi area"
+- **Type:** Door-to-door bus service
+- **Safety:** School's #1 priority with professional drivers
+- **Registration:** Available throughout the year
+- **Cost:** Contact school directly (typically $2,000-4,000/year)
+- **Reliability:** High - school-managed service
+
+**European School Tbilisi:**
+- **Bus Service:** Available (contact school for details)
+- **Coverage:** Central Tbilisi areas
+- **Cost:** Estimated $1,500-3,000/year
+
+**Advantages:**
+- Cost-effective compared to private transport
+- School-supervised safety and reliability
+- Peer social interaction during commute
+- No parent driving responsibility
+
+**Disadvantages:**
+- Fixed schedule (less flexibility)
+- Potential longer commute with multiple stops
+- Weather/traffic delays affect entire route
+
+#### **Option 4: Combination Approach**
+
+**Recommended Hybrid Strategy:**
+- **Primary:** School bus service for daily routine
+- **Backup:** Bolt/taxi app for emergencies and flexibility
+- **Family Vehicle:** Purchase after 6-month trial period for family use
+
+### **Cost Comparison Analysis**
+
+| Transportation Method | Initial Cost | Monthly Cost | Annual Cost | Flexibility Rating |
+|---------------------|-------------|-------------|-------------|------------------|
+| **Vehicle Purchase** | $15,000-25,000 | $300-450 | $3,600-5,400 | Very High (5/5) |
+| **Dedicated Private Driver** | $0 | $600-900 | $7,200-10,800 | High (4/5) |
+| **Daily Taxi Service** | $0 | $300-500 | $3,600-6,000 | Very High (5/5) |
+| **School Bus Service** | $0 | $150-250 | $1,800-3,000 | Low (2/5) |
+| **Combination Approach** | $0-500 | $250-400 | $3,000-4,800 | High (4/5) |
+
+### **Practical Considerations**
+
+#### **Traffic & Timing**
+- **Peak Hours:** 8:00-10:00 AM, 6:00-8:00 PM (heavier traffic)
+- **School Schedule:** 8:20 AM start (New School), pickup needed by 7:45 AM
+- **Route Reliability:** Tskneti Highway generally less congested than city center routes
+- **Winter Considerations:** Snow/ice possible in winter months, 4WD recommended
+
+#### **Safety & Security**
+- **Driver Vetting:** All school and professional services conduct background checks
+- **Vehicle Standards:** Professional services maintain higher vehicle safety standards
+- **Emergency Protocols:** School bus services have established emergency procedures
+- **Communication:** Most professional drivers speak English or use translation apps
+
+### **Recommendation Matrix**
+
+| Family Priority | Recommended Option | Reasoning |
+|----------------|------------------|-----------|
+| **Cost Optimization** | School bus + Taxi backup | Lowest annual cost with adequate flexibility |
+| **Maximum Flexibility** | Vehicle purchase | Complete independence and family utility |
+| **Convenience/Luxury** | Private driver service | Professional service, no responsibilities |
+| **Trial Period** | Taxi/driver service initially | No commitments, test different approaches |
+| **Long-term (2+ years)** | Vehicle purchase | Cost-effective with full family benefits |
+
+### **Implementation Timeline**
+
+#### **Trial Period (Months 1-6):**
+1. **School bus enrollment** for primary transport
+2. **Bolt app setup** for backup/flexibility
+3. **Test private driver services** for special occasions
+4. **Evaluate family transportation needs** beyond school
+
+#### **Commitment Phase (Months 7-12):**
+1. **Vehicle purchase decision** based on family needs assessment
+2. **Driver's license exchange process** initiation
+3. **Insurance and registration** completion
+4. **Transition from temporary to permanent** transport solution
+
+**Recommended Approach for Aaron's Family:** Start with New School International bus service (reliable, cost-effective, peer interaction for Jack) supplemented with Bolt taxi service for flexibility. Evaluate vehicle purchase after 6-month trial period based on broader family transportation needs and comfort with Georgian driving conditions.
+
+---
+
 ## **IMPLEMENTATION STRATEGY**
 
 ### **Phase 1: Assessment & Setup (Months 1-3)**
