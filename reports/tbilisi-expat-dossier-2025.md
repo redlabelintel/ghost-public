@@ -1121,14 +1121,37 @@ Tbilisi, Georgia presents an exceptional case for tax optimization and business 
 
 ### **Premium Travel Pricing Analysis**
 
-#### **Annual Family Travel Cost Breakdown (1-2 Round Trips)**
+#### **Family of 3 Travel Cost Analysis (1-2 Annual Round Trips)**
 
-| Route Option | Round Trip Cost | Annual Cost (2 trips) | Loyalty Benefits |
-|-------------|----------------|-------------------|------------------|
-| **Turkish Airlines via JFK** | $3,500-5,500 | $7,000-11,000 | Miles & Smiles program |
-| **Qatar Airways via JFK** | $4,000-6,000 | $8,000-12,000 | Privilege Club benefits |
-| **Lufthansa via JFK** | $4,200-6,200 | $8,400-12,400 | Miles & More program |
-| **Turkish Airlines via Toronto** | $3,200-4,800 | $6,400-9,600 | Miles & Smiles + shorter ground transport |
+**TBILISI TO BUFFALO ROUTING OPTIONS**
+
+| Route Option | Per Person Cost | Family of 3 Cost | Annual Cost (1 trip) | Annual Cost (2 trips) |
+|-------------|----------------|------------------|---------------------|---------------------|
+| **Turkish Airlines via JFK** | $3,500-5,500 | $10,500-16,500 | $10,500-16,500 | $21,000-33,000 |
+| **Qatar Airways via JFK** | $4,000-6,000 | $12,000-18,000 | $12,000-18,000 | $24,000-36,000 |
+| **Lufthansa via JFK** | $4,200-6,200 | $12,600-18,600 | $12,600-18,600 | $25,200-37,200 |
+| **Turkish Airlines via Toronto** | $3,200-4,800 | $9,600-14,400 | $9,600-14,400 | $19,200-28,800 |
+
+**MARBELLA TO BUFFALO COMPARISON (Current Location)**
+
+| Route Option | Per Person Cost | Family of 3 Cost | Annual Cost (1 trip) | Annual Cost (2 trips) |
+|-------------|----------------|------------------|---------------------|---------------------|
+| **AGP → MAD → JFK → BUF** | $3,800-6,200 | $11,400-18,600 | $11,400-18,600 | $22,800-37,200 |
+| **AGP → LHR → JFK → BUF** | $4,200-6,800 | $12,600-20,400 | $12,600-20,400 | $25,200-40,800 |
+| **AGP → FRA → JFK → BUF** | $4,000-6,500 | $12,000-19,500 | $12,000-19,500 | $24,000-39,000 |
+| **AGP → IST → JFK → BUF** | $3,600-5,800 | $10,800-17,400 | $10,800-17,400 | $21,600-34,800 |
+
+**COST SAVINGS: TBILISI vs MARBELLA**
+
+| Comparison | Tbilisi Best Option | Marbella Best Option | Annual Savings (1 trip) | Annual Savings (2 trips) |
+|-----------|-------------------|---------------------|----------------------|-------------------------|
+| **Most Economical Routes** | Turkish via Toronto: $9,600-14,400 | Turkish via Istanbul: $10,800-17,400 | $1,200-3,000 | $2,400-6,000 |
+| **Premium Routes** | Turkish via JFK: $10,500-16,500 | Iberia via Madrid: $11,400-18,600 | $900-2,100 | $1,800-4,200 |
+
+**Additional Marbella Considerations:**
+- **Ground Transport:** AGP airport is 45 minutes from Marbella (€60-80 taxi each way)
+- **Total Marbella Travel Cost:** Add €240-320 ($260-350) annually for family airport transfers
+- **Net Savings Living in Tbilisi:** $1,500-3,500 annually for Buffalo family visits
 
 #### **Peak vs Off-Peak Pricing**
 - **Peak Season** (June-August, December): +30-50% premium
@@ -1142,7 +1165,7 @@ Tbilisi, Georgia presents an exceptional case for tax optimization and business 
 - **Eastbound (TBS → BUF):** Depart Tbilisi early morning, arrive Buffalo evening same day
 - **Westbound (BUF → TBS):** Depart Buffalo evening, arrive Tbilisi following evening
 - **Jet Lag Management:** 8-hour time difference (TBS ahead)
-- **Business Day Loss:** 1.5-2 days travel time per round trip
+- **Travel Days:** 1.5-2 days travel time per round trip (plan accordingly for family visits)
 
 #### **Connection Timing**
 - **Istanbul (IST):** 2-4 hour layovers recommended for international connections
@@ -1162,7 +1185,7 @@ Tbilisi, Georgia presents an exceptional case for tax optimization and business 
 - **JFK New York:** Major international gateway, multiple lounge options
 - **Toronto (YYZ):** Premium international airport, short drive to Buffalo
 
-### **Business Class Experience Comparison**
+### **Premium Class Family Travel Experience**
 
 | Airline | Seat Type | Dining | Lounge Access | WiFi | Entertainment |
 |---------|-----------|--------|---------------|------|---------------|
@@ -1170,12 +1193,12 @@ Tbilisi, Georgia presents an exceptional case for tax optimization and business 
 | **Qatar Airways** | QSuite (private pods) | Michelin-star catering | Al Mourjan Lounge (DOH) | Complimentary | 4,000+ options |
 | **Lufthansa** | Lie-flat seats | Premium dining | Senator/Business Lounges | Complimentary | Good selection |
 
-### **Practical Business Travel Considerations**
+### **Practical Family Travel Considerations**
 
 #### **Visa & Documentation**
 - **US Citizens:** No visa required for Georgia (365 days)
 - **ESTA/Global Entry:** Expedited US re-entry
-- **Business Purpose:** Tourism classification sufficient
+- **Travel Purpose:** Tourism classification sufficient for family visits
 
 #### **Time Zone Management**
 - **Georgia (GET):** UTC+4
@@ -1183,27 +1206,34 @@ Tbilisi, Georgia presents an exceptional case for tax optimization and business 
 - **Total Difference:** 8-9 hours
 - **Jet Lag Strategy:** Eastbound generally easier than westbound
 
-#### **Productivity During Travel**
-- **Turkish Airlines Business:** WiFi throughout, power outlets, workspace
-- **Qatar Airways Business:** Private suites ideal for work/rest
-- **Airport Lounges:** Business centers, quiet work areas, meeting rooms
+#### **Family Comfort During Travel**
+- **Turkish Airlines Business:** WiFi throughout, family entertainment, comfortable rest
+- **Qatar Airways Business:** QSuite privacy ideal for family rest and relaxation  
+- **Airport Lounges:** Family facilities, children's areas, comfortable seating
 
 ### **Cost-Benefit Analysis**
 
-#### **Annual Business Travel Budget**
+#### **Annual Family Travel Budget (1 Trip)**
+
+**TBILISI TO BUFFALO (Family of 3)**
 | Cost Component | Annual Amount (USD) |
 |----------------|-------------------|
-| **Business Class Flights** | $7,000-11,000 |
-| **Ground Transportation** | $400-600 |
-| **Airport Hotels** (if needed) | $400-800 |
-| **Meals/Incidentals** | $300-500 |
-| **Total Annual Travel Cost** | $8,100-12,900 |
+| **Premium Class Flights** | $9,600-16,500 |
+| **Ground Transportation** | $200-300 |
+| **Airport Hotels** (if needed) | $200-400 |
+| **Meals/Incidentals** | $600-900 |
+| **Total Annual Travel Cost** | $10,600-18,100 |
 
-#### **Comparison to Current Marbella → Buffalo**
-- **Marbella Route:** MAD → JFK → BUF or MAD → YYZ → BUF
-- **Current Travel Time:** 12-16 hours (shorter than Tbilisi)
-- **Current Cost:** $2,500-4,000 business class (shorter distance)
-- **Tbilisi Premium:** +$4,500-7,500 annually for business travel
+**MARBELLA TO BUFFALO (Family of 3) - Current**
+| Cost Component | Annual Amount (USD) |
+|----------------|-------------------|
+| **Premium Class Flights** | $10,800-17,400 |
+| **Ground Transportation** | $260-350 |
+| **Airport Hotels** (if needed) | $200-400 |
+| **Meals/Incidentals** | $600-900 |
+| **Total Annual Travel Cost** | $11,860-19,050 |
+
+**ANNUAL SAVINGS LIVING IN TBILISI:** $1,260-950 per family trip
 
 ### **Scheduling & Frequency Recommendations**
 
