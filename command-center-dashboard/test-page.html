@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEO Command Center - Test</title>
+    <style>
+        body {
+            background: #000;
+            color: #00ff00;
+            font-family: 'Courier New', monospace;
+            margin: 0;
+            padding: 20px;
+        }
+        .status { margin: 10px 0; }
+        .working { color: #00ff00; }
+        .failed { color: #ff0000; }
+        button {
+            background: #000;
+            color: #00ff00;
+            border: 1px solid #00ff00;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            font-family: 'Courier New', monospace;
+        }
+        button:hover {
+            background: #00ff00;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>CEO COMMAND CENTER - CONNECTION TEST</h1>
+    
+    <div class="status">
+        <div>API Status: <span id="api-status">TESTING...</span></div>
+        <div>Frontend: <span class="working">LOADED</span></div>
+        <div>Time: <span id="time">--:--:--</span></div>
+    </div>
+
+    <div>
+        <button onclick="testAPI()">TEST API</button>
+        <button onclick="testPanic()">TEST PANIC ENDPOINT</button>
+        <button onclick="window.location.href='http://100.76.103.90:3004'">GO TO REACT APP</button>
+    </div>
+
+    <div id="output" style="margin-top: 20px; white-space: pre-wrap;"></div>
+
+    <script>
+        function updateTime() {
+            document.getElementById('time').textContent = new Date().toLocaleTimeString();
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+
+        async function testAPI() {
+            try {
+                const response = await fetch('http://100.76.103.90:3001/api/health');
+                const data = await response.json();
+                document.getElementById('api-status').textContent = 'WORKING';
+                document.getElementById('api-status').className = 'working';
+                document.getElementById('output').textContent = 'API Response: ' + JSON.stringify(data, null, 2);
+            } catch (error) {
+                document.getElementById('api-status').textContent = 'FAILED';
+                document.getElementById('api-status').className = 'failed';
+                document.getElementById('output').textContent = 'API Error: ' + error.message;
+            }
+        }
+
+        async function testPanic() {
+            if (!confirm('TEST PANIC ENDPOINT? (This is just a test, will not actually trigger panic)')) return;
+            
+            try {
+                const response = await fetch('http://100.76.103.90:3001/api/emergency/panic', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' }
+                });
+                const data = await response.json();
+                document.getElementById('output').textContent = 'PANIC TEST Response: ' + JSON.stringify(data, null, 2);
+            } catch (error) {
+                document.getElementById('output').textContent = 'PANIC TEST Error: ' + error.message;
+            }
+        }
+
+        // Auto-test API on load
+        testAPI();
+    </script>
+</body>
+</html>
