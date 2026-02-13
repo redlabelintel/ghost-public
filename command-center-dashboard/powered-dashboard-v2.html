@@ -677,14 +677,14 @@
             <ul>
                 <li>1. Check <strong>green status dot</strong> (top-right)</li>
                 <li>2. Read <strong>System Intelligence Log</strong> (first panel)</li>
-                <li>3. Use <strong>chat widget</strong> for quick questions (Ctrl+C)</li>
+                <li>3. Use <strong>dashboard controls</strong> for all operations</li>
                 <li>4. Deploy <strong>specialist teams</strong> for projects</li>
                 <li>5. Get <strong>Warren's CEO approval</strong> for strategic decisions</li>
             </ul>
             
             <h4>💬 How to Use Chat:</h4>
             <ul>
-                <li><strong>Click chat header</strong> (bottom-right) or press Ctrl+C</li>
+                <li><strong>Use dashboard controls</strong> for all communication</li>
                 <li><strong>Ask naturally:</strong> "How are you?" "What's happening?"</li>
                 <li><strong>Get real data:</strong> Your actual 865 sessions, costs, operations</li>
                 <li><strong>Ask about Warren:</strong> CEO strategic guidance available</li>
@@ -758,15 +758,7 @@
             </ul>
             <p><strong>Safety:</strong> All destructive actions require confirmation prompts.</p>
             
-            <h4>💬 OPENCLAW CHAT WIDGET</h4>
-            <p><strong>Purpose:</strong> Direct communication with OpenClaw assistant.</p>
-            <ul>
-                <li><strong>Location:</strong> Bottom-right expandable widget</li>
-                <li><strong>Activation:</strong> Click header or use Ctrl+C</li>
-                <li><strong>Commands:</strong> Ask about status, team, costs, operations</li>
-                <li><strong>Responses:</strong> Real OpenClaw intelligence and guidance</li>
-            </ul>
-            <p><strong>Try asking:</strong> "status", "who are you", "team", "costs", "help"</p>
+            <!-- OpenClaw chat widget documentation removed per CEO directive -->
             
             <h4>🔧 TROUBLESHOOTING</h4>
             <ul>
@@ -780,7 +772,7 @@
             <h4>⌨️ KEYBOARD SHORTCUTS</h4>
             <ul>
                 <li><strong>Ctrl+H:</strong> Toggle manual drawer</li>
-                <li><strong>Ctrl+C:</strong> Toggle OpenClaw chat</li>
+                <!-- Chat widget shortcut removed -->
                 <li><strong>Enter:</strong> Send chat message</li>
             </ul>
             
@@ -791,23 +783,7 @@
         </div>
     </div>
 
-    <!-- OpenClaw Chat Widget -->
-    <div class="chat-widget" id="chatWidget">
-        <div class="chat-header" onclick="toggleChat()">
-            OPENCLAW CHAT
-            <span id="chatToggle">▲</span>
-        </div>
-        <div class="chat-messages" id="chatMessages" style="display: none;">
-            <div class="chat-message assistant">
-                Connected to OpenClaw. Send commands or questions here.
-            </div>
-        </div>
-        <div class="chat-input-container" id="chatInputContainer" style="display: none;">
-            <input type="text" class="chat-input" id="chatInput" placeholder="Send OpenClaw command..." 
-                   onkeypress="if(event.key==='Enter') sendChatMessage()">
-            <button class="chat-send" onclick="sendChatMessage()">[SEND]</button>
-        </div>
-    </div>
+    <!-- OpenClaw chat widget removed per CEO directive -->
 
     <script>
         // Real workspace integration
@@ -1361,11 +1337,7 @@
                 toggleDrawer();
             }
             
-            // Ctrl+C to toggle chat
-            if (e.ctrlKey && e.key === 'c') {
-                e.preventDefault();
-                toggleChat();
-            }
+            // Chat shortcuts removed per CEO directive
         });
 
         // Warren Buffett CEO Functions - REMOVED PER CEO DIRECTIVE
