@@ -611,9 +611,7 @@
                     <span>Competitive Advantage</span>
                     <span class="metric-value" style="font-size: 9px;">Strong</span>
                 </div>
-                <button onclick="generateBoardLetter()" style="width: 100%; margin-top: 8px;">
-                    [CEO] GENERATE BOARD LETTER
-                </button>
+                <!-- Board letter generation removed per CEO directive -->
             </div>
 
             <!-- Real-Time Business Intelligence -->
@@ -1084,12 +1082,21 @@
         async function commitProgress() {
             log('Committing current progress to repository...', 'info');
             
-            // Would execute real git operations
-            setTimeout(() => {
+            const result = await realApiCall('/git/commit', { 
+                method: 'POST',
+                body: { 
+                    message: 'Command Center progress commit via dashboard',
+                    push: true 
+                }
+            });
+            
+            if (result.success) {
                 realMetrics.recentCommits++;
                 updateRealMetrics();
-                log('✅ Progress committed to Ghost repository', 'success');
-            }, 1500);
+                log('✅ REAL COMMIT: Progress committed and pushed to Ghost repository', 'success');
+            } else {
+                log('❌ COMMIT FAILED: ' + (result.error || 'Git operation failed'), 'error');
+            }
         }
 
         // Status and health monitoring
@@ -1264,34 +1271,7 @@
 
         // Warren Buffett CEO Functions - REMOVED PER CEO DIRECTIVE
 
-        async function generateBoardLetter() {
-            log('CEO generating monthly board letter...', 'info');
-            updateTeamStatus('warren', 'WRITING');
-            
-            setTimeout(() => {
-                const boardLetter = `
-Warren's Monthly Board Letter - ${new Date().toLocaleDateString()}
-
-Fellow Shareholders,
-
-Our OpenClaw operations continue to demonstrate the power of patient capital and long-term thinking. This month we achieved a 225% return on agent investment while maintaining our conservative cash runway of 11 months.
-
-The local model strategy continues to compound - $320 monthly savings that flow directly to shareholder value. As I always say, a penny saved is more than a penny earned because you don't pay taxes on it.
-
-Our competitive position strengthens monthly. While others chase expensive cloud models, we've built a moat through local intelligence that gets deeper with time.
-
-Remember: we're building for decades, not quarters.
-
-Warren E. Buffett, CEO
-                `;
-                
-                log('📊 CEO Board Letter Generated - Warren\'s strategic assessment complete', 'success');
-                updateTeamStatus('warren', 'STRATEGIC');
-                
-                // Could export this letter to file or display in modal
-                alert('Warren Buffett Board Letter Generated. Check System Intelligence Log for details.');
-            }, 4000);
-        }
+        // Board letter generation removed per CEO directive
 
         // Model usage breakdown functionality
         let modelUsageData = {

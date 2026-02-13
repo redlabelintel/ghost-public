@@ -11,24 +11,31 @@ import path from 'path';
 
 // Configuration
 const CONFIG = {
-  // Cost thresholds
-  DAILY_BUDGET_LIMIT: 50.0,      // Daily spending limit in USD
-  SESSION_COST_KILL: 100.0,      // Kill session if it exceeds this cost
-  SESSION_COST_WARNING: 15.0,    // Warning threshold
-  HOURLY_BURN_RATE: 15.0,        // Kill if burning more than this per hour for 2+ hours
+  // Cost thresholds - MUCH MORE AGGRESSIVE
+  DAILY_BUDGET_LIMIT: 25.0,      // Daily spending limit in USD (reduced from 50)
+  SESSION_COST_KILL: 25.0,       // Kill session if it exceeds this cost (reduced from 100)
+  SESSION_COST_WARNING: 8.0,     // Warning threshold (reduced from 15)
+  HOURLY_BURN_RATE: 5.0,         // Kill if burning more than this per hour (reduced from 15)
   
-  // Token thresholds
-  TOKEN_KILL_THRESHOLD: 2000000, // Kill session if it exceeds 2M tokens
-  TOKEN_WARNING: 1000000,        // Warning at 1M tokens
+  // Token thresholds - AGGRESSIVE CONTEXT MONITORING
+  TOKEN_KILL_THRESHOLD: 800000,  // Kill session at 800k tokens (reduced from 2M)
+  TOKEN_WARNING: 500000,         // Warning at 500k tokens (reduced from 1M)
+  CONTEXT_WARNING: 0.8,          // Warning at 80% context usage
+  CONTEXT_KILL: 0.95,            // Kill at 95% context usage
+  
+  // Session count thresholds - NEW
+  MAX_TOTAL_SESSIONS: 50,        // Warning if more than 50 total sessions
+  CRITICAL_SESSION_COUNT: 100,   // Critical warning if more than 100 sessions
   
   // Message count thresholds
-  MESSAGE_KILL_THRESHOLD: 2000,  // Kill session with excessive messages
+  MESSAGE_KILL_THRESHOLD: 1000,  // Kill session with excessive messages (reduced)
   
-  // Time thresholds
-  MAX_SESSION_HOURS: 24,         // Kill sessions running more than 24 hours
+  // Time thresholds - MORE AGGRESSIVE
+  MAX_SESSION_HOURS: 8,          // Kill sessions running more than 8 hours (reduced from 24)
+  WARNING_SESSION_HOURS: 4,      // Warning for sessions >4 hours
   
   // File size thresholds (in bytes)
-  MAX_SESSION_LOG_SIZE: 50 * 1024 * 1024, // 50MB transcript size limit
+  MAX_SESSION_LOG_SIZE: 20 * 1024 * 1024, // 20MB transcript size limit (reduced)
   
   // Whitelisted sessions (never kill these)
   PROTECTED_SESSIONS: ['main', 'system', 'guardian', 'monitor'],
