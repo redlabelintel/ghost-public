@@ -1291,9 +1291,12 @@
             
             // Send to actual OpenClaw via sessions_send API
             try {
-                const response = await fetch('http://100.76.103.90:3001/api/chat', {
+                const response = await fetch('http://localhost:18789/api/agents/main/send', {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: { 
+                        'Content-Type': 'application/json',
+                        'Authorization': 'Bearer ' + '__OPENCLAW_REDACTED__'
+                    },
                     body: JSON.stringify({ 
                         message: message,
                         source: 'command_center_chat'
@@ -1305,8 +1308,9 @@
                 const assistantMsg = document.createElement('div');
                 assistantMsg.className = 'chat-message assistant';
                 
-                if (result.success && result.response) {
-                    assistantMsg.textContent = `OpenClaw: ${result.response}`;
+                if (result.ok || (result.success && result.response)) {
+                    const responseText = result.response || result.message || 'Response received';
+                    assistantMsg.textContent = `OpenClaw: ${responseText}`;
                     log('Real OpenClaw response received', 'real');
                 } else {
                     // Fallback to intelligent responses if API unavailable
