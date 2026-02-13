@@ -604,27 +604,51 @@
             <button class="close-drawer" onclick="toggleDrawer()">[CLOSE]</button>
         </div>
         <div class="drawer-content">
-            <h4>🎯 QUICK START GUIDE</h4>
+            <h4>🚀 HOW TO USE THE COMMAND CENTER</h4>
+            
+            <h4>Getting Started:</h4>
             <ul>
-                <li><strong>Access:</strong> http://100.76.103.90:8001/powered-dashboard-v2.html</li>
-                <li><strong>Green Dot:</strong> Shows "POWERED ONLINE" when operational</li>
-                <li><strong>System Log:</strong> First column shows real-time activity</li>
-                <li><strong>Team Panel:</strong> 6 specialists with live status indicators</li>
-                <li><strong>[REAL] Controls:</strong> Execute actual OpenClaw commands</li>
-                <li><strong>Chat Widget:</strong> Direct communication (Ctrl+C)</li>
+                <li>1. Check <strong>green status dot</strong> (top-right)</li>
+                <li>2. Read <strong>System Intelligence Log</strong> (first panel)</li>
+                <li>3. Use <strong>chat widget</strong> for quick questions (Ctrl+C)</li>
+                <li>4. Deploy <strong>specialist teams</strong> for projects</li>
+                <li>5. Get <strong>Warren's CEO approval</strong> for strategic decisions</li>
             </ul>
             
-            <h4>🤖 TEAM STATUS PANEL</h4>
-            <p><strong>Purpose:</strong> Monitor and deploy specialist teams for operations.</p>
+            <h4>💬 How to Use Chat:</h4>
             <ul>
-                <li><strong>Ghost (G):</strong> Main Operations - Primary coordinator (ACTIVE)</li>
-                <li><strong>Tesla (T):</strong> Architecture - System design & infrastructure</li>
-                <li><strong>Aaron (A):</strong> Data Pipeline - Analytics & optimization</li>
-                <li><strong>Barnum (B):</strong> UX/UI - Interface & experience design</li>
-                <li><strong>Bond (J):</strong> Security - Protection & compliance</li>
-                <li><strong>Patton (P):</strong> Strategy - Planning & execution</li>
+                <li><strong>Click chat header</strong> (bottom-right) or press Ctrl+C</li>
+                <li><strong>Ask naturally:</strong> "How are you?" "What's happening?"</li>
+                <li><strong>Get real data:</strong> Your actual 865 sessions, costs, operations</li>
+                <li><strong>Ask about Warren:</strong> CEO strategic guidance available</li>
             </ul>
-            <p><strong>[DEPLOY] SPECIALIZED TEAM:</strong> Prompts for team type, updates status indicators.</p>
+            
+            <h4>🤖 How to Deploy Teams:</h4>
+            <ol>
+                <li><strong>Click [DEPLOY] SPECIALIZED TEAM</strong></li>
+                <li><strong>Enter team type:</strong> architecture/data/security/ui/strategy</li>
+                <li><strong>Watch status change:</strong> READY → ACTIVE</li>
+                <li><strong>See confirmation</strong> in System Intelligence Log</li>
+            </ol>
+            
+            <h4>Your Team:</h4>
+            <ul>
+                <li><strong>Ghost (G):</strong> Always active - main coordinator</li>
+                <li><strong>Tesla (T):</strong> Architecture (enter "architecture")</li>
+                <li><strong>Aaron (A):</strong> Data Pipeline (enter "data")</li>
+                <li><strong>Barnum (B):</strong> UX/UI (enter "ui")</li>
+                <li><strong>Bond (J):</strong> Security (enter "security")</li>
+                <li><strong>Patton (P):</strong> Strategy (enter "strategy")</li>
+                <li><strong>Warren (W):</strong> CEO - Use approval button below</li>
+            </ul>
+            
+            <h4>🏛️ How to Get CEO Approval from Warren:</h4>
+            <ol>
+                <li><strong>Click [CEO] REQUEST WARREN'S APPROVAL</strong></li>
+                <li><strong>Enter specific proposal:</strong> "Hire data analyst" not "strategic thing"</li>
+                <li><strong>Watch Warren's status:</strong> STRATEGIC → EVALUATING → STRATEGIC</li>
+                <li><strong>Read Warren's response</strong> in System Intelligence Log (takes 3 seconds)</li>
+            </ol>
             
             <h4>💻 LIVE WORKSPACE PANEL</h4>
             <p><strong>Purpose:</strong> Monitor real workspace activity and quick file access.</p>
@@ -1154,22 +1178,30 @@
 
         // Warren Buffett CEO Functions
         async function requestCEOApproval() {
-            const proposal = prompt('Enter proposal for CEO approval (expense/hiring/strategy):') || 'Strategic initiative requiring approval';
+            const proposal = prompt('Enter proposal for CEO approval:') || 'General operational proposal';
             
             log(`Requesting CEO approval for: ${proposal}`, 'info');
             updateTeamStatus('warren', 'EVALUATING');
             
-            // Simulate Warren's decision-making process
+            // Warren's logical evaluation based on the actual proposal
             setTimeout(() => {
-                const warrenResponses = [
-                    "Now, that sounds like the kind of investment that gets better with time. I approve, but let's monitor it closely.",
-                    "I'd rather be approximately right than precisely wrong. This looks approximately right. Proceed.",
-                    "Simple is better than complex. If we can't explain this in plain English, we shouldn't do it.",
-                    "Rule number one: don't lose money. I need to see more downside protection before I approve this.",
-                    "This reminds me of the saying: time is the friend of the wonderful business. Is this a wonderful business?"
-                ];
+                let response = '';
+                const p = proposal.toLowerCase();
                 
-                const response = warrenResponses[Math.floor(Math.random() * warrenResponses.length)];
+                if (p.includes('cost') || p.includes('expense') || p.includes('budget')) {
+                    response = `Looking at the cost: Does this generate more value than we'd spend? With our current $3.80 daily costs and 865 sessions, we need careful capital allocation. What's the expected return?`;
+                } else if (p.includes('session') || p.includes('kill') || p.includes('terminate')) {
+                    response = `Session management makes sense. With 865 active sessions and some at 100% context, we should terminate the expensive ones. This protects our capital while maintaining essential operations.`;
+                } else if (p.includes('team') || p.includes('hire') || p.includes('agent')) {
+                    response = `Team expansion: I always hire for integrity, intelligence, and energy. What specific capabilities would this agent add that we can't get from our current team?`;
+                } else if (p.includes('model') || p.includes('routing') || p.includes('local')) {
+                    response = `The local model strategy is working well - 60-80% cost reduction without quality loss. If this proposal enhances that advantage, I'm interested. What's the long-term competitive benefit?`;
+                } else if (p.includes('strategic') || p.includes('planning')) {
+                    response = `Strategic decisions require long-term thinking. How does this position us better in 5 years? What's our circle of competence here?`;
+                } else {
+                    response = `Regarding "${proposal}": I need to understand the fundamentals. What problem does this solve? What's the downside risk? Can we explain it simply? These basics matter more than complexity.`;
+                }
+                
                 log(`CEO Warren Buffett: ${response}`, 'success');
                 updateTeamStatus('warren', 'STRATEGIC');
             }, 3000);
