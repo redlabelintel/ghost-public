@@ -15,7 +15,7 @@ const ExecutiveControlPanel = () => {
 
   // Initialize WebSocket connection
   useEffect(() => {
-    const newSocket = io('http://localhost:3001');
+    const newSocket = io('http://100.76.103.90:3001');
     
     newSocket.on('connect', () => {
       console.log('Connected to CEO Command Center');
@@ -54,7 +54,7 @@ const ExecutiveControlPanel = () => {
   // API call wrapper
   const apiCall = useCallback(async (endpoint, method = 'GET', body = null) => {
     try {
-      const response = await fetch(`http://localhost:3001/api${endpoint}`, {
+      const response = await fetch(`http://100.76.103.90:3001/api${endpoint}`, {
         method,
         headers: {
           'Content-Type': 'application/json',

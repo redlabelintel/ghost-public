@@ -488,7 +488,7 @@ process.on('SIGTERM', () => {
 });
 
 // Start server
-server.listen(CONFIG.port, () => {
+server.listen(CONFIG.port, '0.0.0.0', () => {
   console.log(`🎯 CEO Command Center Control API running on port ${CONFIG.port}`);
   console.log(`🚨 Emergency controls: POST /api/emergency/panic`);
   console.log(`💰 Financial controls: GET /api/financial/status`);
