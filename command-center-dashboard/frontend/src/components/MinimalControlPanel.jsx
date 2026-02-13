@@ -74,13 +74,13 @@ const MinimalControlPanel = () => {
   const hourlyRate = status.financial.hourly_rate || 0;
 
   return (
-    <div className="min-h-screen bg-black text-green-400 p-4 font-mono text-sm">
+    <div className="min-h-screen bg-black text-white p-4 font-mono text-sm">
       {/* Header */}
-      <div className="border-b border-green-400 pb-2 mb-4">
+      <div className="border-b border-gray-500 pb-2 mb-4">
         <div className="flex justify-between items-center">
           <span>CEO COMMAND CENTER</span>
           <div className="flex items-center space-x-2">
-            <span className={`w-2 h-2 ${status.connected ? 'bg-green-400' : 'bg-red-400'}`}></span>
+            <span className={`w-2 h-2 ${status.connected ? 'bg-white' : 'bg-gray-500'}`}></span>
             <span>{status.connected ? 'ONLINE' : 'OFFLINE'}</span>
           </div>
         </div>
@@ -111,7 +111,7 @@ const MinimalControlPanel = () => {
         <button 
           onClick={() => confirm('PANIC', 'EMERGENCY SHUTDOWN ALL SYSTEMS?', 
             () => apiCall('/emergency/panic', 'POST'))}
-          className="w-full bg-red-900 hover:bg-red-800 border border-red-400 text-red-400 py-2 px-4 transition-colors"
+          className="w-full bg-gray-900 hover:bg-gray-800 border border-white text-white py-2 px-4 transition-colors"
         >
           [PANIC] EMERGENCY SHUTDOWN
         </button>
@@ -119,7 +119,7 @@ const MinimalControlPanel = () => {
         <button 
           onClick={() => confirm('KILL_EXPENSIVE', 'TERMINATE ALL EXPENSIVE SESSIONS?', 
             () => apiCall('/sessions/kill-expensive', 'POST', { threshold: 10.0 }))}
-          className="w-full bg-gray-900 hover:bg-gray-800 border border-green-400 py-2 px-4 transition-colors"
+          className="w-full bg-gray-900 hover:bg-gray-800 border border-gray-500 py-2 px-4 transition-colors"
         >
           [KILL] EXPENSIVE SESSIONS (&gt;$10)
         </button>
@@ -127,22 +127,22 @@ const MinimalControlPanel = () => {
         <button 
           onClick={() => confirm('KILL_ALL', 'TERMINATE ALL NON-CRITICAL SESSIONS?', 
             () => apiCall('/emergency/kill-all', 'POST', { preserveCritical: true }))}
-          className="w-full bg-gray-900 hover:bg-gray-800 border border-green-400 py-2 px-4 transition-colors"
+          className="w-full bg-gray-900 hover:bg-gray-800 border border-gray-500 py-2 px-4 transition-colors"
         >
           [KILL] ALL SESSIONS
         </button>
         
         <button 
           onClick={() => apiCall('/financial/enforce-limits', 'POST')}
-          className="w-full bg-gray-900 hover:bg-gray-800 border border-green-400 py-2 px-4 transition-colors"
+          className="w-full bg-gray-900 hover:bg-gray-800 border border-gray-500 py-2 px-4 transition-colors"
         >
           [ENFORCE] BUDGET LIMITS
         </button>
       </div>
 
       {/* Session List */}
-      <div className="border border-green-400 p-2">
-        <div className="border-b border-green-400 pb-1 mb-2 text-xs">
+      <div className="border border-gray-500 p-2">
+        <div className="border-b border-gray-500 pb-1 mb-2 text-xs">
           ACTIVE SESSIONS ({totalSessions})
         </div>
         <div className="space-y-1 max-h-40 overflow-y-auto">
@@ -156,7 +156,7 @@ const MinimalControlPanel = () => {
                 <button 
                   onClick={() => confirm('KILL_SESSION', `TERMINATE ${session.id}?`, 
                     () => apiCall(`/sessions/kill/${session.id || `session-${idx}`}`, 'POST'))}
-                  className="bg-red-900 hover:bg-red-800 text-red-400 px-1 text-xs border border-red-400"
+                  className="bg-gray-900 hover:bg-gray-700 text-white px-1 text-xs border border-gray-500"
                 >
                   X
                 </button>
@@ -169,21 +169,21 @@ const MinimalControlPanel = () => {
       {/* Confirmation Modal */}
       {showConfirm && (
         <div className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center">
-          <div className="border border-green-400 bg-black p-4 max-w-md w-full mx-4">
+          <div className="border border-gray-500 bg-black p-4 max-w-md w-full mx-4">
             <div className="mb-4">
-              <div className="text-red-400 mb-2">[CONFIRM]</div>
+              <div className="text-white mb-2">[CONFIRM]</div>
               <div>{showConfirm.title}</div>
             </div>
             <div className="flex space-x-2">
               <button 
                 onClick={() => execute(showConfirm.callback)}
-                className="flex-1 bg-red-900 hover:bg-red-800 border border-red-400 text-red-400 py-2 text-sm"
+                className="flex-1 bg-gray-900 hover:bg-gray-700 border border-white text-white py-2 text-sm"
               >
                 EXECUTE
               </button>
               <button 
                 onClick={() => setShowConfirm(null)}
-                className="flex-1 bg-gray-900 hover:bg-gray-800 border border-green-400 py-2 text-sm"
+                className="flex-1 bg-gray-900 hover:bg-gray-700 border border-gray-500 py-2 text-sm"
               >
                 CANCEL
               </button>

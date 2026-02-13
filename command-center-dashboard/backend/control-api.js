@@ -436,12 +436,16 @@ app.get('/api/agents/status', async (req, res) => {
   }
 });
 
+// Enhanced routes integration - V2 with real data
+const enhancedRoutesV2 = require('./enhanced-routes-v2');
+app.use('/api/enhanced', enhancedRoutesV2);
+
 // Health check
 app.get('/api/health', (req, res) => {
   res.json({ 
     status: 'operational', 
     timestamp: new Date().toISOString(),
-    version: '1.0.0' 
+    version: '1.1.0' 
   });
 });
 

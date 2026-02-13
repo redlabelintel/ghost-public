@@ -9,7 +9,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #000000;
-  color: #00ff00;
+  color: #ffffff;
 }
 
 .App {
@@ -26,9 +26,9 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #00ff00;
+  background: #666666;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #00cc00;
+  background: #999999;
 }
