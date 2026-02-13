@@ -986,17 +986,27 @@
             }
         }
 
-        // Update real metrics display
+        // Update real metrics display with null checks
         function updateRealMetrics() {
-            document.getElementById('real-daily-cost').textContent = realMetrics.dailyCost.toFixed(2);
-            document.getElementById('real-session-count').textContent = realMetrics.sessionCount;
-            document.getElementById('local-model-usage').textContent = realMetrics.localUsage + '%';
-            document.getElementById('cost-savings').textContent = realMetrics.costSavings.toFixed(2);
+            const elements = {
+                'real-daily-cost': realMetrics.dailyCost.toFixed(2),
+                'real-session-count': realMetrics.sessionCount,
+                'local-model-usage': realMetrics.localUsage + '%',
+                'cost-savings': realMetrics.costSavings.toFixed(2),
+                'recent-commits': realMetrics.recentCommits,
+                'active-projects': realMetrics.activeProjects,
+                'memory-files': realMetrics.memoryFiles,
+                'daily-todos': realMetrics.todos
+            };
             
-            document.getElementById('recent-commits').textContent = realMetrics.recentCommits;
-            document.getElementById('active-projects').textContent = realMetrics.activeProjects;
-            document.getElementById('memory-files').textContent = realMetrics.memoryFiles;
-            document.getElementById('daily-todos').textContent = realMetrics.todos;
+            for (const [id, value] of Object.entries(elements)) {
+                const element = document.getElementById(id);
+                if (element) {
+                    element.textContent = value;
+                } else {
+                    log(`Element missing: ${id}`, 'warning');
+                }
+            }
         }
 
         // Real Executive Operations
