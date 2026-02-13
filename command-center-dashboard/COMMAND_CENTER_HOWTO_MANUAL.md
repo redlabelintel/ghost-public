@@ -1,52 +1,86 @@
-# CEO Command Center - How-To Manual
-**Version:** Powered v2  
+# CEO Command Center - Complete How-To Guide
+**Version:** Powered v2 with Warren Buffett CEO  
 **Access URL:** http://100.76.103.90:8001/powered-dashboard-v2.html  
-**Last Updated:** February 13, 2026
+**Last Updated:** February 13, 2026 - 15:16 GMT+1
 
 ---
 
-## 🎯 QUICK START GUIDE
+## 🚀 HOW TO ACCESS AND USE THE COMMAND CENTER
 
-### Accessing the Command Center
-1. Navigate to: **http://100.76.103.90:8001/powered-dashboard-v2.html**
-2. Verify green status dot shows "POWERED ONLINE"
-3. Check System Intelligence Log for system initialization messages
+### Step 1: Opening the Command Center
+1. **Open your web browser** (Chrome, Safari, Firefox)
+2. **Navigate to:** http://100.76.103.90:8001/powered-dashboard-v2.html
+3. **Wait for loading** - Should take 3-5 seconds
+4. **Verify status:** Look for green dot next to "POWERED ONLINE"
+5. **Check System Intelligence Log** - Should show initialization messages
 
-### Interface Overview
-- **System Intelligence Log**: Real-time activity and system messages (first column)
-- **Team Status**: Visual roster of all available specialist agents
-- **Live Workspace**: Real workspace metrics and quick actions
-- **Executive Automation**: Auto-enforcement and optimization controls
-- **Live Business Intelligence**: Real-time operational metrics
-- **Real Operations**: Executive controls that execute actual OpenClaw commands
+**If showing offline:** Refresh page, check if backend API is running
+
+### Step 2: Understanding the Interface Layout
+The dashboard has **6 main panels** arranged in a grid:
+
+**Column 1 (Left):**
+- **System Intelligence Log** (first priority) - Shows real-time activity
+- **Team Status** - Your specialist agents including Warren Buffett CEO
+
+**Remaining Columns:**
+- **Live Workspace** - Real workspace metrics and git operations
+- **Executive Automation** - Auto-budget protection and optimization  
+- **Warren's CEO Strategic Dashboard** - Warren Buffett's business metrics
+- **Live Business Intelligence** - Real-time operational data
+- **Real Operations** - Emergency controls and session management
 
 ---
 
-## 🤖 TEAM STATUS PANEL
+## 🤖 HOW TO USE THE TEAM STATUS PANEL
 
-### Team Roster
-**Purpose:** Monitor and deploy specialized agent teams for different operational needs.
+### What This Panel Does
+Shows your specialist agents and Warren Buffett CEO with live status indicators. Use this to deploy teams for specific projects.
 
-#### Available Specialists:
-- **Ghost (G)** - Main Operations - Status: ACTIVE
-  - *Role:* Primary operations coordinator
-  - *Specialization:* Overall system management and CEO interface
+### Step-by-Step: How to Deploy a Team
+1. **Look at the team roster** - Each agent has a circular avatar and status
+2. **Click [DEPLOY] SPECIALIZED TEAM** button at bottom of panel
+3. **Enter team type when prompted:** architecture/data/security/ui/strategy
+4. **Watch status change** - Deployed agents show "ACTIVE" status
+5. **Monitor in System Intelligence Log** - See deployment confirmation
 
-- **Tesla (T)** - Architecture - Status: READY  
-  - *Role:* System architecture and technical design
-  - *Specialization:* Backend systems, API design, infrastructure
+### Your Team Members
 
-- **Aaron (A)** - Data Pipeline - Status: READY
-  - *Role:* Data processing and analytics
-  - *Specialization:* Data integration, pipeline development, metrics
+**Ghost (G) - ACTIVE**
+- **What he does:** Coordinates all operations, manages Command Center
+- **When to use:** Always available, primary operational coordinator
+- **Status:** Always shows ACTIVE
 
-- **Barnum (B)** - UX/UI - Status: READY
-  - *Role:* User experience and interface design  
-  - *Specialization:* Frontend development, design systems
+**Tesla (T) - READY**  
+- **What he does:** System architecture, backend design, infrastructure
+- **When to use:** Building new systems, API development, technical planning
+- **How to deploy:** Select "architecture" when prompted
 
-- **Bond (J)** - Security - Status: READY
-  - *Role:* Security and compliance
-  - *Specialization:* Security audits, threat assessment, protection protocols
+**Aaron (A) - READY**
+- **What he does:** Data analysis, metrics, pipeline development  
+- **When to use:** Need analytics, data processing, performance optimization
+- **How to deploy:** Select "data" when prompted
+
+**Barnum (B) - READY**
+- **What he does:** User interface design, user experience
+- **When to use:** Frontend work, design improvements, user workflows
+- **How to deploy:** Select "ui" when prompted
+
+**Bond (J) - READY**
+- **What he does:** Security, compliance, threat assessment
+- **When to use:** Security audits, protection protocols, risk analysis  
+- **How to deploy:** Select "security" when prompted
+
+**Patton (P) - READY**
+- **What he does:** Strategic planning, project execution
+- **When to use:** Strategic planning, project coordination, execution oversight
+- **How to deploy:** Select "strategy" when prompted
+
+**Warren Buffett (W) - STRATEGIC**
+- **What he does:** CEO-level strategic oversight with legendary business judgment
+- **When to use:** Major decisions, capital allocation, long-term strategy
+- **How to interact:** Use [CEO] REQUEST WARREN'S APPROVAL button
+- **Special status:** Always shows STRATEGIC (executive level)
 
 - **Patton (P)** - Strategy - Status: READY
   - *Role:* Strategic planning and execution
