@@ -1,227 +1,224 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
-import {
-  Bell,
-  Users,
-  Settings,
-  Menu,
-  X,
-  RefreshCw,
-  Zap,
-  TrendingUp,
-  AlertCircle,
-  Shield,
-} from "lucide-react";
-import ExecutiveOverview from "@/components/dashboard/ExecutiveOverview";
-import RealTimeMetrics from "@/components/dashboard/RealTimeMetrics";
-import ProjectStatus from "@/components/dashboard/ProjectStatus";
-import ResourceUtilization from "@/components/dashboard/ResourceUtilization";
-import DetailedMetrics from "@/components/dashboard/DetailedMetrics";
-import AlertWidget from "@/components/dashboard/AlertWidget";
-import { useSocket } from "@/hooks/useSocket";
+import { useState, useEffect } from 'react';
 
 export default function Dashboard() {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [lastUpdate, setLastUpdate] = useState<Date>(new Date());
-  const [isRefreshing, setIsRefreshing] = useState(false);
-  const { isConnected, lastMessage } = useSocket();
+  const [currentTime, setCurrentTime] = useState(new Date());
 
-  // Update timestamp on new messages
   useEffect(() => {
-    if (lastMessage) {
-      setLastUpdate(new Date());
-    }
-  }, [lastMessage]);
-
-  const handleRefresh = () => {
-    setIsRefreshing(true);
-    setTimeout(() => {
-      setLastUpdate(new Date());
-      setIsRefreshing(false);
+    const timer = setInterval(() => {
+      setCurrentTime(new Date());
     }, 1000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const mockData = {
+    systemHealth: 'OPERATIONAL',
+    activeSessions: 42,
+    costPerHour: 3.51,
+    totalCost: 42.00,
+    uptime: '99.8%',
+    responseTime: '145ms',
+    localAI: {
+      model: 'QWEN_2.5_7B',
+      status: 'ONLINE',
+      savings: '$150-300/mo',
+      tasksProcessed: 127
+    },
+    projects: [
+      { name: 'CMD_CENTER', status: 'LIVE', progress: 100, time: '12:25' },
+      { name: 'DONOTAGE', status: 'DELIVERED', progress: 100, time: '11:45' },
+      { name: 'LM_STUDIO', status: 'ACTIVE', progress: 100, time: '12:09' },
+      { name: 'CEO_SIM', status: 'READY', progress: 85, time: '11:30' },
+      { name: 'GEO_REBUILD', status: 'HIRING', progress: 75, time: '12:26' },
+    ],
+    alerts: [
+      { type: 'SUCCESS', message: 'GEO_TEAM_ASSEMBLING', time: '12:26' },
+      { type: 'SUCCESS', message: 'LOCAL_AI_DEPLOYED', time: '12:09' },
+      { type: 'WARNING', message: 'SESSION_COST_$42', time: '12:23' },
+    ],
+    metrics: {
+      totalDeliverables: 5,
+      completedToday: 3,
+      costsOptimized: '60-80%',
+      teamSize: 5
+    }
   };
 
-  const getTimeAgo = () => {
-    const seconds = Math.floor((Date.now() - lastUpdate.getTime()) / 1000);
-    if (seconds < 60) return `${seconds}s ago`;
-    const minutes = Math.floor(seconds / 60);
-    return `${minutes}m ago`;
+  const getStatusColor = (status: string) => {
+    switch (status) {
+      case 'LIVE':
+      case 'DELIVERED': 
+      case 'ACTIVE':
+        return 'status-green';
+      case 'READY':
+      case 'HIRING':
+        return 'status-yellow';
+      default:
+        return 'text-muted-foreground';
+    }
   };
 
   return (
-    <div className="min-h-screen bg-slate-50">
-      {/* Top Navigation */}
-      <header className="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-sm">
-        <div className="flex items-center justify-between h-16 px-4 lg:px-6">
-          {/* Left: Mobile menu + Logo */}
-          <div className="flex items-center gap-4">
-            <button
-              onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-              className="lg:hidden p-2 text-slate-600 hover:bg-slate-100 rounded-lg"
-            >
-              {isSidebarOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-primary-navy rounded-lg flex items-center justify-center">
-                <Zap className="w-5 h-5 text-white" />
-              </div>
-              <h1 className="text-xl font-bold text-slate-900">
-                Command Center
-              </h1>
-            </div>
-          </div>
-
-          {/* Center: Connection Status */}
-          <div className="hidden md:flex items-center gap-2">
-            <div className={`w-2 h-2 rounded-full ${isConnected ? 'bg-green-500' : 'bg-red-500'} animate-pulse"`} />
-            <span className="text-sm text-slate-600">
-              {isConnected ? "Connected" : "Disconnected"}
-            </span>
-          </div>
-
-          {/* Right: Actions */}
-          <div className="flex items-center gap-3">
-            <button
-              onClick={handleRefresh}
-              disabled={isRefreshing}
-              className="flex items-center gap-2 px-3 py-1.5 text-sm text-slate-600 hover:bg-slate-100 rounded-lg transition-colors"
-            >
-              <RefreshCw className={`w-4 h-4 ${isRefreshing ? 'animate-spin' : ''}`} />
-              <span className="hidden sm:inline">Updated {getTimeAgo()}</span>
-            </button>
-            <button className="relative p-2 text-slate-600 hover:bg-slate-100 rounded-lg">
-              <Bell className="w-5 h-5" />
-              <span className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full" />
-            </button>
-            <div className="flex items-center gap-2 px-3 py-1.5 bg-slate-100 rounded-lg">
-              <div className="w-8 h-8 bg-primary-navy rounded-full flex items-center justify-center">
-                <span className="text-white text-sm font-semibold">C</span>
-              </div>
-              <span className="hidden sm:block text-sm font-medium text-slate-700">CEO</span>
-            </div>
-            <button className="p-2 text-slate-600 hover:bg-slate-100 rounded-lg">
-              <Settings className="w-5 h-5" />
-            </button>
+    <div className="min-h-screen bg-background p-2 font-mono text-xs">
+      {/* Compact Header */}
+      <div className="flex justify-between items-center mb-3 pb-1 border-b border-border">
+        <div className="flex items-center space-x-4">
+          <h1 className="text-sm font-medium text-accent">COMMAND_CENTER</h1>
+          <div className="text-xs text-muted-foreground">
+            OPENCLAW_v1.0
           </div>
         </div>
-      </header>
+        <div className="text-xs text-muted-foreground font-mono">
+          {currentTime.toISOString().substr(11, 8)} GMT+1
+        </div>
+      </div>
 
-      {/* Main Content */}
-      <div className="flex">
-        {/* Sidebar (Desktop) */}
-        <aside className="hidden lg:block w-64 border-r border-slate-200 bg-white min-h-[calc(100vh-64px)]">
-          <nav className="p-4 space-y-2">
-            {[
-              { icon: Zap, label: "Dashboard", active: true },
-              { icon: TrendingUp, label: "Analytics", active: false },
-              { icon: Users, label: "Team", active: false },
-              { icon: AlertCircle, label: "Alerts", active: false },
-              { icon: Shield, label: "Security", active: false },
-            ].map((item) => (
-              <button
-                key={item.label}
-                className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-lg transition-colors ${
-                  item.active
-                    ? "bg-primary-navy text-white"
-                    : "text-slate-600 hover:bg-slate-100"
-                }`}
-              >
-                <item.icon className="w-5 h-5" />
-                <span className="font-medium">{item.label}</span>
-              </button>
-            ))}
-          </nav>
-        </aside>
-
-        {/* Mobile Sidebar */}
-        {isSidebarOpen && (
-          <div className="lg:hidden fixed inset-0 z-40">
-            <div
-              className="absolute inset-0 bg-black/50"
-              onClick={() => setIsSidebarOpen(false)}
-            />
-            <motion.aside
-              initial={{ x: -256 }}
-              animate={{ x: 0 }}
-              exit={{ x: -256 }}
-              className="relative w-64 h-full bg-white border-r border-slate-200"
-            >
-              <nav className="p-4 space-y-2">
-                {[
-                  { icon: Zap, label: "Dashboard", active: true },
-                  { icon: TrendingUp, label: "Analytics", active: false },
-                  { icon: Users, label: "Team", active: false },
-                  { icon: AlertCircle, label: "Alerts", active: false },
-                  { icon: Shield, label: "Security", active: false },
-                ].map((item) => (
-                  <button
-                    key={item.label}
-                    className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-lg transition-colors ${
-                      item.active
-                        ? "bg-primary-navy text-white"
-                        : "text-slate-600 hover:bg-slate-100"
-                    }`}
-                  >
-                    <item.icon className="w-5 h-5" />
-                    <span className="font-medium">{item.label}</span>
-                  </button>
-                ))}
-              </nav>
-            </motion.aside>
+      <div className="grid grid-cols-16 gap-2">
+        {/* System Status - Compact */}
+        <div className="col-span-4 dashboard-card">
+          <div className="dashboard-subheader mb-2">SYSTEM</div>
+          <div className="space-y-1">
+            <div className="flex justify-between">
+              <span>STATUS</span>
+              <span className="status-green">OPERATIONAL</span>
+            </div>
+            <div className="flex justify-between">
+              <span>UPTIME</span>
+              <span>{mockData.uptime}</span>
+            </div>
+            <div className="flex justify-between">
+              <span>LATENCY</span>
+              <span>{mockData.responseTime}</span>
+            </div>
           </div>
-        )}
+        </div>
 
-        {/* Dashboard Content */}
-        <main className="flex-1 p-4 lg:p-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3 }}
-            className="space-y-6"
-          >
-            {/* Executive Overview */}
-            <ExecutiveOverview />
-
-            {/* Secondary Metrics Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-              <RealTimeMetrics />
-              <ProjectStatus />
-              <ResourceUtilization />
+        {/* Sessions - More Detail */}
+        <div className="col-span-4 dashboard-card">
+          <div className="dashboard-subheader mb-2">SESSIONS</div>
+          <div className="space-y-1">
+            <div className="flex justify-between">
+              <span>ACTIVE</span>
+              <span className="metric-value text-sm">{mockData.activeSessions}</span>
             </div>
-
-            {/* Detailed Metrics */}
-            <DetailedMetrics />
-
-            {/* Alerts */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-              <div className="lg:col-span-2">
-                <AlertWidget />
-              </div>
-              <div className="lg:col-span-1">
-                <div className="bg-white rounded-lg border border-slate-200 p-6 h-full">
-                  <h3 className="font-semibold text-slate-900 mb-4">Quick Actions</h3>
-                  <div className="space-y-2">
-                    {[
-                      "Export Dashboard Data",
-                      "View System Logs",
-                      "Configure Alerts",
-                      "Manage Users",
-                    ].map((action) => (
-                      <button
-                        key={action}
-                        className="w-full text-left px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-lg transition-colors"
-                      >
-                        {action}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              </div>
+            <div className="flex justify-between">
+              <span>COST/HR</span>
+              <span className="status-yellow">${mockData.costPerHour}</span>
             </div>
-          </motion.div>
-        </main>
+            <div className="flex justify-between">
+              <span>TOTAL</span>
+              <span className="status-red">${mockData.totalCost}</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Local AI - Enhanced */}
+        <div className="col-span-4 dashboard-card">
+          <div className="dashboard-subheader mb-2">LOCAL_AI</div>
+          <div className="space-y-1">
+            <div className="flex justify-between">
+              <span>MODEL</span>
+              <span className="status-green">{mockData.localAI.model}</span>
+            </div>
+            <div className="flex justify-between">
+              <span>STATUS</span>
+              <span className="status-green">{mockData.localAI.status}</span>
+            </div>
+            <div className="flex justify-between">
+              <span>SAVINGS</span>
+              <span className="status-green">{mockData.localAI.savings}</span>
+            </div>
+            <div className="flex justify-between">
+              <span>TASKS</span>
+              <span>{mockData.localAI.tasksProcessed}</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Quick Metrics */}
+        <div className="col-span-4 dashboard-card">
+          <div className="dashboard-subheader mb-2">TODAY</div>
+          <div className="space-y-1">
+            <div className="flex justify-between">
+              <span>DELIVERED</span>
+              <span className="metric-value text-sm">{mockData.metrics.completedToday}</span>
+            </div>
+            <div className="flex justify-between">
+              <span>TOTAL</span>
+              <span>{mockData.metrics.totalDeliverables}</span>
+            </div>
+            <div className="flex justify-between">
+              <span>OPTIMIZED</span>
+              <span className="status-green">{mockData.metrics.costsOptimized}</span>
+            </div>
+            <div className="flex justify-between">
+              <span>TEAM</span>
+              <span>{mockData.metrics.teamSize}</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Projects - Compact Table */}
+        <div className="col-span-10 dashboard-card">
+          <div className="dashboard-subheader mb-2">PROJECTS</div>
+          <table className="compact-table">
+            <thead>
+              <tr>
+                <th className="w-1/3">NAME</th>
+                <th className="w-1/4">STATUS</th>
+                <th className="w-1/4 text-right">PROGRESS</th>
+                <th className="w-1/4 text-right">TIME</th>
+              </tr>
+            </thead>
+            <tbody>
+              {mockData.projects.map((project, i) => (
+                <tr key={i}>
+                  <td className="font-medium">{project.name}</td>
+                  <td>
+                    <span className={`${getStatusColor(project.status)}`}>
+                      {project.status}
+                    </span>
+                  </td>
+                  <td className="text-right">
+                    <span>{project.progress}%</span>
+                  </td>
+                  <td className="text-right text-muted-foreground">
+                    {project.time}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        {/* Alerts - Compact */}
+        <div className="col-span-6 dashboard-card">
+          <div className="dashboard-subheader mb-2">ALERTS</div>
+          <div className="space-y-1">
+            {mockData.alerts.map((alert, i) => (
+              <div key={i} className="flex justify-between">
+                <span className={`${
+                  alert.type === 'SUCCESS' ? 'status-green' :
+                  alert.type === 'WARNING' ? 'status-yellow' :
+                  alert.type === 'ERROR' ? 'status-red' :
+                  'text-muted-foreground'
+                } flex-1 mr-2 text-xs`}>
+                  {alert.message}
+                </span>
+                <span className="text-muted-foreground text-xs">{alert.time}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Compact Footer */}
+      <div className="mt-3 pt-1 border-t border-border text-xs text-muted-foreground">
+        <div className="flex justify-between items-center">
+          <span>5_MAJOR_DELIVERABLES_TODAY • COST_OPTIMIZED_60-80% • LOCAL_AI_ACTIVE</span>
+          <span>LAST_UPDATE: {currentTime.toTimeString().split(' ')[0]}</span>
+        </div>
       </div>
     </div>
   );
