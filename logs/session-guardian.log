@@ -70,3 +70,9 @@
 [2026-02-13T15:08:15.084Z] Found 0 active sessions
 [2026-02-13T15:08:15.084Z] No active sessions found
 [2026-02-13T15:08:15.085Z] Scan complete - all sessions healthy
+[2026-02-13T15:23:13.773Z] Session Guardian starting...
+[2026-02-13T15:23:13.775Z] 🛡️ Session Guardian scan initiated
+[2026-02-13T15:23:13.775Z] Fetching active sessions...
+[2026-02-13T15:23:15.675Z] Found 0 active sessions
+[2026-02-13T15:23:15.675Z] No active sessions found
+[2026-02-13T15:23:15.675Z] Scan complete - all sessions healthy

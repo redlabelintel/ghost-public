@@ -897,6 +897,7 @@
                 
                 updateRealMetrics();
                 loadRealSessionData(); // Load actual session list
+                updateCriticalMonitoring(); // Update critical panel with real data
                 
             } catch (error) {
                 log(`Failed to load real workspace data: ${error.message}`, 'error');
@@ -932,31 +933,56 @@
             }
         }
         
-        // Update critical monitoring panel with real session data
-        function updateCriticalMonitoring() {
-            // Get real session count (start with 867, reduce when cleanup occurs)
-            let currentSessions = parseInt(document.getElementById('critical-total-sessions').textContent) || 867;
-            
-            // Check if we've done cleanup (look for cleanup log messages)
-            const logContent = document.getElementById('log').innerHTML;
-            if (logContent.includes('AGGRESSIVE CLEANUP COMPLETE') || logContent.includes('Killing Opus session')) {
-                // Reduce session count if cleanup occurred
-                currentSessions = Math.max(currentSessions - Math.floor(Math.random() * 50 + 20), 400);
-                document.getElementById('context-limit-warnings').textContent = 'REDUCED';
-                document.getElementById('old-session-count').textContent = Math.max(parseInt(document.getElementById('old-session-count').textContent || 200) - 50, 50);
-                document.getElementById('expensive-session-count').textContent = Math.max(parseInt(document.getElementById('expensive-session-count').textContent || 15) - 5, 5);
-            }
-            
-            document.getElementById('critical-total-sessions').textContent = currentSessions;
-            
-            // Color coding based on session count
-            const sessionElement = document.getElementById('critical-total-sessions');
-            if (currentSessions > 500) {
-                sessionElement.style.color = '#ff0000'; // Red for critical
-            } else if (currentSessions > 200) {
-                sessionElement.style.color = '#ff8800'; // Orange for warning
-            } else {
-                sessionElement.style.color = '#008800'; // Green for good
+        // Update critical monitoring panel with REAL session data
+        async function updateCriticalMonitoring() {
+            try {
+                const sessions = await realApiCall('/sessions/list');
+                if (sessions.success && sessions.sessions) {
+                    const totalSessions = sessions.sessions.length;
+                    let highContextCount = 0;
+                    let oldSessionCount = 0;
+                    let expensiveSessionCount = 0;
+                    let mainSessionAtMax = false;
+                    
+                    const now = Date.now();
+                    
+                    sessions.sessions.forEach(session => {
+                        // Context percentage check
+                        const contextPercent = (session.contextTokens || 0) / (session.maxTokens || 200000) * 100;
+                        if (contextPercent > 80) highContextCount++;
+                        if (session.key === 'agent:main:main' && contextPercent > 95) mainSessionAtMax = true;
+                        
+                        // Age check (>8 hours)
+                        if (session.updatedAt && (now - session.updatedAt) > 8 * 60 * 60 * 1000) {
+                            oldSessionCount++;
+                        }
+                        
+                        // Cost check (rough estimate)
+                        if (session.model && session.model.includes('claude') && contextPercent > 50) {
+                            expensiveSessionCount++;
+                        }
+                    });
+                    
+                    // Update display with real data
+                    document.getElementById('critical-total-sessions').textContent = totalSessions;
+                    document.getElementById('context-limit-warnings').textContent = mainSessionAtMax ? 'MAIN 100%' : `${highContextCount} HIGH`;
+                    document.getElementById('old-session-count').textContent = oldSessionCount;
+                    document.getElementById('expensive-session-count').textContent = expensiveSessionCount;
+                    
+                    // Color coding based on real session count
+                    const sessionElement = document.getElementById('critical-total-sessions');
+                    if (totalSessions > 100) {
+                        sessionElement.style.color = '#ff0000'; // Red for critical
+                    } else if (totalSessions > 50) {
+                        sessionElement.style.color = '#ff8800'; // Orange for warning  
+                    } else {
+                        sessionElement.style.color = '#008800'; // Green for good
+                    }
+                    
+                    log(`Critical monitoring updated: ${totalSessions} sessions, ${highContextCount} high context`, 'real');
+                }
+            } catch (error) {
+                log(`Critical monitoring update failed: ${error.message}`, 'error');
             }
         }
 
