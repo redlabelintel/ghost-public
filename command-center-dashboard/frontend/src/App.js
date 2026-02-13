@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import ExecutiveControlPanel from './components/ExecutiveControlPanel';
+import MinimalControlPanel from './components/MinimalControlPanel';
 
 function App() {
   return (
     <div className="App">
-      <ExecutiveControlPanel />
+      <MinimalControlPanel />
     </div>
   );
 }
