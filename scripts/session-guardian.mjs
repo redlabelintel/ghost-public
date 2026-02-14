@@ -8,7 +8,6 @@
 import { execSync } from 'child_process';
 import fs from 'fs';
 import path from 'path';
-import http from 'http';
 
 // Configuration
 const CONFIG = {
@@ -93,77 +92,67 @@ function estimateCost(tokens, model = 'claude-sonnet-4') {
   return (tokens / 1000) * rate;
 }
 
-// Check main session status via OpenClaw gateway
-async function checkMainSession() {
-  return new Promise((resolve) => {
-    const options = {
-      hostname: '127.0.0.1',
-      port: 18789,
-      path: '/api/v1/status',
-      method: 'GET',
-      timeout: 5000
-    };
-
-    const req = http.request(options, (res) => {
-      let data = '';
-      res.on('data', chunk => data += chunk);
-      res.on('end', () => {
-        try {
-          const status = JSON.parse(data);
-          const session = status.session;
-          
-          if (session && session.contextWindow && session.contextWindow.max > 0) {
-            const used = session.contextWindow.used || 0;
-            const max = session.contextWindow.max;
-            const percentage = (used / max);
-            const tokens = session.tokens?.total || 0;
-            
-            log(`Main session context: ${used}/${max} (${(percentage * 100).toFixed(1)}%)`);
-            
-            const result = {
-              id: 'main:current',
-              tokens: tokens,
-              contextUsed: used,
-              contextMax: max,
-              contextPercent: percentage,
-              isMainSession: true
-            };
-            
-            // Check thresholds
-            if (percentage >= CONFIG.CONTEXT_KILL) {
-              result.critical = true;
-              result.reason = `CONTEXT_CRITICAL: ${(percentage * 100).toFixed(1)}% >= ${(CONFIG.CONTEXT_KILL * 100)}%`;
-              log(`🚨 CRITICAL: Main session context at ${(percentage * 100).toFixed(1)}%`);
-            } else if (percentage >= CONFIG.CONTEXT_WARNING) {
-              result.warning = true;
-              result.reason = `CONTEXT_WARNING: ${(percentage * 100).toFixed(1)}% >= ${(CONFIG.CONTEXT_WARNING * 100)}%`;
-              log(`⚠️ WARNING: Main session context at ${(percentage * 100).toFixed(1)}%`);
-            }
-            
-            resolve(result);
-          } else {
-            resolve(null);
-          }
-        } catch (e) {
-          log(`Failed to parse status: ${e.message}`);
-          resolve(null);
+// Check main session status via OpenClaw CLI
+function checkMainSession() {
+  try {
+    log('Checking main session status...');
+    const output = execSync('openclaw status', { 
+      encoding: 'utf8',
+      timeout: 10000 
+    });
+    
+    // Parse context from status output - look for main session line
+    // Example line: "│ agent:main:main                                   │ direct │ 2m ago  │ moonshotai/kimi-k2.5      │ 256k/256k (100%) │"
+    const lines = output.split('\n');
+    let mainSessionLine = null;
+    
+    for (const line of lines) {
+      if (line.includes('agent:main:main') && line.includes('direct')) {
+        mainSessionLine = line;
+        break;
+      }
+    }
+    
+    if (mainSessionLine) {
+      // Extract context info: 256k/256k (100%)
+      const contextMatch = mainSessionLine.match(/(\d+)k\/(\d+)k\s*\((\d+)%\)/);
+      
+      if (contextMatch) {
+        const used = parseInt(contextMatch[1]) * 1000;  // Convert k to actual
+        const max = parseInt(contextMatch[2]) * 1000;
+        const percentage = parseInt(contextMatch[3]) / 100;
+        
+        log(`Main session context: ${contextMatch[1]}k/${contextMatch[2]}k (${contextMatch[3]}%)`);
+        
+        const result = {
+          id: 'main:current',
+          tokens: used,
+          contextUsed: used,
+          contextMax: max,
+          contextPercent: percentage,
+          isMainSession: true
+        };
+        
+        // Check thresholds
+        if (percentage >= CONFIG.CONTEXT_KILL) {
+          result.critical = true;
+          result.reason = `CONTEXT_CRITICAL: ${(percentage * 100).toFixed(0)}% >= ${(CONFIG.CONTEXT_KILL * 100)}%`;
+          log(`🚨 CRITICAL: Main session context at ${(percentage * 100).toFixed(0)}% - RESTART REQUIRED`);
+        } else if (percentage >= CONFIG.CONTEXT_WARNING) {
+          result.warning = true;
+          result.reason = `CONTEXT_WARNING: ${(percentage * 100).toFixed(0)}% >= ${(CONFIG.CONTEXT_WARNING * 100)}%`;
+          log(`⚠️ WARNING: Main session context at ${(percentage * 100).toFixed(0)}%`);
         }
-      });
-    });
-
-    req.on('error', (err) => {
-      log(`Status check failed: ${err.message}`);
-      resolve(null);
-    });
-
-    req.on('timeout', () => {
-      log('Status check timeout');
-      req.destroy();
-      resolve(null);
-    });
-
-    req.end();
-  });
+        
+        return result;
+      }
+    }
+    
+    return null;
+  } catch (error) {
+    log(`Failed to check main session: ${error.message}`);
+    return null;
+  }
 }
 
 function parseSessionsList() {
@@ -299,7 +288,7 @@ async function runGuardianScan() {
   
   // Check main session first
   try {
-    const mainSession = await checkMainSession();
+    const mainSession = checkMainSession();
     if (mainSession) {
       stats.mainSessionAlert = mainSession;
       
