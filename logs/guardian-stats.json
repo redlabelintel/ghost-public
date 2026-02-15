@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-15T05:53:18.842Z",
+  "timestamp": "2026-02-15T06:53:11.594Z",
   "totalSessions": 0,
   "protectedSessions": 0,
   "killedSessions": 0,
@@ -8,10 +8,10 @@
   "sessionsAnalyzed": [],
   "mainSessionAlert": {
     "id": "main:current",
-    "tokens": 99000,
-    "contextUsed": 99000,
+    "tokens": 117000,
+    "contextUsed": 117000,
     "contextMax": 256000,
-    "contextPercent": 0.39,
+    "contextPercent": 0.46,
     "isMainSession": true
   }
 }
