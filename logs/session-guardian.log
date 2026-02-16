@@ -1437,3 +1437,39 @@
 [2026-02-16T14:23:41.519Z] Found 0 active sessions
 [2026-02-16T14:23:41.520Z] No active sessions found
 [2026-02-16T14:23:41.520Z] Scan complete - all sessions healthy
+[2026-02-16T15:08:27.764Z] Session Guardian starting...
+[2026-02-16T15:08:27.766Z] 🛡️ Session Guardian scan initiated
+[2026-02-16T15:08:27.766Z] Checking main session status...
+[2026-02-16T15:08:30.359Z] Main session context: 107k/131k (81%)
+[2026-02-16T15:08:30.359Z] ⚠️ WARNING: Main session context at 81%
+[2026-02-16T15:08:30.359Z] ⚠️ MAIN SESSION WARNING: CONTEXT_WARNING: 81% >= 80%
+[2026-02-16T15:08:30.360Z] Fetching active sessions...
+[2026-02-16T15:08:31.010Z] Found 0 active sessions
+[2026-02-16T15:08:31.010Z] No active sessions found
+[2026-02-16T15:08:31.010Z] Scan complete - all sessions healthy
+[2026-02-16T15:23:29.988Z] Session Guardian starting...
+[2026-02-16T15:23:29.990Z] 🛡️ Session Guardian scan initiated
+[2026-02-16T15:23:29.990Z] Checking main session status...
+[2026-02-16T15:23:31.908Z] Main session context: 103k/131k (79%)
+[2026-02-16T15:23:31.908Z] Fetching active sessions...
+[2026-02-16T15:23:32.583Z] Found 0 active sessions
+[2026-02-16T15:23:32.583Z] No active sessions found
+[2026-02-16T15:23:32.583Z] Scan complete - all sessions healthy
+[2026-02-16T15:38:19.489Z] Session Guardian starting...
+[2026-02-16T15:38:19.491Z] 🛡️ Session Guardian scan initiated
+[2026-02-16T15:38:19.491Z] Checking main session status...
+[2026-02-16T15:38:21.010Z] Main session context: 96k/131k (73%)
+[2026-02-16T15:38:21.010Z] Fetching active sessions...
+[2026-02-16T15:38:21.674Z] Found 0 active sessions
+[2026-02-16T15:38:21.674Z] No active sessions found
+[2026-02-16T15:38:21.674Z] Scan complete - all sessions healthy
+[2026-02-16T15:53:19.614Z] Session Guardian starting...
+[2026-02-16T15:53:19.616Z] 🛡️ Session Guardian scan initiated
+[2026-02-16T15:53:19.616Z] Checking main session status...
+[2026-02-16T15:53:22.363Z] Main session context: 111k/131k (85%)
+[2026-02-16T15:53:22.364Z] ⚠️ WARNING: Main session context at 85%
+[2026-02-16T15:53:22.364Z] ⚠️ MAIN SESSION WARNING: CONTEXT_WARNING: 85% >= 80%
+[2026-02-16T15:53:22.364Z] Fetching active sessions...
+[2026-02-16T15:53:23.018Z] Found 0 active sessions
+[2026-02-16T15:53:23.019Z] No active sessions found
+[2026-02-16T15:53:23.019Z] Scan complete - all sessions healthy
