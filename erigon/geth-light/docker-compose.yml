@@ -13,6 +13,7 @@ services:
     command: >
       --sepolia
       --syncmode=snap
+      --checkpoint=https://sepolia.beaconstate.ethstaker.cc
       --http
       --http.addr=0.0.0.0
       --http.port=8545
