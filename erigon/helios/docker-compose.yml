@@ -1,0 +1,28 @@
+services:
+  # Helios Light Client - Sepolia
+  helios-sepolia:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: helios-sepolia
+    restart: unless-stopped
+    ports:
+      - "8545:8545"  # HTTP RPC
+    environment:
+      - RUST_LOG=info
+      - ETH_RPC_URL=${ETH_RPC_URL:-https://ethereum-sepolia.publicnode.com}
+    command: >
+      ethereum
+      --execution-rpc ${ETH_RPC_URL:-https://ethereum-sepolia.publicnode.com}
+      --rpc-port 8545
+      --rpc-bind-ip 0.0.0.0
+    networks:
+      - helios
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+
+networks:
+  helios:
+    driver: bridge

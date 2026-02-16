@@ -1,0 +1,34 @@
+services:
+  # Geth Light Client - Sepolia
+  geth-sepolia:
+    image: ethereum/client-go:stable
+    container_name: geth-sepolia
+    restart: unless-stopped
+    ports:
+      - "8545:8545"  # HTTP RPC
+      - "30303:30303/tcp"  # P2P
+      - "30303:30303/udp"
+    volumes:
+      - ./data:/root/.ethereum
+    command: >
+      --sepolia
+      --syncmode=snap
+      --http
+      --http.addr=0.0.0.0
+      --http.port=8545
+      --http.api=eth,net,web3
+      --http.corsdomain=*
+      --http.vhosts=*
+      --authrpc.addr=0.0.0.0
+      --authrpc.port=8551
+      --authrpc.vhosts=*
+    networks:
+      - geth
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+
+networks:
+  geth:
+    driver: bridge
