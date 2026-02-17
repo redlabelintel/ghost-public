@@ -42,3 +42,37 @@
 19:43:28.479368 table@compaction committed F-1 S-396KiB Ke·0 D·26553 T·40.532292ms
 19:43:28.479804 table@remove removed @10
 19:43:28.480035 table@remove removed @8
+=============== Feb 17, 2026 (UTC) ===============
+02:51:36.674872 memdb@flush N·34663 S·3MiB
+02:51:36.722518 memdb@flush created L0@13 N·34663 S·675KiB "n:\x00..ail,v61450":"n:\xff..ail,v75270"
+02:51:36.722612 version@stat F·[1 1] S·1MiB[675KiB 901KiB] Sc·[0.25 0.01]
+02:51:36.723224 memdb@flush committed F·1 T·48.144208ms
+02:51:36.723641 journal@remove removed @9
+02:52:02.213270 table@compaction L0·1 -> L1·1 S·1MiB Q·89027
+02:52:02.260117 table@build created L1@14 N·29204 S·1MiB "loc..seq,v12102":"version,v1"
+02:52:02.260215 version@stat F·[0 1] S·1MiB[0B 1MiB] Sc·[0.00 0.01]
+02:52:02.260576 table@compaction committed F-1 S-544KiB Ke·0 D·30670 T·46.956ms
+02:52:02.260853 table@remove removed @13
+02:52:02.261376 table@remove removed @11
+09:58:58.379225 memdb@flush N·34467 S·3MiB
+09:58:58.425490 memdb@flush created L0@16 N·34467 S·670KiB "n:\x00..:v4,v122146":"n:\xff..ail,v92908"
+09:58:58.425579 version@stat F·[1 1] S·1MiB[670KiB 1MiB] Sc·[0.25 0.01]
+09:58:58.426219 memdb@flush committed F·1 T·46.462375ms
+09:58:58.426657 journal@remove removed @12
+10:05:17.200993 table@compaction L0·1 -> L1·1 S·1MiB Q·123933
+10:05:17.253965 table@build created L1@17 N·33016 S·1MiB "loc..seq,v12102":"version,v1"
+10:05:17.254035 version@stat F·[0 1] S·1MiB[0B 1MiB] Sc·[0.00 0.01]
+10:05:17.254471 table@compaction committed F-1 S-547KiB Ke·0 D·30655 T·49.554792ms
+10:05:17.254718 table@remove removed @16
+10:05:17.255081 table@remove removed @14
+15:27:28.514682 memdb@flush N·40467 S·3MiB
+15:27:28.562062 memdb@flush created L0@19 N·40467 S·878KiB "n:\x00..:v4,v130669":"n:\xff..ong,d150115"
+15:27:28.562158 version@stat F·[1 1] S·1MiB[878KiB 1MiB] Sc·[0.25 0.01]
+15:27:28.562697 memdb@flush committed F·1 T·47.480666ms
+15:27:28.563064 journal@remove removed @15
+15:29:40.922706 table@compaction L0·1 -> L1·1 S·1MiB Q·164107
+15:29:40.966962 table@build created L1@20 N·22059 S·895KiB "loc..seq,v12102":"version,v1"
+15:29:40.967034 version@stat F·[0 1] S·895KiB[0B 895KiB] Sc·[0.00 0.01]
+15:29:40.967361 table@compaction committed F-1 S-1MiB Ke·0 D·51424 T·44.261375ms
+15:29:40.967596 table@remove removed @19
+15:29:40.968030 table@remove removed @17

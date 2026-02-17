@@ -56,6 +56,35 @@ EOF
 - Quick emails without opening Gmail web interface
 - Programmatic email sending from scripts
 
+## DUPLICATE PROTECTION
+
+**CRITICAL RULE: Only ONE email per request**
+
+### Protection System
+
+The email service now includes duplicate prevention:
+
+1. **24-hour window**: Cannot send duplicate emails to same recipient with similar subject/content within 24 hours
+2. **Hash tracking**: Each email is hashed and stored in `.email-tracker.json`
+3. **Automatic blocking**: Duplicate attempts are rejected with error message
+
+### Safe Send Script (Use This)
+
+```bash
+node /Users/ghost/.openclaw/workspace/scripts/safe-email-send.mjs \
+  "recipient@example.com" \
+  "Subject Line" \
+  /path/to/body.txt
+```
+
+This script:
+- ✅ Checks for duplicates first
+- ✅ Sends only if unique
+- ✅ Records successful sends
+- ✅ Prevents accidental duplicates
+
+**NEVER send raw emails multiple times. Always use the safe wrapper.**
+
 ## Limitations
 
 - Gmail daily sending limits apply (500 emails/day for personal accounts)
@@ -63,4 +92,5 @@ EOF
 - HTML emails require MIME formatting
 
 ---
-*Locked in: February 17, 2026*
+*Locked in: February 17, 2026*  
+*Duplicate protection added: February 17, 2026*
