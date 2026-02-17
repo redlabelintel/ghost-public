@@ -1,7 +1,9 @@
 [SESSION GUARDIAN] Session Guardian starting...
 [SESSION GUARDIAN] 🛡️ Session Guardian scan initiated
 [SESSION GUARDIAN] Checking main session status...
-[SESSION GUARDIAN] Main session context: 39k/131k (30%)
+[SESSION GUARDIAN] Main session context: 170k/131k (130%)
+[SESSION GUARDIAN] 🚨 CRITICAL: Main session context at 130% - RESTART REQUIRED
+[SESSION GUARDIAN] 🚨 MAIN SESSION CRITICAL: CONTEXT_CRITICAL: 130% >= 95%
 [SESSION GUARDIAN] Fetching active sessions...
 [SESSION GUARDIAN] Found 0 active sessions
 [SESSION GUARDIAN] No active sessions found

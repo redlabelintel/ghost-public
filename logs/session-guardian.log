@@ -1759,3 +1759,43 @@
 [2026-02-16T23:53:20.755Z] Found 0 active sessions
 [2026-02-16T23:53:20.755Z] No active sessions found
 [2026-02-16T23:53:20.756Z] Scan complete - all sessions healthy
+[2026-02-17T00:09:07.202Z] Session Guardian starting...
+[2026-02-17T00:09:07.204Z] 🛡️ Session Guardian scan initiated
+[2026-02-17T00:09:07.204Z] Checking main session status...
+[2026-02-17T00:09:09.629Z] Main session context: 151k/131k (115%)
+[2026-02-17T00:09:09.629Z] 🚨 CRITICAL: Main session context at 115% - RESTART REQUIRED
+[2026-02-17T00:09:09.629Z] 🚨 MAIN SESSION CRITICAL: CONTEXT_CRITICAL: 115% >= 95%
+[2026-02-17T00:09:09.629Z] Fetching active sessions...
+[2026-02-17T00:09:10.276Z] Found 0 active sessions
+[2026-02-17T00:09:10.277Z] No active sessions found
+[2026-02-17T00:09:10.277Z] Scan complete - all sessions healthy
+[2026-02-17T00:23:22.716Z] Session Guardian starting...
+[2026-02-17T00:23:22.719Z] 🛡️ Session Guardian scan initiated
+[2026-02-17T00:23:22.719Z] Checking main session status...
+[2026-02-17T00:23:25.093Z] Main session context: 143k/131k (109%)
+[2026-02-17T00:23:25.094Z] 🚨 CRITICAL: Main session context at 109% - RESTART REQUIRED
+[2026-02-17T00:23:25.094Z] 🚨 MAIN SESSION CRITICAL: CONTEXT_CRITICAL: 109% >= 95%
+[2026-02-17T00:23:25.094Z] Fetching active sessions...
+[2026-02-17T00:23:25.749Z] Found 0 active sessions
+[2026-02-17T00:23:25.749Z] No active sessions found
+[2026-02-17T00:23:25.749Z] Scan complete - all sessions healthy
+[2026-02-17T00:24:41.353Z] Session Guardian starting...
+[2026-02-17T00:24:41.355Z] 🛡️ Session Guardian scan initiated
+[2026-02-17T00:24:41.355Z] Checking main session status...
+[2026-02-17T00:24:42.792Z] Main session context: 143k/131k (109%)
+[2026-02-17T00:24:42.792Z] 🚨 CRITICAL: Main session context at 109% - RESTART REQUIRED
+[2026-02-17T00:24:42.792Z] 🚨 MAIN SESSION CRITICAL: CONTEXT_CRITICAL: 109% >= 95%
+[2026-02-17T00:24:42.792Z] Fetching active sessions...
+[2026-02-17T00:24:43.456Z] Found 0 active sessions
+[2026-02-17T00:24:43.456Z] No active sessions found
+[2026-02-17T00:24:43.456Z] Scan complete - all sessions healthy
+[2026-02-17T00:53:22.062Z] Session Guardian starting...
+[2026-02-17T00:53:22.065Z] 🛡️ Session Guardian scan initiated
+[2026-02-17T00:53:22.065Z] Checking main session status...
+[2026-02-17T00:53:24.810Z] Main session context: 170k/131k (130%)
+[2026-02-17T00:53:24.811Z] 🚨 CRITICAL: Main session context at 130% - RESTART REQUIRED
+[2026-02-17T00:53:24.811Z] 🚨 MAIN SESSION CRITICAL: CONTEXT_CRITICAL: 130% >= 95%
+[2026-02-17T00:53:24.811Z] Fetching active sessions...
+[2026-02-17T00:53:25.458Z] Found 0 active sessions
+[2026-02-17T00:53:25.459Z] No active sessions found
+[2026-02-17T00:53:25.459Z] Scan complete - all sessions healthy
