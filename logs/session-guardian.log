@@ -2336,3 +2336,11 @@
 [2026-02-17T18:08:16.982Z] Found 0 active sessions
 [2026-02-17T18:08:16.982Z] No active sessions found
 [2026-02-17T18:08:16.982Z] Scan complete - all sessions healthy
+[2026-02-17T18:23:58.748Z] Session Guardian starting...
+[2026-02-17T18:23:58.750Z] 🛡️ Session Guardian scan initiated
+[2026-02-17T18:23:58.750Z] Checking main session status...
+[2026-02-17T18:24:01.494Z] Main session context: 38k/131k (29%)
+[2026-02-17T18:24:01.495Z] Fetching active sessions...
+[2026-02-17T18:24:02.150Z] Found 0 active sessions
+[2026-02-17T18:24:02.150Z] No active sessions found
+[2026-02-17T18:24:02.151Z] Scan complete - all sessions healthy
