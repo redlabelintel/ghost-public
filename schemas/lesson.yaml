@@ -1,0 +1,87 @@
+# Schema: lesson
+# Defines the structure for MEMORY.md and lesson files
+
+primitive: lesson
+version: "1.0"
+description: Learnings, insights, and accumulated wisdom
+
+fields:
+  type:
+    type: string
+    required: true
+    default: "lesson"
+    enum: [lesson, learning, insight, wisdom, realization]
+    
+  date_learned:
+    type: date
+    required: true
+    format: "YYYY-MM-DD"
+    
+  category:
+    type: string
+    required: true
+    enum: [technical, operational, strategic, interpersonal, ethical, other]
+    
+  importance:
+    type: number
+    required: false
+    min: 1
+    max: 5
+    default: 3
+    description: 1-5 scale of importance
+    
+  source:
+    type: string
+    required: false
+    description: Where this lesson came from (incident, reading, conversation)
+    
+  tags:
+    type: array
+    items: string
+    required: false
+    
+  related_decisions:
+    type: array
+    items: string
+    required: false
+    description: Decisions that resulted from this lesson
+    
+  related_tasks:
+    type: array
+    items: string
+    required: false
+    description: Tasks created based on this lesson
+    
+  status:
+    type: string
+    required: false
+    default: "active"
+    enum: [active, applied, superseded, archived]
+    
+  superseded_by:
+    type: string
+    required: false
+    description: If superseded, link to newer lesson
+
+validation:
+  - field: importance
+    rule: range
+    min: 1
+    max: 5
+    message: "Importance must be between 1 and 5"
+
+examples:
+  - |
+    ---
+    type: lesson
+    date_learned: 2026-02-13
+    category: operational
+    importance: 5
+    source: "Context bleed incident - 865 sessions undetected"
+    tags: [monitoring, cost-control, guardian, alerting]
+    related_decisions:
+      - primitives/decision/session-guardian-upgrade-2026-02-13.md
+    related_tasks:
+      - primitives/task/implement-critical-monitoring-panel.md
+    status: active
+    ---

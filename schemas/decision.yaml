@@ -1,0 +1,96 @@
+# Schema: decision
+# Defines the structure for decision records
+
+primitive: decision
+version: "1.0"
+description: Record of important decisions made
+
+fields:
+  type:
+    type: string
+    required: true
+    default: "decision"
+    enum: [decision, choice, policy, rule-change]
+    
+  date_decided:
+    type: date
+    required: true
+    format: "YYYY-MM-DD"
+    
+  decider:
+    type: string
+    required: true
+    description: Who made the decision
+    
+  context:
+    type: string
+    required: false
+    description: Background and circumstances
+    
+  options_considered:
+    type: array
+    items: string
+    required: false
+    description: Alternatives that were evaluated
+    
+  decision:
+    type: string
+    required: true
+    description: The actual decision made
+    
+  rationale:
+    type: string
+    required: true
+    description: Why this decision was made
+    
+  consequences:
+    type: array
+    items: string
+    required: false
+    description: Expected outcomes
+    
+  related_tasks:
+    type: array
+    items: string
+    required: false
+    description: Tasks created from this decision
+    
+  related_lessons:
+    type: array
+    items: string
+    required: false
+    description: Lessons learned from this decision
+    
+  status:
+    type: string
+    required: false
+    default: "active"
+    enum: [active, implemented, reversed, superseded]
+    
+  review_date:
+    type: date
+    required: false
+    description: When to review this decision
+
+examples:
+  - |
+    ---
+    type: decision
+    date_decided: 2026-02-13
+    decider: "CEO"
+    context: "Session Guardian reported healthy while 865 active sessions burned cost"
+    options_considered:
+      - "Keep thresholds at $100/24h"
+      - "Lower to $50/12h"
+      - "Lower to $25/8h with context monitoring"
+    decision: "Lower kill threshold to $25, duration to 8h, add context monitoring"
+    rationale: "Previous settings allowed dangerous cost bleed to go undetected"
+    consequences:
+      - "Earlier intervention on runaway sessions"
+      - "More false positives requiring manual review"
+    related_tasks:
+      - primitives/task/update-session-guardian-config.md
+      - primitives/task/add-critical-monitoring-panel.md
+    status: implemented
+    review_date: 2026-03-13
+    ---

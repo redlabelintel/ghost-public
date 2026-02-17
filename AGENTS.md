@@ -1,3 +1,19 @@
+---
+type: agent-rule
+version: "2.0"
+last_updated: 2026-02-17
+author: CEO
+tags: [behavior, boundaries, operational-rules, core-infrastructure]
+priority: critical
+applies_to: [all]
+related_primitives:
+  - primitives/decision/ghost-repo-reorganization-2026-02-13.md
+  - primitives/decision/command-center-deployment-2026-02-13.md
+  - primitives/lesson/context-bleed-discovery-2026-02-13.md
+  - primitives/lesson/cost-elimination-victory-2026-02-13.md
+status: active
+---
+
 # AGENTS.md - Your Workspace
 
 This folder is home. Treat it that way.
