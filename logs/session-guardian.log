@@ -1729,3 +1729,33 @@
 [2026-02-16T22:53:18.406Z] Found 0 active sessions
 [2026-02-16T22:53:18.407Z] No active sessions found
 [2026-02-16T22:53:18.407Z] Scan complete - all sessions healthy
+[2026-02-16T23:23:26.481Z] Session Guardian starting...
+[2026-02-16T23:23:26.483Z] 🛡️ Session Guardian scan initiated
+[2026-02-16T23:23:26.483Z] Checking main session status...
+[2026-02-16T23:23:29.041Z] Main session context: 119k/131k (91%)
+[2026-02-16T23:23:29.041Z] ⚠️ WARNING: Main session context at 91%
+[2026-02-16T23:23:29.041Z] ⚠️ MAIN SESSION WARNING: CONTEXT_WARNING: 91% >= 80%
+[2026-02-16T23:23:29.042Z] Fetching active sessions...
+[2026-02-16T23:23:29.742Z] Found 0 active sessions
+[2026-02-16T23:23:29.742Z] No active sessions found
+[2026-02-16T23:23:29.742Z] Scan complete - all sessions healthy
+[2026-02-16T23:38:15.239Z] Session Guardian starting...
+[2026-02-16T23:38:15.241Z] 🛡️ Session Guardian scan initiated
+[2026-02-16T23:38:15.241Z] Checking main session status...
+[2026-02-16T23:38:17.192Z] Main session context: 121k/131k (93%)
+[2026-02-16T23:38:17.193Z] ⚠️ WARNING: Main session context at 93%
+[2026-02-16T23:38:17.193Z] ⚠️ MAIN SESSION WARNING: CONTEXT_WARNING: 93% >= 80%
+[2026-02-16T23:38:17.193Z] Fetching active sessions...
+[2026-02-16T23:38:17.839Z] Found 0 active sessions
+[2026-02-16T23:38:17.839Z] No active sessions found
+[2026-02-16T23:38:17.840Z] Scan complete - all sessions healthy
+[2026-02-16T23:53:18.064Z] Session Guardian starting...
+[2026-02-16T23:53:18.066Z] 🛡️ Session Guardian scan initiated
+[2026-02-16T23:53:18.066Z] Checking main session status...
+[2026-02-16T23:53:20.093Z] Main session context: 116k/131k (88%)
+[2026-02-16T23:53:20.093Z] ⚠️ WARNING: Main session context at 88%
+[2026-02-16T23:53:20.093Z] ⚠️ MAIN SESSION WARNING: CONTEXT_WARNING: 88% >= 80%
+[2026-02-16T23:53:20.093Z] Fetching active sessions...
+[2026-02-16T23:53:20.755Z] Found 0 active sessions
+[2026-02-16T23:53:20.755Z] No active sessions found
+[2026-02-16T23:53:20.756Z] Scan complete - all sessions healthy

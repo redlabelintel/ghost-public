@@ -1,17 +1,19 @@
 {
-  "timestamp": "2026-02-16T22:53:15.926Z",
+  "timestamp": "2026-02-16T23:53:18.066Z",
   "totalSessions": 0,
   "protectedSessions": 0,
   "killedSessions": 0,
-  "warningsIssued": 0,
+  "warningsIssued": 1,
   "totalCostSaved": 0,
   "sessionsAnalyzed": [],
   "mainSessionAlert": {
     "id": "main:current",
-    "tokens": 84000,
-    "contextUsed": 84000,
+    "tokens": 116000,
+    "contextUsed": 116000,
     "contextMax": 131000,
-    "contextPercent": 0.64,
-    "isMainSession": true
+    "contextPercent": 0.88,
+    "isMainSession": true,
+    "warning": true,
+    "reason": "CONTEXT_WARNING: 88% >= 80%"
   }
 }
