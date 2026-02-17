@@ -37,4 +37,18 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 
 ---
 
+## Email Service
+
+**Account:** aarontrubic@gmail.com  
+**Method:** Gmail SMTP with app password  
+**Config:** `~/.config/himalaya/config.toml`  
+**Docs:** `EMAIL_SERVICE.md`
+
+**Quick send:**
+```bash
+python3 send_email.py [to] [subject] [body]
+```
+
+---
+
 Add whatever helps you do your job. This is your cheat sheet.
