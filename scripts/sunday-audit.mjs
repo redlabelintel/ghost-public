@@ -4,7 +4,7 @@
  * Checks for silent cron failures and reports issues
  */
 
-const { execSync } = require('child_process');
+import { execSync } from 'child_process';
 
 function formatDuration(ms) {
   if (!ms) return 'N/A';
@@ -34,43 +34,40 @@ async function runAudit() {
   
   try {
     // Get cron status using openclaw CLI
-    const cronOutput = execSync('openclaw cron list --include-disabled 2>&1', { 
+    const cronOutput = execSync('openclaw cron list 2>&1', { 
       encoding: 'utf8', 
       timeout: 30000,
       cwd: '/Users/ghost/.openclaw/workspace'
     });
     
-    // Parse the output (it's JSON when using the CLI tool)
-    // Actually, let me try running the node script directly with npx or just use the output
-    console.log('Raw output received, processing...\n');
+    console.log('Cron list output received, processing...\n');
     
-    // Try to get structured data via direct API call using curl
-    const apiOutput = execSync(
-      'curl -s "http://localhost:3000/api/v1/cron/list?includeDisabled=true" 2>/dev/null || echo "API_NOT_AVAILABLE"',
+    // Parse the table output from CLI
+    const lines = cronOutput.split('\n').filter(line => line.includes(' - '));
+    
+    // Look for error states in output
+    const errorJobs = [];
+    const allJobs = [];
+    
+    // Parse the table format
+    cronOutput.split('\n').forEach(line => {
+      if (line.match(/^[0-9a-f]{8}-/)) {
+        const parts = line.trim().split(/\s{2,}/);
+        if (parts.length >= 6) {
+          const [id, name, schedule, next, last, status, target, agent] = parts;
+          allJobs.push({ name: name?.trim(), status: status?.trim(), last: last?.trim() });
+          if (status?.trim() === 'error') {
+            errorJobs.push({ name: name?.trim(), last: last?.trim() });
+          }
+        }
+      }
+    });
+    
+    // Check for active sessions
+    const activeSessions = execSync(
+      'openclaw sessions list --message-limit 1 2>&1 | head -30 || echo "No sessions"',
       { encoding: 'utf8', timeout: 10000 }
     );
-    
-    let jobs = [];
-    if (apiOutput && apiOutput !== 'API_NOT_AVAILABLE') {
-      try {
-        const data = JSON.parse(apiOutput);
-        jobs = data.jobs || [];
-      } catch (e) {
-        console.log('API response not JSON, using CLI method\n');
-      }
-    }
-    
-    // Fallback: parse from memory/recall what we know
-    if (jobs.length === 0) {
-      console.log('⚠️  Using last known state from memory\n');
-      // Check session-guardian for any active issues
-      const activeSessions = execSync(
-        'openclaw sessions list --message-limit 1 2>&1 | head -30 || echo "No sessions"',
-        { encoding: 'utf8', timeout: 10000 }
-      );
-      console.log('Active Session Sample:');
-      console.log(activeSessions);
-    }
     
     // Hardcoded check based on known jobs from last audit
     const knownIssues = [
