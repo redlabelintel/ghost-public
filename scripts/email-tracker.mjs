@@ -2,13 +2,88 @@
 /**
  * Email Duplicate Prevention Tracker
  * Prevents sending duplicate emails within a 24-hour window
+ * AND prevents multiple sends in the same request (CRITICAL)
  */
 
-import { readFileSync, writeFileSync, existsSync } from 'fs';
+import { readFileSync, writeFileSync, existsSync, unlinkSync } from 'fs';
 import { createHash } from 'crypto';
 
 const TRACKER_FILE = '/Users/ghost/.openclaw/workspace/.email-tracker.json';
+const LOCK_FILE = '/Users/ghost/.openclaw/workspace/.email-send.lock';
 const DUPLICATE_WINDOW_MS = 24 * 60 * 60 * 1000; // 24 hours
+const LOCK_TIMEOUT_MS = 30 * 1000; // 30 seconds max lock time
+
+// In-memory request tracking (prevents same-session duplicates)
+const sessionSentEmails = new Set();
+
+/**
+ * ACQUIRE SEND LOCK - Prevents concurrent sends
+ * Returns true if lock acquired, false if another send is in progress
+ */
+export function acquireSendLock(requestId) {
+  try {
+    // Check if lock exists and is fresh
+    if (existsSync(LOCK_FILE)) {
+      const lockData = JSON.parse(readFileSync(LOCK_FILE, 'utf8'));
+      const lockAge = Date.now() - lockData.timestamp;
+      
+      if (lockAge < LOCK_TIMEOUT_MS) {
+        console.error(`🔒 Send lock active (age: ${(lockAge/1000).toFixed(1)}s)`);
+        return false;
+      }
+      
+      // Stale lock, remove it
+      console.log('🧹 Cleaning stale lock file');
+      unlinkSync(LOCK_FILE);
+    }
+    
+    // Create lock
+    writeFileSync(LOCK_FILE, JSON.stringify({
+      timestamp: Date.now(),
+      requestId: requestId || 'unknown'
+    }));
+    
+    return true;
+  } catch (e) {
+    console.error('Lock error:', e.message);
+    return false;
+  }
+}
+
+/**
+ * RELEASE SEND LOCK
+ */
+export function releaseSendLock() {
+  try {
+    if (existsSync(LOCK_FILE)) {
+      unlinkSync(LOCK_FILE);
+    }
+  } catch (e) {
+    // Ignore release errors
+  }
+}
+
+/**
+ * CHECK IF EMAIL ALREADY SENT THIS SESSION
+ */
+export function checkSessionDuplicate(to, subject) {
+  const key = `${to.toLowerCase().trim()}|${subject.toLowerCase().trim()}`;
+  if (sessionSentEmails.has(key)) {
+    return {
+      isDuplicate: true,
+      message: `🚫 SESSION DUPLICATE: Email to ${to} with subject "${subject}" already sent in this request`
+    };
+  }
+  return { isDuplicate: false };
+}
+
+/**
+ * MARK EMAIL AS SENT THIS SESSION
+ */
+export function markSessionSent(to, subject) {
+  const key = `${to.toLowerCase().trim()}|${subject.toLowerCase().trim()}`;
+  sessionSentEmails.add(key);
+}
 
 function loadTracker() {
   if (!existsSync(TRACKER_FILE)) {
