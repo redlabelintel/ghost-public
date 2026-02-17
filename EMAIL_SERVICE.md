@@ -68,8 +68,9 @@ The email service now includes duplicate prevention:
 2. **Hash tracking**: Each email is hashed and stored in `.email-tracker.json`
 3. **Automatic blocking**: Duplicate attempts are rejected with error message
 
-### Safe Send Script (Use This)
+### Safe Send Scripts (USE THESE - NEVER RAW SENDS)
 
+**Option 1: Python SMTP (Recommended)**
 ```bash
 node /Users/ghost/.openclaw/workspace/scripts/safe-email-send.mjs \
   "recipient@example.com" \
@@ -77,13 +78,21 @@ node /Users/ghost/.openclaw/workspace/scripts/safe-email-send.mjs \
   /path/to/body.txt
 ```
 
-This script:
-- ✅ Checks for duplicates first
-- ✅ Sends only if unique
-- ✅ Records successful sends
-- ✅ Prevents accidental duplicates
+**Option 2: Himalaya CLI**
+```bash
+/Users/ghost/.openclaw/workspace/scripts/himalaya-safe-send.sh \
+  "recipient@example.com" \
+  "Subject Line" \
+  /path/to/body.txt
+```
 
-**NEVER send raw emails multiple times. Always use the safe wrapper.**
+Both scripts provide:
+- ✅ **Session-level protection** — Prevents multiple sends in same request
+- ✅ **24-hour duplicate check** — Blocks identical emails within 24 hours  
+- ✅ **Hash tracking** — Each email SHA256 hashed and recorded
+- ✅ **Automatic blocking** — Duplicate attempts rejected immediately
+
+**⚠️ NEVER use raw `himalaya` commands or direct SMTP without these wrappers. You sent 4 duplicates earlier — this prevents that.**
 
 ## Limitations
 
