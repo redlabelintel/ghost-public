@@ -1,6 +1,28 @@
 {
-  "posted": [],
-  "experiments": [],
+  "posted": [
+    {
+      "date": "2026-02-17",
+      "title": "Effective Harnesses for Long-Running Agents (TEST)",
+      "url": "https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents",
+      "topic": "session checkpointing"
+    }
+  ],
+  "experiments": [
+    {
+      "date": "2026-02-17",
+      "fromArticle": "effective-harnesses",
+      "experiment": "Add session checkpoint primitive before context compaction",
+      "outcome": "pending",
+      "learned": null
+    }
+  ],
   "skillsEvaluated": [],
-  "setupChanges": []
+  "setupChanges": [
+    {
+      "date": "2026-02-17",
+      "change": "Update digest cron job with rate limit handling",
+      "reason": "Brave Search 429 errors on multiple rapid requests",
+      "status": "implemented"
+    }
+  ]
 }
