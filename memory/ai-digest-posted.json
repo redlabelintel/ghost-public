@@ -5,6 +5,30 @@
       "title": "Effective Harnesses for Long-Running Agents (TEST)",
       "url": "https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents",
       "topic": "session checkpointing"
+    },
+    {
+      "date": "2026-02-18",
+      "title": "Cursor: Towards Self-Driving Codebases",
+      "url": "https://cursor.com/blog/self-driving-codebases",
+      "topic": "multi-agent coordination"
+    },
+    {
+      "date": "2026-02-18",
+      "title": "Cursor: Expanding Long-Running Agents Research Preview",
+      "url": "https://cursor.com/blog/long-running-agents",
+      "topic": "long-running agents"
+    },
+    {
+      "date": "2026-02-18",
+      "title": "Rodney v0.4.0 - CLI Browser Automation Tool",
+      "url": "https://github.com/simonw/rodney/releases/tag/v0.4.0",
+      "topic": "browser automation tools"
+    },
+    {
+      "date": "2026-02-18",
+      "title": "Claude Sonnet 4.6 Released",
+      "url": "https://www.anthropic.com/news/claude-sonnet-4-6",
+      "topic": "model updates"
     }
   ],
   "experiments": [
@@ -12,6 +36,13 @@
       "date": "2026-02-17",
       "fromArticle": "effective-harnesses",
       "experiment": "Add session checkpoint primitive before context compaction",
+      "outcome": "pending",
+      "learned": null
+    },
+    {
+      "date": "2026-02-18",
+      "fromArticle": "cursor-multi-agent",
+      "experiment": "Add judge/monitoring primitive for delegated sub-agent tasks",
       "outcome": "pending",
       "learned": null
     }
