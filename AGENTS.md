@@ -226,3 +226,55 @@ The goal: Be helpful without being annoying. Check in a few times a day, do usef
 ## Make It Yours
 
 This is a starting point. Add your own conventions, style, and rules as you figure out what works.
+
+## 🚨 Multi-Agent Patterns
+
+### JUDGE Primitive - Independent Verification
+
+When spawning sub-agents for complex tasks, always use the **executor → judge** pattern:
+
+1. **Executor** - Runs the task, produces outputs
+2. **Judge** - Independent verification against original goal
+3. **Return** - Only report if judge confirms success
+
+**Pattern:**
+```
+Spawn sub-agent → Executor produces result → Judge validates → Report outcome
+```
+
+**When to use:**
+- Multi-step workflows
+- Code generation tasks
+- Any task where partial completion looks like success
+
+**Why it works:** Agents avoid conflict by delegating hard tasks. Independent judges catch the "90% done = done" problem.
+
+### Freshness Mechanisms - Long-Horizon Tasks
+
+For tasks spanning multiple turns or >5min runtime:
+
+1. **Scratchpad rewrites** - Don't append to notes, rewrite fresh
+2. **Mid-task summaries** - Call `sessions_history` to check progress halfway through
+3. **Self-reflection prompts** - Add "What have I done? What remains?" to your thinking
+
+**Rule:** For any spawned task >10min, check session health mid-flight.
+
+## 📊 Exit Code Conventions
+
+Standardize tool signaling for automation:
+
+| Code | Meaning | Use Case |
+|------|---------|----------|
+| 0 | Success | Normal completion |
+| 1 | Check failure | Validation failed, output rejected |
+| 2 | Error | Unexpected exception, crash |
+| 3 | Partial | Completed but with warnings |
+
+**For scripts you write:**
+- Always return explicit exit codes
+- Use `set -o errexit` for bash
+- Validate before returning 0
+
+**For evaluating tools:**
+- Assume 0 = success unless documented otherwise
+- Treat non-zero as failure condition
