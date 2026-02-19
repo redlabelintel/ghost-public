@@ -1,0 +1,334 @@
+{"level":"info","message":"🚀 Starting Paper Trading Engine...","timestamp":"2026-02-11T16:05:35.517Z"}
+{"level":"info","message":"💰 Virtual Balance: $10,000","timestamp":"2026-02-11T16:05:35.525Z"}
+{"level":"info","message":"🎯 Testing Assets: OP, AAVE, NEAR, LINK","timestamp":"2026-02-11T16:05:35.525Z"}
+{"level":"info","message":"🔄 Starting paper trading monitoring...","timestamp":"2026-02-11T16:05:35.525Z"}
+{"level":"info","message":"📈 SELL NEAR: Size=17.6226 @ $5.2823 (46.54424806208935% confidence)","timestamp":"2026-02-11T16:05:35.526Z"}
+{"level":"info","message":"📈 SELL LINK: Size=5.9492 @ $18.2844 (54.38880191887139% confidence)","timestamp":"2026-02-11T16:05:35.526Z"}
+{"level":"info","message":"📊 PORTFOLIO STATUS:","timestamp":"2026-02-11T16:05:35.526Z"}
+{"level":"info","message":"💰 Total Value: $10000.00 (0.00%)","timestamp":"2026-02-11T16:05:35.526Z"}
+{"level":"info","message":"📈 Realized P&L: $0.00","timestamp":"2026-02-11T16:05:35.526Z"}
+{"level":"info","message":"🎯 Win Rate: 0.0% (0/2)","timestamp":"2026-02-11T16:05:35.526Z"}
+{"level":"info","message":"⬇️ Max Drawdown: 0.00%","timestamp":"2026-02-11T16:05:35.526Z"}
+{"level":"info","message":"📋 Open Positions: 2","timestamp":"2026-02-11T16:05:35.526Z"}
+{"level":"info","message":"🔸 Current Positions:","timestamp":"2026-02-11T16:05:35.526Z"}
+{"level":"info","message":"  NEAR: short $0.00 (0.00%)","timestamp":"2026-02-11T16:05:35.526Z"}
+{"level":"info","message":"  LINK: short $0.00 (0.00%)","timestamp":"2026-02-11T16:05:35.526Z"}
+{"level":"info","message":"🚀 Starting Paper Trading Engine...","timestamp":"2026-02-11T16:09:13.733Z"}
+{"level":"info","message":"💰 Virtual Balance: $10,000","timestamp":"2026-02-11T16:09:13.741Z"}
+{"level":"info","message":"🎯 Testing Assets: OP, AAVE, NEAR, LINK","timestamp":"2026-02-11T16:09:13.741Z"}
+{"level":"info","message":"🔄 Starting paper trading monitoring...","timestamp":"2026-02-11T16:09:13.741Z"}
+{"level":"info","message":"🔍 Updating narrative intelligence...","timestamp":"2026-02-11T16:09:13.741Z"}
+{"level":"info","message":"✅ Updated coefficients for 5 assets","timestamp":"2026-02-11T16:09:13.742Z"}
+{"level":"info","message":"📊 PORTFOLIO STATUS:","timestamp":"2026-02-11T16:09:13.742Z"}
+{"level":"info","message":"💰 Total Value: $10000.00 (0.00%)","timestamp":"2026-02-11T16:09:13.742Z"}
+{"level":"info","message":"📈 Realized P&L: $0.00","timestamp":"2026-02-11T16:09:13.742Z"}
+{"level":"info","message":"🎯 Win Rate: 0.0% (0/0)","timestamp":"2026-02-11T16:09:13.742Z"}
+{"level":"info","message":"⬇️ Max Drawdown: 0.00%","timestamp":"2026-02-11T16:09:13.742Z"}
+{"level":"info","message":"📋 Open Positions: 0","timestamp":"2026-02-11T16:09:13.742Z"}
+{"level":"info","message":"🔍 Updating narrative intelligence...","timestamp":"2026-02-11T16:09:59.668Z"}
+{"level":"info","message":"✅ Updated coefficients for 5 assets","timestamp":"2026-02-11T16:09:59.669Z"}
+{"level":"info","message":"🔍 Updating narrative intelligence...","timestamp":"2026-02-11T16:14:13.750Z"}
+{"level":"info","message":"✅ Updated coefficients for 5 assets","timestamp":"2026-02-11T16:14:13.751Z"}
+{"level":"info","message":"📈 SELL AAVE: Size=0.3390 @ $187.3562 (31.760449540643883% confidence)","timestamp":"2026-02-11T16:14:13.751Z"}
+{"level":"info","message":"📈 SELL LINK: Size=5.0040 @ $18.6370 (46.63016291214255% confidence)","timestamp":"2026-02-11T16:14:13.752Z"}
+{"level":"info","message":"📊 PORTFOLIO STATUS:","timestamp":"2026-02-11T16:14:13.752Z"}
+{"level":"info","message":"💰 Total Value: $10000.00 (0.00%)","timestamp":"2026-02-11T16:14:13.752Z"}
+{"level":"info","message":"📈 Realized P&L: $0.00","timestamp":"2026-02-11T16:14:13.752Z"}
+{"level":"info","message":"🎯 Win Rate: 0.0% (0/2)","timestamp":"2026-02-11T16:14:13.752Z"}
+{"level":"info","message":"⬇️ Max Drawdown: 0.00%","timestamp":"2026-02-11T16:14:13.752Z"}
+{"level":"info","message":"📋 Open Positions: 2","timestamp":"2026-02-11T16:14:13.752Z"}
+{"level":"info","message":"🔸 Current Positions:","timestamp":"2026-02-11T16:14:13.752Z"}
+{"level":"info","message":"  AAVE: short $0.00 (0.00%)","timestamp":"2026-02-11T16:14:13.752Z"}
+{"level":"info","message":"  LINK: short $0.00 (0.00%)","timestamp":"2026-02-11T16:14:13.752Z"}
+{"level":"info","message":"🚀 Starting Paper Trading Engine...","timestamp":"2026-02-12T13:57:37.769Z"}
+{"level":"info","message":"💰 Virtual Balance: $10,000","timestamp":"2026-02-12T13:57:37.777Z"}
+{"level":"info","message":"🎯 Testing Assets: OP, AAVE, NEAR, LINK","timestamp":"2026-02-12T13:57:37.778Z"}
+{"level":"info","message":"🔄 Starting paper trading monitoring...","timestamp":"2026-02-12T13:57:37.778Z"}
+{"level":"info","message":"🔍 Updating narrative intelligence...","timestamp":"2026-02-12T13:57:37.778Z"}
+{"level":"info","message":"✅ Updated coefficients for 5 assets","timestamp":"2026-02-12T13:57:37.778Z"}
+{"level":"info","message":"📈 BUY AAVE: Size=0.3583 @ $186.3493 (33.37995778223243% confidence)","timestamp":"2026-02-12T13:57:37.779Z"}
+{"level":"info","message":"📈 SELL LINK: Size=4.4081 @ $18.4536 (40.67244162464732% confidence)","timestamp":"2026-02-12T13:57:37.779Z"}
+{"level":"info","message":"📊 PORTFOLIO STATUS:","timestamp":"2026-02-12T13:57:37.779Z"}
+{"level":"info","message":"💰 Total Value: $10000.00 (0.00%)","timestamp":"2026-02-12T13:57:37.779Z"}
+{"level":"info","message":"📈 Realized P&L: $0.00","timestamp":"2026-02-12T13:57:37.779Z"}
+{"level":"info","message":"🎯 Win Rate: 0.0% (0/2)","timestamp":"2026-02-12T13:57:37.779Z"}
+{"level":"info","message":"⬇️ Max Drawdown: 0.00%","timestamp":"2026-02-12T13:57:37.779Z"}
+{"level":"info","message":"📋 Open Positions: 2","timestamp":"2026-02-12T13:57:37.779Z"}
+{"level":"info","message":"🔸 Current Positions:","timestamp":"2026-02-12T13:57:37.779Z"}
+{"level":"info","message":"  AAVE: long $0.00 (0.00%)","timestamp":"2026-02-12T13:57:37.779Z"}
+{"level":"info","message":"  LINK: short $0.00 (0.00%)","timestamp":"2026-02-12T13:57:37.779Z"}
+{"level":"info","message":"🚀 Starting Paper Trading Engine...","timestamp":"2026-02-12T14:02:00.648Z"}
+{"level":"info","message":"💰 Virtual Balance: $10,000","timestamp":"2026-02-12T14:02:00.656Z"}
+{"level":"info","message":"🎯 Testing Assets: OP, AAVE, NEAR, LINK","timestamp":"2026-02-12T14:02:00.656Z"}
+{"level":"info","message":"🔄 Starting paper trading monitoring...","timestamp":"2026-02-12T14:02:00.656Z"}
+{"level":"info","message":"🔍 Updating narrative intelligence...","timestamp":"2026-02-12T14:02:00.656Z"}
+{"level":"info","message":"✅ Updated coefficients for 5 assets","timestamp":"2026-02-12T14:02:00.657Z"}
+{"level":"info","message":"📈 BUY OP: Size=28.8686 @ $2.8910 (41.729129111589494% confidence)","timestamp":"2026-02-12T14:02:00.657Z"}
+{"level":"info","message":"📈 SELL AAVE: Size=0.4285 @ $185.8953 (39.827672906298176% confidence)","timestamp":"2026-02-12T14:02:00.657Z"}
+{"level":"info","message":"📊 PORTFOLIO STATUS:","timestamp":"2026-02-12T14:02:00.657Z"}
+{"level":"info","message":"💰 Total Value: $10000.00 (0.00%)","timestamp":"2026-02-12T14:02:00.657Z"}
+{"level":"info","message":"📈 Realized P&L: $0.00","timestamp":"2026-02-12T14:02:00.657Z"}
+{"level":"info","message":"🎯 Win Rate: 0.0% (0/2)","timestamp":"2026-02-12T14:02:00.657Z"}
+{"level":"info","message":"⬇️ Max Drawdown: 0.00%","timestamp":"2026-02-12T14:02:00.657Z"}
+{"level":"info","message":"📋 Open Positions: 2","timestamp":"2026-02-12T14:02:00.657Z"}
+{"level":"info","message":"🔸 Current Positions:","timestamp":"2026-02-12T14:02:00.657Z"}
+{"level":"info","message":"  OP: long $0.00 (0.00%)","timestamp":"2026-02-12T14:02:00.657Z"}
+{"level":"info","message":"  AAVE: short $0.00 (0.00%)","timestamp":"2026-02-12T14:02:00.657Z"}
+{"level":"info","message":"🔍 Updating narrative intelligence...","timestamp":"2026-02-12T14:02:37.788Z"}
+{"level":"info","message":"✅ Updated coefficients for 5 assets","timestamp":"2026-02-12T14:02:37.789Z"}
+{"level":"info","message":"📈 SELL AAVE: Size=0.4193 @ $185.1649 (38.820809973980005% confidence)","timestamp":"2026-02-12T14:02:37.789Z"}
+{"level":"info","message":"✅ CLOSED LINK: P&L=-1.83 (-2.24%)","timestamp":"2026-02-12T14:02:37.789Z"}
+{"level":"info","message":"📊 PORTFOLIO STATUS:","timestamp":"2026-02-12T14:02:37.790Z"}
+{"level":"info","message":"💰 Total Value: $9997.75 (-0.02%)","timestamp":"2026-02-12T14:02:37.790Z"}
+{"level":"info","message":"📈 Realized P&L: $-1.83","timestamp":"2026-02-12T14:02:37.790Z"}
+{"level":"info","message":"🎯 Win Rate: 0.0% (0/3)","timestamp":"2026-02-12T14:02:37.790Z"}
+{"level":"info","message":"⬇️ Max Drawdown: 0.02%","timestamp":"2026-02-12T14:02:37.790Z"}
+{"level":"info","message":"📋 Open Positions: 2","timestamp":"2026-02-12T14:02:37.790Z"}
+{"level":"info","message":"🔸 Current Positions:","timestamp":"2026-02-12T14:02:37.790Z"}
+{"level":"info","message":"  AAVE: long $-0.42 (-0.64%)","timestamp":"2026-02-12T14:02:37.791Z"}
+{"level":"info","message":"  AAVE: short $0.00 (0.00%)","timestamp":"2026-02-12T14:02:37.791Z"}
+{"level":"info","message":"🔍 Updating narrative intelligence...","timestamp":"2026-02-12T14:07:37.798Z"}
+{"level":"info","message":"✅ Updated coefficients for 5 assets","timestamp":"2026-02-12T14:07:37.798Z"}
+{"level":"info","message":"📈 BUY OP: Size=34.0459 @ $2.9069 (49.49368379165166% confidence)","timestamp":"2026-02-12T14:07:37.798Z"}
+{"level":"info","message":"📈 SELL NEAR: Size=16.0484 @ $5.1444 (41.287013416685156% confidence)","timestamp":"2026-02-12T14:07:37.799Z"}
+{"level":"info","message":"📊 PORTFOLIO STATUS:","timestamp":"2026-02-12T14:07:37.799Z"}
+{"level":"info","message":"💰 Total Value: $9997.65 (-0.02%)","timestamp":"2026-02-12T14:07:37.799Z"}
+{"level":"info","message":"📈 Realized P&L: $-1.83","timestamp":"2026-02-12T14:07:37.799Z"}
+{"level":"info","message":"🎯 Win Rate: 0.0% (0/5)","timestamp":"2026-02-12T14:07:37.799Z"}
+{"level":"info","message":"⬇️ Max Drawdown: 0.02%","timestamp":"2026-02-12T14:07:37.799Z"}
+{"level":"info","message":"📋 Open Positions: 4","timestamp":"2026-02-12T14:07:37.799Z"}
+{"level":"info","message":"🔸 Current Positions:","timestamp":"2026-02-12T14:07:37.799Z"}
+{"level":"info","message":"  AAVE: long $0.19 (0.28%)","timestamp":"2026-02-12T14:07:37.800Z"}
+{"level":"info","message":"  AAVE: short $-0.72 (-0.92%)","timestamp":"2026-02-12T14:07:37.800Z"}
+{"level":"info","message":"  OP: long $0.00 (0.00%)","timestamp":"2026-02-12T14:07:37.800Z"}
+{"level":"info","message":"  NEAR: short $0.00 (0.00%)","timestamp":"2026-02-12T14:07:37.800Z"}
+{"level":"info","message":"🔍 Updating narrative intelligence...","timestamp":"2026-02-12T14:12:37.825Z"}
+{"level":"info","message":"✅ Updated coefficients for 5 assets","timestamp":"2026-02-12T14:12:37.825Z"}
+{"level":"info","message":"📈 SELL AAVE: Size=0.3784 @ $182.6551 (34.563656189303664% confidence)","timestamp":"2026-02-12T14:12:37.825Z"}
+{"level":"info","message":"✅ CLOSED NEAR: P&L=-1.88 (-2.28%)","timestamp":"2026-02-12T14:12:37.825Z"}
+{"level":"info","message":"📊 PORTFOLIO STATUS:","timestamp":"2026-02-12T14:12:37.826Z"}
+{"level":"info","message":"💰 Total Value: $9995.05 (-0.05%)","timestamp":"2026-02-12T14:12:37.826Z"}
+{"level":"info","message":"📈 Realized P&L: $-3.71","timestamp":"2026-02-12T14:12:37.826Z"}
+{"level":"info","message":"🎯 Win Rate: 0.0% (0/6)","timestamp":"2026-02-12T14:12:37.826Z"}
+{"level":"info","message":"⬇️ Max Drawdown: 0.05%","timestamp":"2026-02-12T14:12:37.826Z"}
+{"level":"info","message":"📋 Open Positions: 4","timestamp":"2026-02-12T14:12:37.827Z"}
+{"level":"info","message":"🔸 Current Positions:","timestamp":"2026-02-12T14:12:37.827Z"}
+{"level":"info","message":"  AAVE: long $-1.32 (-1.98%)","timestamp":"2026-02-12T14:12:37.827Z"}
+{"level":"info","message":"  AAVE: short $1.05 (1.36%)","timestamp":"2026-02-12T14:12:37.827Z"}
+{"level":"info","message":"  OP: long $-0.97 (-0.98%)","timestamp":"2026-02-12T14:12:37.828Z"}
+{"level":"info","message":"  AAVE: short $0.00 (0.00%)","timestamp":"2026-02-12T14:12:37.828Z"}
+{"level":"info","message":"🚀 Starting Paper Trading Engine...","timestamp":"2026-02-12T14:15:44.150Z"}
+{"level":"info","message":"💰 Virtual Balance: $10,000","timestamp":"2026-02-12T14:15:44.158Z"}
+{"level":"info","message":"🎯 Testing Assets: OP, AAVE, NEAR, LINK","timestamp":"2026-02-12T14:15:44.158Z"}
+{"level":"info","message":"🔄 Starting paper trading monitoring...","timestamp":"2026-02-12T14:15:44.158Z"}
+{"level":"info","message":"🔍 Updating narrative intelligence...","timestamp":"2026-02-12T14:15:44.158Z"}
+{"level":"info","message":"✅ Updated coefficients for 5 assets","timestamp":"2026-02-12T14:15:44.159Z"}
+{"level":"info","message":"📊 PORTFOLIO STATUS:","timestamp":"2026-02-12T14:15:44.159Z"}
+{"level":"info","message":"💰 Total Value: $10000.00 (0.00%)","timestamp":"2026-02-12T14:15:44.159Z"}
+{"level":"info","message":"📈 Realized P&L: $0.00","timestamp":"2026-02-12T14:15:44.159Z"}
+{"level":"info","message":"🎯 Win Rate: 0.0% (0/0)","timestamp":"2026-02-12T14:15:44.159Z"}
+{"level":"info","message":"⬇️ Max Drawdown: 0.00%","timestamp":"2026-02-12T14:15:44.159Z"}
+{"level":"info","message":"📋 Open Positions: 0","timestamp":"2026-02-12T14:15:44.159Z"}
+{"level":"info","message":"🔍 Updating narrative intelligence...","timestamp":"2026-02-12T14:17:37.835Z"}
+{"level":"info","message":"✅ Updated coefficients for 5 assets","timestamp":"2026-02-12T14:17:37.835Z"}
+{"level":"info","message":"📈 BUY AAVE: Size=0.3657 @ $185.9822 (34.01734568885349% confidence)","timestamp":"2026-02-12T14:17:37.836Z"}
+{"level":"info","message":"📊 PORTFOLIO STATUS:","timestamp":"2026-02-12T14:17:37.836Z"}
+{"level":"info","message":"💰 Total Value: $9993.74 (-0.06%)","timestamp":"2026-02-12T14:17:37.836Z"}
+{"level":"info","message":"📈 Realized P&L: $-3.71","timestamp":"2026-02-12T14:17:37.836Z"}
+{"level":"info","message":"🎯 Win Rate: 0.0% (0/7)","timestamp":"2026-02-12T14:17:37.836Z"}
+{"level":"info","message":"⬇️ Max Drawdown: 0.06%","timestamp":"2026-02-12T14:17:37.836Z"}
+{"level":"info","message":"📋 Open Positions: 5","timestamp":"2026-02-12T14:17:37.837Z"}
+{"level":"info","message":"🔸 Current Positions:","timestamp":"2026-02-12T14:17:37.837Z"}
+{"level":"info","message":"  AAVE: long $-0.13 (-0.20%)","timestamp":"2026-02-12T14:17:37.837Z"}
+{"level":"info","message":"  AAVE: short $-0.34 (-0.44%)","timestamp":"2026-02-12T14:17:37.837Z"}
+{"level":"info","message":"  OP: long $-0.81 (-0.82%)","timestamp":"2026-02-12T14:17:37.837Z"}
+{"level":"info","message":"  AAVE: short $-1.26 (-1.82%)","timestamp":"2026-02-12T14:17:37.837Z"}
+{"level":"info","message":"  AAVE: long $0.00 (0.00%)","timestamp":"2026-02-12T14:17:37.838Z"}
+{"level":"info","message":"🔍 Updating narrative intelligence...","timestamp":"2026-02-12T14:22:37.845Z"}
+{"level":"info","message":"✅ Updated coefficients for 5 assets","timestamp":"2026-02-12T14:22:37.845Z"}
+{"level":"info","message":"📈 BUY OP: Size=20.9121 @ $2.8765 (30.088014727296475% confidence)","timestamp":"2026-02-12T14:22:37.846Z"}
+{"level":"info","message":"✅ CLOSED AAVE: P&L=-2.25 (-3.26%)","timestamp":"2026-02-12T14:22:37.846Z"}
+{"level":"info","message":"📈 SELL NEAR: Size=14.2697 @ $5.2904 (37.76883379555697% confidence)","timestamp":"2026-02-12T14:22:37.846Z"}
+{"level":"info","message":"📈 SELL LINK: Size=4.3426 @ $18.1640 (39.46307157147298% confidence)","timestamp":"2026-02-12T14:22:37.846Z"}
+{"level":"info","message":"📊 PORTFOLIO STATUS:","timestamp":"2026-02-12T14:22:37.846Z"}
+{"level":"info","message":"💰 Total Value: $9992.37 (-0.08%)","timestamp":"2026-02-12T14:22:37.846Z"}
+{"level":"info","message":"📈 Realized P&L: $-5.96","timestamp":"2026-02-12T14:22:37.847Z"}
+{"level":"info","message":"🎯 Win Rate: 0.0% (0/10)","timestamp":"2026-02-12T14:22:37.847Z"}
+{"level":"info","message":"⬇️ Max Drawdown: 0.08%","timestamp":"2026-02-12T14:22:37.847Z"}
+{"level":"info","message":"📋 Open Positions: 7","timestamp":"2026-02-12T14:22:37.847Z"}
+{"level":"info","message":"🔸 Current Positions:","timestamp":"2026-02-12T14:22:37.847Z"}
+{"level":"info","message":"  AAVE: long $0.81 (1.21%)","timestamp":"2026-02-12T14:22:37.847Z"}
+{"level":"info","message":"  AAVE: short $-1.44 (-1.86%)","timestamp":"2026-02-12T14:22:37.847Z"}
+{"level":"info","message":"  OP: long $-1.04 (-1.05%)","timestamp":"2026-02-12T14:22:37.848Z"}
+{"level":"info","message":"  AAVE: long $0.00 (0.00%)","timestamp":"2026-02-12T14:22:37.848Z"}
+{"level":"info","message":"  OP: long $0.00 (0.00%)","timestamp":"2026-02-12T14:22:37.848Z"}
+{"level":"info","message":"  NEAR: short $0.00 (0.00%)","timestamp":"2026-02-12T14:22:37.848Z"}
+{"level":"info","message":"  LINK: short $0.00 (0.00%)","timestamp":"2026-02-12T14:22:37.848Z"}
+{"level":"info","message":"🚀 Starting Paper Trading Engine...","timestamp":"2026-02-12T14:30:32.542Z"}
+{"level":"info","message":"💰 Virtual Balance: $10,000","timestamp":"2026-02-12T14:30:32.550Z"}
+{"level":"info","message":"🎯 Testing Assets: OP, AAVE, NEAR, LINK","timestamp":"2026-02-12T14:30:32.550Z"}
+{"level":"info","message":"🔄 Starting paper trading monitoring...","timestamp":"2026-02-12T14:30:32.550Z"}
+{"level":"info","message":"🔍 Updating narrative intelligence...","timestamp":"2026-02-12T14:30:32.550Z"}
+{"level":"info","message":"✅ Updated coefficients for 5 assets","timestamp":"2026-02-12T14:30:32.551Z"}
+{"level":"info","message":"📈 BUY OP: Size=31.3492 @ $2.8252 (44.28451746150379% confidence)","timestamp":"2026-02-12T14:30:32.551Z"}
+{"level":"info","message":"📈 SELL LINK: Size=6.1373 @ $18.3289 (56.245461876254396% confidence)","timestamp":"2026-02-12T14:30:32.551Z"}
+{"level":"info","message":"📊 PORTFOLIO STATUS:","timestamp":"2026-02-12T14:30:32.551Z"}
+{"level":"info","message":"💰 Total Value: $10000.00 (0.00%)","timestamp":"2026-02-12T14:30:32.551Z"}
+{"level":"info","message":"📈 Realized P&L: $0.00","timestamp":"2026-02-12T14:30:32.551Z"}
+{"level":"info","message":"🎯 Win Rate: 0.0% (0/2)","timestamp":"2026-02-12T14:30:32.551Z"}
+{"level":"info","message":"⬇️ Max Drawdown: 0.00%","timestamp":"2026-02-12T14:30:32.551Z"}
+{"level":"info","message":"📋 Open Positions: 2","timestamp":"2026-02-12T14:30:32.551Z"}
+{"level":"info","message":"🔸 Current Positions:","timestamp":"2026-02-12T14:30:32.551Z"}
+{"level":"info","message":"  OP: long $0.00 (0.00%)","timestamp":"2026-02-12T14:30:32.551Z"}
+{"level":"info","message":"  LINK: short $0.00 (0.00%)","timestamp":"2026-02-12T14:30:32.551Z"}
+{"level":"info","message":"🚀 Starting Paper Trading Engine...","timestamp":"2026-02-12T14:48:11.710Z"}
+{"level":"info","message":"💰 Virtual Balance: $10,000","timestamp":"2026-02-12T14:48:11.717Z"}
+{"level":"info","message":"🎯 Testing Assets: OP, AAVE, NEAR, LINK","timestamp":"2026-02-12T14:48:11.717Z"}
+{"level":"info","message":"🔄 Starting paper trading monitoring...","timestamp":"2026-02-12T14:48:11.718Z"}
+{"level":"info","message":"🔍 Updating narrative intelligence...","timestamp":"2026-02-12T14:48:11.718Z"}
+{"level":"info","message":"✅ Updated coefficients for 5 assets","timestamp":"2026-02-12T14:48:11.718Z"}
+{"level":"info","message":"📈 BUY OP: Size=26.8910 @ $2.8442 (38.241661223465385% confidence)","timestamp":"2026-02-12T14:48:11.718Z"}
+{"level":"info","message":"📈 SELL NEAR: Size=20.1352 @ $5.1438 (51.786013106778285% confidence)","timestamp":"2026-02-12T14:48:11.718Z"}
+{"level":"info","message":"📈 SELL LINK: Size=3.8954 @ $18.3635 (35.76705032925916% confidence)","timestamp":"2026-02-12T14:48:11.718Z"}
+{"level":"info","message":"📊 PORTFOLIO STATUS:","timestamp":"2026-02-12T14:48:11.719Z"}
+{"level":"info","message":"💰 Total Value: $10000.00 (0.00%)","timestamp":"2026-02-12T14:48:11.719Z"}
+{"level":"info","message":"📈 Realized P&L: $0.00","timestamp":"2026-02-12T14:48:11.719Z"}
+{"level":"info","message":"🎯 Win Rate: 0.0% (0/3)","timestamp":"2026-02-12T14:48:11.719Z"}
+{"level":"info","message":"⬇️ Max Drawdown: 0.00%","timestamp":"2026-02-12T14:48:11.719Z"}
+{"level":"info","message":"📋 Open Positions: 3","timestamp":"2026-02-12T14:48:11.719Z"}
+{"level":"info","message":"🔸 Current Positions:","timestamp":"2026-02-12T14:48:11.719Z"}
+{"level":"info","message":"  OP: long $0.00 (0.00%)","timestamp":"2026-02-12T14:48:11.719Z"}
+{"level":"info","message":"  NEAR: short $0.00 (0.00%)","timestamp":"2026-02-12T14:48:11.719Z"}
+{"level":"info","message":"  LINK: short $0.00 (0.00%)","timestamp":"2026-02-12T14:48:11.719Z"}
+{"level":"info","message":"🔍 Updating narrative intelligence...","timestamp":"2026-02-12T14:53:11.725Z"}
+{"level":"info","message":"✅ Updated coefficients for 5 assets","timestamp":"2026-02-12T14:53:11.725Z"}
+{"level":"info","message":"✅ CLOSED LINK: P&L=-1.74 (-2.43%)","timestamp":"2026-02-12T14:53:11.726Z"}
+{"level":"info","message":"📊 PORTFOLIO STATUS:","timestamp":"2026-02-12T14:53:11.726Z"}
+{"level":"info","message":"💰 Total Value: $10000.15 (0.00%)","timestamp":"2026-02-12T14:53:11.726Z"}
+{"level":"info","message":"📈 Realized P&L: $-1.74","timestamp":"2026-02-12T14:53:11.726Z"}
+{"level":"info","message":"🎯 Win Rate: 0.0% (0/3)","timestamp":"2026-02-12T14:53:11.726Z"}
+{"level":"info","message":"⬇️ Max Drawdown: 0.00%","timestamp":"2026-02-12T14:53:11.726Z"}
+{"level":"info","message":"📋 Open Positions: 2","timestamp":"2026-02-12T14:53:11.726Z"}
+{"level":"info","message":"🔸 Current Positions:","timestamp":"2026-02-12T14:53:11.726Z"}
+{"level":"info","message":"  OP: long $1.37 (1.79%)","timestamp":"2026-02-12T14:53:11.726Z"}
+{"level":"info","message":"  NEAR: short $0.52 (0.50%)","timestamp":"2026-02-12T14:53:11.726Z"}
+{"level":"info","message":"🔍 Updating narrative intelligence...","timestamp":"2026-02-12T14:58:11.735Z"}
+{"level":"info","message":"✅ Updated coefficients for 5 assets","timestamp":"2026-02-12T14:58:11.735Z"}
+{"level":"info","message":"📈 SELL AAVE: Size=0.3588 @ $183.4341 (32.91175165643948% confidence)","timestamp":"2026-02-12T14:58:11.736Z"}
+{"level":"info","message":"📈 SELL NEAR: Size=11.7542 @ $5.2956 (31.1282809383789% confidence)","timestamp":"2026-02-12T14:58:11.736Z"}
+{"level":"info","message":"✅ CLOSED NEAR: P&L=-3.06 (-2.95%)","timestamp":"2026-02-12T14:58:11.737Z"}
+{"level":"info","message":"📊 PORTFOLIO STATUS:","timestamp":"2026-02-12T14:58:11.737Z"}
+{"level":"info","message":"💰 Total Value: $9996.83 (-0.03%)","timestamp":"2026-02-12T14:58:11.737Z"}
+{"level":"info","message":"📈 Realized P&L: $-4.79","timestamp":"2026-02-12T14:58:11.737Z"}
+{"level":"info","message":"🎯 Win Rate: 0.0% (0/5)","timestamp":"2026-02-12T14:58:11.737Z"}
+{"level":"info","message":"⬇️ Max Drawdown: 0.03%","timestamp":"2026-02-12T14:58:11.738Z"}
+{"level":"info","message":"📋 Open Positions: 3","timestamp":"2026-02-12T14:58:11.738Z"}
+{"level":"info","message":"🔸 Current Positions:","timestamp":"2026-02-12T14:58:11.738Z"}
+{"level":"info","message":"  OP: long $1.62 (2.12%)","timestamp":"2026-02-12T14:58:11.738Z"}
+{"level":"info","message":"  AAVE: short $0.00 (0.00%)","timestamp":"2026-02-12T14:58:11.738Z"}
+{"level":"info","message":"  NEAR: short $0.00 (0.00%)","timestamp":"2026-02-12T14:58:11.738Z"}
+{"level":"info","message":"🚀 Starting Paper Trading Engine...","timestamp":"2026-02-12T15:00:43.783Z"}
+{"level":"info","message":"💰 Virtual Balance: $10,000","timestamp":"2026-02-12T15:00:43.790Z"}
+{"level":"info","message":"🎯 Testing Assets: OP, AAVE, NEAR, LINK","timestamp":"2026-02-12T15:00:43.790Z"}
+{"level":"info","message":"🔄 Starting paper trading monitoring...","timestamp":"2026-02-12T15:00:43.790Z"}
+{"level":"info","message":"🔍 Updating narrative intelligence...","timestamp":"2026-02-12T15:00:43.791Z"}
+{"level":"info","message":"✅ Updated coefficients for 5 assets","timestamp":"2026-02-12T15:00:43.791Z"}
+{"level":"info","message":"📈 SELL NEAR: Size=19.3032 @ $5.1081 (49.3017307961244% confidence)","timestamp":"2026-02-12T15:00:43.791Z"}
+{"level":"info","message":"📈 SELL LINK: Size=5.2348 @ $18.5134 (48.45679248646807% confidence)","timestamp":"2026-02-12T15:00:43.791Z"}
+{"level":"info","message":"📊 PORTFOLIO STATUS:","timestamp":"2026-02-12T15:00:43.791Z"}
+{"level":"info","message":"💰 Total Value: $10000.00 (0.00%)","timestamp":"2026-02-12T15:00:43.792Z"}
+{"level":"info","message":"📈 Realized P&L: $0.00","timestamp":"2026-02-12T15:00:43.792Z"}
+{"level":"info","message":"🎯 Win Rate: 0.0% (0/2)","timestamp":"2026-02-12T15:00:43.792Z"}
+{"level":"info","message":"⬇️ Max Drawdown: 0.00%","timestamp":"2026-02-12T15:00:43.792Z"}
+{"level":"info","message":"📋 Open Positions: 2","timestamp":"2026-02-12T15:00:43.792Z"}
+{"level":"info","message":"🔸 Current Positions:","timestamp":"2026-02-12T15:00:43.792Z"}
+{"level":"info","message":"  NEAR: short $0.00 (0.00%)","timestamp":"2026-02-12T15:00:43.792Z"}
+{"level":"info","message":"  LINK: short $0.00 (0.00%)","timestamp":"2026-02-12T15:00:43.792Z"}
+{"level":"info","message":"🔍 Updating narrative intelligence...","timestamp":"2026-02-12T15:03:11.746Z"}
+{"level":"info","message":"✅ Updated coefficients for 5 assets","timestamp":"2026-02-12T15:03:11.747Z"}
+{"level":"info","message":"📈 BUY OP: Size=31.7023 @ $2.8097 (44.55897898191958% confidence)","timestamp":"2026-02-12T15:03:11.747Z"}
+{"level":"info","message":"✅ CLOSED AAVE: P&L=-1.72 (-2.61%)","timestamp":"2026-02-12T15:03:11.747Z"}
+{"level":"info","message":"📈 SELL LINK: Size=5.1920 @ $18.8136 (48.87160092709317% confidence)","timestamp":"2026-02-12T15:03:11.747Z"}
+{"level":"info","message":"📊 PORTFOLIO STATUS:","timestamp":"2026-02-12T15:03:11.747Z"}
+{"level":"info","message":"💰 Total Value: $9992.71 (-0.07%)","timestamp":"2026-02-12T15:03:11.747Z"}
+{"level":"info","message":"📈 Realized P&L: $-6.51","timestamp":"2026-02-12T15:03:11.747Z"}
+{"level":"info","message":"🎯 Win Rate: 0.0% (0/7)","timestamp":"2026-02-12T15:03:11.747Z"}
+{"level":"info","message":"⬇️ Max Drawdown: 0.07%","timestamp":"2026-02-12T15:03:11.748Z"}
+{"level":"info","message":"📋 Open Positions: 4","timestamp":"2026-02-12T15:03:11.748Z"}
+{"level":"info","message":"🔸 Current Positions:","timestamp":"2026-02-12T15:03:11.748Z"}
+{"level":"info","message":"  OP: long $-0.93 (-1.21%)","timestamp":"2026-02-12T15:03:11.748Z"}
+{"level":"info","message":"  NEAR: short $0.14 (0.23%)","timestamp":"2026-02-12T15:03:11.748Z"}
+{"level":"info","message":"  OP: long $0.00 (0.00%)","timestamp":"2026-02-12T15:03:11.748Z"}
+{"level":"info","message":"  LINK: short $0.00 (0.00%)","timestamp":"2026-02-12T15:03:11.748Z"}
+{"level":"info","message":"📈 BUY OP: Size=30.4432 @ $2.7965 (42.59475290902092% confidence)","timestamp":"2026-02-12T15:08:11.721Z"}
+{"level":"info","message":"📊 PORTFOLIO STATUS:","timestamp":"2026-02-12T15:08:11.721Z"}
+{"level":"info","message":"💰 Total Value: $9993.92 (-0.06%)","timestamp":"2026-02-12T15:08:11.721Z"}
+{"level":"info","message":"📈 Realized P&L: $-6.51","timestamp":"2026-02-12T15:08:11.721Z"}
+{"level":"info","message":"🎯 Win Rate: 0.0% (0/8)","timestamp":"2026-02-12T15:08:11.721Z"}
+{"level":"info","message":"⬇️ Max Drawdown: 0.07%","timestamp":"2026-02-12T15:08:11.721Z"}
+{"level":"info","message":"📋 Open Positions: 5","timestamp":"2026-02-12T15:08:11.721Z"}
+{"level":"info","message":"🔸 Current Positions:","timestamp":"2026-02-12T15:08:11.721Z"}
+{"level":"info","message":"  OP: long $-1.28 (-1.68%)","timestamp":"2026-02-12T15:08:11.721Z"}
+{"level":"info","message":"  NEAR: short $2.28 (3.66%)","timestamp":"2026-02-12T15:08:11.721Z"}
+{"level":"info","message":"  OP: long $-0.42 (-0.47%)","timestamp":"2026-02-12T15:08:11.721Z"}
+{"level":"info","message":"  LINK: short $-0.15 (-0.15%)","timestamp":"2026-02-12T15:08:11.721Z"}
+{"level":"info","message":"  OP: long $0.00 (0.00%)","timestamp":"2026-02-12T15:08:11.721Z"}
+{"level":"info","message":"🔍 Updating narrative intelligence...","timestamp":"2026-02-12T15:13:11.725Z"}
+{"level":"info","message":"✅ Updated coefficients for 5 assets","timestamp":"2026-02-12T15:13:11.725Z"}
+{"level":"info","message":"📈 SELL LINK: Size=4.0002 @ $18.6546 (37.335028552338564% confidence)","timestamp":"2026-02-12T15:13:11.726Z"}
+{"level":"info","message":"📊 PORTFOLIO STATUS:","timestamp":"2026-02-12T15:13:11.726Z"}
+{"level":"info","message":"💰 Total Value: $9995.06 (-0.05%)","timestamp":"2026-02-12T15:13:11.726Z"}
+{"level":"info","message":"📈 Realized P&L: $-6.51","timestamp":"2026-02-12T15:13:11.726Z"}
+{"level":"info","message":"🎯 Win Rate: 0.0% (0/9)","timestamp":"2026-02-12T15:13:11.726Z"}
+{"level":"info","message":"⬇️ Max Drawdown: 0.07%","timestamp":"2026-02-12T15:13:11.726Z"}
+{"level":"info","message":"📋 Open Positions: 6","timestamp":"2026-02-12T15:13:11.726Z"}
+{"level":"info","message":"🔸 Current Positions:","timestamp":"2026-02-12T15:13:11.727Z"}
+{"level":"info","message":"  OP: long $-0.70 (-0.92%)","timestamp":"2026-02-12T15:13:11.727Z"}
+{"level":"info","message":"  NEAR: short $0.52 (0.83%)","timestamp":"2026-02-12T15:13:11.727Z"}
+{"level":"info","message":"  OP: long $0.27 (0.30%)","timestamp":"2026-02-12T15:13:11.727Z"}
+{"level":"info","message":"  LINK: short $0.83 (0.85%)","timestamp":"2026-02-12T15:13:11.727Z"}
+{"level":"info","message":"  OP: long $0.66 (0.77%)","timestamp":"2026-02-12T15:13:11.728Z"}
+{"level":"info","message":"  LINK: short $0.00 (0.00%)","timestamp":"2026-02-12T15:13:11.728Z"}
+{"level":"info","message":"🚀 Starting Paper Trading Engine...","timestamp":"2026-02-12T15:15:17.495Z"}
+{"level":"info","message":"💰 Virtual Balance: $10,000","timestamp":"2026-02-12T15:15:17.503Z"}
+{"level":"info","message":"🎯 Testing Assets: OP, AAVE, NEAR, LINK","timestamp":"2026-02-12T15:15:17.503Z"}
+{"level":"info","message":"🔄 Starting paper trading monitoring...","timestamp":"2026-02-12T15:15:17.503Z"}
+{"level":"info","message":"🔍 Updating narrative intelligence...","timestamp":"2026-02-12T15:15:17.503Z"}
+{"level":"info","message":"✅ Updated coefficients for 5 assets","timestamp":"2026-02-12T15:15:17.504Z"}
+{"level":"info","message":"📈 BUY OP: Size=22.4154 @ $2.8039 (31.425297809604352% confidence)","timestamp":"2026-02-12T15:15:17.504Z"}
+{"level":"info","message":"📊 PORTFOLIO STATUS:","timestamp":"2026-02-12T15:15:17.504Z"}
+{"level":"info","message":"💰 Total Value: $10000.00 (0.00%)","timestamp":"2026-02-12T15:15:17.504Z"}
+{"level":"info","message":"📈 Realized P&L: $0.00","timestamp":"2026-02-12T15:15:17.504Z"}
+{"level":"info","message":"🎯 Win Rate: 0.0% (0/1)","timestamp":"2026-02-12T15:15:17.504Z"}
+{"level":"info","message":"⬇️ Max Drawdown: 0.00%","timestamp":"2026-02-12T15:15:17.504Z"}
+{"level":"info","message":"📋 Open Positions: 1","timestamp":"2026-02-12T15:15:17.504Z"}
+{"level":"info","message":"🔸 Current Positions:","timestamp":"2026-02-12T15:15:17.504Z"}
+{"level":"info","message":"  OP: long $0.00 (0.00%)","timestamp":"2026-02-12T15:15:17.504Z"}
+{"level":"info","message":"🔍 Updating narrative intelligence...","timestamp":"2026-02-12T15:31:07.893Z"}
+{"level":"info","message":"✅ Updated coefficients for 5 assets","timestamp":"2026-02-12T15:31:07.893Z"}
+{"level":"info","message":"🔍 Updating narrative intelligence...","timestamp":"2026-02-12T15:31:07.893Z"}
+{"level":"info","message":"✅ Updated coefficients for 5 assets","timestamp":"2026-02-12T15:31:07.893Z"}
+{"level":"info","message":"🔍 Updating narrative intelligence...","timestamp":"2026-02-12T15:31:41.774Z"}
+{"level":"info","message":"✅ Updated coefficients for 5 assets","timestamp":"2026-02-12T15:31:41.774Z"}
+{"level":"info","message":"🔍 Updating narrative intelligence...","timestamp":"2026-02-12T15:31:41.774Z"}
+{"level":"info","message":"✅ Updated coefficients for 5 assets","timestamp":"2026-02-12T15:31:41.774Z"}
+{"level":"info","message":"🔍 Updating narrative intelligence...","timestamp":"2026-02-12T19:00:18.472Z"}
+{"level":"info","message":"✅ Updated coefficients for 5 assets","timestamp":"2026-02-12T19:00:18.473Z"}
+{"level":"info","message":"🔍 Updating narrative intelligence...","timestamp":"2026-02-12T19:00:18.473Z"}
+{"level":"info","message":"✅ Updated coefficients for 5 assets","timestamp":"2026-02-12T19:00:18.473Z"}
+{"level":"info","message":"🔍 Updating narrative intelligence...","timestamp":"2026-02-12T23:00:21.329Z"}
+{"level":"info","message":"✅ Updated coefficients for 5 assets","timestamp":"2026-02-12T23:00:21.329Z"}
+{"level":"info","message":"🔍 Updating narrative intelligence...","timestamp":"2026-02-12T23:00:21.329Z"}
+{"level":"info","message":"✅ Updated coefficients for 5 assets","timestamp":"2026-02-12T23:00:21.330Z"}
+{"level":"info","message":"🔍 Updating narrative intelligence...","timestamp":"2026-02-13T03:01:11.061Z"}
+{"level":"info","message":"✅ Updated coefficients for 5 assets","timestamp":"2026-02-13T03:01:11.061Z"}
+{"level":"info","message":"🔍 Updating narrative intelligence...","timestamp":"2026-02-13T03:01:11.061Z"}
+{"level":"info","message":"✅ Updated coefficients for 5 assets","timestamp":"2026-02-13T03:01:11.061Z"}
+{"level":"info","message":"🔍 Updating narrative intelligence...","timestamp":"2026-02-13T07:00:35.090Z"}
+{"level":"info","message":"✅ Updated coefficients for 5 assets","timestamp":"2026-02-13T07:00:35.090Z"}
+{"level":"info","message":"🔍 Updating narrative intelligence...","timestamp":"2026-02-13T07:00:35.091Z"}
+{"level":"info","message":"✅ Updated coefficients for 5 assets","timestamp":"2026-02-13T07:00:35.091Z"}
+{"level":"info","message":"🔍 Updating narrative intelligence...","timestamp":"2026-02-13T11:00:19.386Z"}
+{"level":"info","message":"✅ Updated coefficients for 5 assets","timestamp":"2026-02-13T11:00:19.386Z"}
+{"level":"info","message":"🔍 Updating narrative intelligence...","timestamp":"2026-02-13T11:00:19.386Z"}
+{"level":"info","message":"✅ Updated coefficients for 5 assets","timestamp":"2026-02-13T11:00:19.386Z"}

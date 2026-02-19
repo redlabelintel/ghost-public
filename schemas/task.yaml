@@ -1,0 +1,94 @@
+# Schema: task
+# Defines the structure for task tracking
+
+primitive: task
+version: "1.0"
+description: Actionable work items
+
+fields:
+  type:
+    type: string
+    required: true
+    default: "task"
+    enum: [task, action, todo, deliverable]
+    
+  created_date:
+    type: date
+    required: true
+    format: "YYYY-MM-DD"
+    
+  title:
+    type: string
+    required: true
+    description: Brief task description
+    
+  description:
+    type: string
+    required: false
+    description: Detailed requirements
+    
+  owner:
+    type: string
+    required: true
+    description: Who is responsible
+    
+  priority:
+    type: string
+    required: true
+    default: "medium"
+    enum: [critical, high, medium, low]
+    
+  status:
+    type: string
+    required: true
+    default: "open"
+    enum: [open, in-progress, blocked, done, cancelled]
+    
+  due_date:
+    type: date
+    required: false
+    format: "YYYY-MM-DD"
+    
+  tags:
+    type: array
+    items: string
+    required: false
+    
+  depends_on:
+    type: array
+    items: string
+    required: false
+    description: Tasks that must complete first
+    
+  related_decisions:
+    type: array
+    items: string
+    required: false
+    description: Decisions that created this task
+    
+  related_lessons:
+    type: array
+    items: string
+    required: false
+    description: Lessons applicable to this task
+    
+  completion_notes:
+    type: string
+    required: false
+    description: Notes upon completion
+
+examples:
+  - |
+    ---
+    type: task
+    created_date: 2026-02-17
+    title: "Implement ClawVault primitive system"
+    description: "Build YAML frontmatter schemas and primitive linking"
+    owner: "Ghost"
+    priority: high
+    status: in-progress
+    due_date: 2026-02-17
+    tags: [infrastructure, automation, primitives]
+    related_decisions:
+      - primitives/decision/adopt-clawvault-approach-2026-02-17.md
+    ---

@@ -1,0 +1,85 @@
+# Schema: agent-rule
+# Defines the structure for AGENTS.md and agent configuration files
+
+primitive: agent-rule
+version: "1.0"
+description: Configuration rules and behavioral guidelines for AI agents
+
+fields:
+  type:
+    type: string
+    required: true
+    default: "agent-rule"
+    enum: [agent-rule, agent-config, agent-profile]
+    
+  version:
+    type: string
+    required: true
+    pattern: "^\\d+\\.\\d+$"
+    description: Semantic version of the rule set
+    
+  last_updated:
+    type: date
+    required: true
+    format: "YYYY-MM-DD"
+    
+  author:
+    type: string
+    required: false
+    description: Who created or last modified this rule
+    
+  tags:
+    type: array
+    items: string
+    required: false
+    description: Categorization tags
+    
+  priority:
+    type: string
+    required: false
+    default: "normal"
+    enum: [critical, high, normal, low]
+    description: Importance level for this rule
+    
+  applies_to:
+    type: array
+    items: string
+    required: false
+    description: Which agents this rule applies to (empty = all)
+    
+  related_primitives:
+    type: array
+    items: string
+    required: false
+    description: Links to related files (decisions, tasks, lessons)
+    
+  status:
+    type: string
+    required: false
+    default: "active"
+    enum: [active, deprecated, draft, archived]
+
+validation:
+  - field: version
+    rule: semver
+    message: "Version must be in semantic versioning format (e.g., 1.0)"
+    
+  - field: last_updated
+    rule: not_future
+    message: "Last updated date cannot be in the future"
+
+examples:
+  - |
+    ---
+    type: agent-rule
+    version: "2.1"
+    last_updated: 2026-02-17
+    author: CEO
+    tags: [behavior, boundaries, cost-control]
+    priority: critical
+    applies_to: [all]
+    related_primitives:
+      - primitives/decision/cost-policy-2026-02-13.md
+      - primitives/lesson/context-bleed-incident.md
+    status: active
+    ---

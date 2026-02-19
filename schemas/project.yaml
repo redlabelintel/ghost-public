@@ -1,0 +1,89 @@
+# Schema: project
+# Defines the structure for project tracking
+
+primitive: project
+version: "1.0"
+description: Higher-level initiatives comprising multiple tasks
+
+fields:
+  type:
+    type: string
+    required: true
+    default: "project"
+    enum: [project, initiative, program, sprint]
+    
+  start_date:
+    type: date
+    required: true
+    format: "YYYY-MM-DD"
+    
+  name:
+    type: string
+    required: true
+    description: Project name
+    
+  description:
+    type: string
+    required: true
+    description: What this project aims to achieve
+    
+  owner:
+    type: string
+    required: true
+    description: Project lead
+    
+  status:
+    type: string
+    required: true
+    default: "active"
+    enum: [planning, active, paused, completed, cancelled]
+    
+  target_completion:
+    type: date
+    required: false
+    format: "YYYY-MM-DD"
+    
+  tasks:
+    type: array
+    items: string
+    required: false
+    description: Links to constituent tasks
+    
+  decisions:
+    type: array
+    items: string
+    required: false
+    description: Key project decisions
+    
+  lessons:
+    type: array
+    items: string
+    required: false
+    description: Lessons learned during project
+    
+  success_criteria:
+    type: array
+    items: string
+    required: false
+    description: How we know this succeeded
+
+examples:
+  - |
+    ---
+    type: project
+    start_date: 2026-02-17
+    name: "ClawVault Primitive System"
+    description: "Implement formal primitive architecture with schemas and linking"
+    owner: "Ghost"
+    status: active
+    target_completion: 2026-02-17
+    tasks:
+      - primitives/task/create-schemas.md
+      - primitives/task/update-existing-files.md
+      - primitives/task/build-linking-system.md
+      - primitives/task/auto-generate-primitives.md
+    success_criteria:
+      - "All core files have valid frontmatter"
+      - "Primitives link to each other"
+      - "Auto-generation works from conversations"
+    ---

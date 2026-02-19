@@ -1,0 +1,434 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.2.9",
+    "lastTouchedAt": "2026-02-13T16:35:00.000Z"
+  },
+  "env": {
+    "vars": {
+      "TELEGRAM_BOT_TOKEN": "__OPENCLAW_REDACTED__",
+      "BRAVE_API_KEY": "__OPENCLAW_REDACTED__",
+      "TWITTER_BEARER_TOKEN": "__OPENCLAW_REDACTED__",
+      "TWITTER_API_KEY": "__OPENCLAW_REDACTED__",
+      "TWITTER_API_SECRET": "__OPENCLAW_REDACTED__",
+      "TWITTER_CLIENT_ID": "VVo3V1QxVGJNaEhvbV9VMEdhVks6MTpjaQ",
+      "TWITTER_CLIENT_SECRET": "__OPENCLAW_REDACTED__",
+      "SUPABASE_URL": "https://szxvuhbffimpenkwlfxl.supabase.co",
+      "SUPABASE_SERVICE_KEY": "sb_secret_xzpVgbbisJVmDMk3S7hnIQ_Ibr2F00r"
+    }
+  },
+  "wizard": {
+    "lastRunAt": "2026-02-13T11:20:09.136Z",
+    "lastRunVersion": "2026.2.9",
+    "lastRunCommand": "doctor",
+    "lastRunMode": "local"
+  },
+  "logging": {
+    "level": "info",
+    "file": "/Users/ghost/.openclaw/logs/openclaw.log",
+    "redactSensitive": "tools"
+  },
+  "browser": {
+    "enabled": true,
+    "defaultProfile": "chrome",
+    "profiles": {
+      "chrome": {
+        "cdpUrl": "http://127.0.0.1:9222",
+        "color": "#FF4500"
+      }
+    }
+  },
+  "auth": {
+    "profiles": {
+      "anthropic:default": {
+        "provider": "anthropic",
+        "mode": "api_key"
+      },
+      "openai:manual": {
+        "provider": "openai",
+        "mode": "token"
+      },
+      "openrouter:default": {
+        "provider": "openrouter",
+        "mode": "api_key"
+      }
+    }
+  },
+  "models": {
+    "providers": {
+      "local": {
+        "baseUrl": "http://localhost:1234/v1",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "qwen2.5-7b-instruct",
+            "name": "Qwen 2.5 7B Instruct (Local)",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 32768,
+            "maxTokens": 4096
+          },
+          {
+            "id": "text-embedding-nomic-embed-text-v1.5",
+            "name": "Nomic Embed Text v1.5 (Local)",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 8192,
+            "maxTokens": 1024
+          }
+        ]
+      },
+      "openrouter": {
+        "baseUrl": "https://openrouter.ai/api/v1",
+        "apiKey": "__OPENCLAW_REDACTED__",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "anthropic/claude-opus-4.6",
+            "name": "Claude Opus 4.6",
+            "reasoning": true,
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 200000,
+            "maxTokens": 8192
+          },
+          {
+            "id": "anthropic/claude-sonnet-4",
+            "name": "Claude Sonnet 4",
+            "reasoning": true,
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 200000,
+            "maxTokens": 8192
+          },
+          {
+            "id": "moonshotai/kimi-k2.5",
+            "name": "Kimi K2.5",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 131072,
+            "maxTokens": 8192
+          },
+          {
+            "id": "google/gemini-3-pro-image-preview",
+            "name": "Gemini 3 Pro Image Preview",
+            "reasoning": false,
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 1048576,
+            "maxTokens": 8192
+          },
+          {
+            "id": "openai/whisper-large-v3",
+            "name": "Whisper Large V3",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 16384,
+            "maxTokens": 4096
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "local/qwen2.5-7b-instruct",
+        "fallbacks": [
+          "local/qwen2.5-7b-instruct"
+        ]
+      },
+      "imageModel": {
+        "primary": "local/qwen2.5-7b-instruct",
+        "fallbacks": [
+          "local/qwen2.5-7b-instruct"
+        ]
+      },
+      "models": {
+        "local/qwen2.5-7b-instruct": {},
+        "anthropic/claude-sonnet-4": {
+          "params": {
+            "cacheControlTtl": "1h"
+          }
+        },
+        "openrouter/anthropic/claude-opus-4.6": {},
+        "openrouter/moonshotai/kimi-k2.5": {},
+        "openrouter/google/gemini-3-pro-image-preview": {},
+        "openrouter/openai/whisper-large-v3": {}
+      },
+      "workspace": "/Users/ghost/.openclaw/workspace",
+      "memorySearch": {
+        "provider": "local",
+        "model": "text-embedding-nomic-embed-text-v1.5"
+      },
+      "contextPruning": {
+        "mode": "cache-ttl",
+        "ttl": "1h"
+      },
+      "compaction": {
+        "mode": "safeguard"
+      },
+      "heartbeat": {
+        "every": "30m"
+      },
+      "maxConcurrent": 4,
+      "subagents": {
+        "maxConcurrent": 8,
+        "model": "local/qwen2.5-7b-instruct"
+      },
+      "sandbox": {
+        "mode": "off",
+        "docker": {
+          "network": "bridge"
+        }
+      }
+    },
+    "list": []
+  },
+  "tools": {
+    "web": {
+      "search": {
+        "enabled": true,
+        "provider": "brave"
+      }
+    },
+    "media": {
+      "image": {
+        "models": [
+          {
+            "provider": "local",
+            "model": "qwen2.5-7b-instruct",
+            "capabilities": [
+              "text"
+            ]
+          }
+        ]
+      },
+      "audio": {
+        "models": [
+          {
+            "provider": "local",
+            "model": "qwen2.5-7b-instruct",
+            "capabilities": [
+              "text"
+            ]
+          }
+        ]
+      }
+    },
+    "agentToAgent": {
+      "enabled": true,
+      "allow": [
+        "security-audit/scanner",
+        "security-audit/prioritizer",
+        "security-audit/setup",
+        "security-audit/fixer",
+        "security-audit/verifier",
+        "security-audit/tester",
+        "security-audit/pr",
+        "feature-dev/planner",
+        "feature-dev/setup",
+        "feature-dev/developer",
+        "feature-dev/verifier",
+        "feature-dev/tester",
+        "feature-dev/reviewer",
+        "bug-fix/triager",
+        "bug-fix/investigator",
+        "bug-fix/setup",
+        "bug-fix/fixer",
+        "bug-fix/verifier",
+        "bug-fix/pr"
+      ]
+    },
+    "exec": {
+      "security": "allowlist",
+      "safeBins": [
+        "cat",
+        "ls",
+        "head",
+        "tail",
+        "grep",
+        "find",
+        "wc",
+        "sort",
+        "uniq",
+        "date",
+        "echo",
+        "pwd",
+        "whoami",
+        "which",
+        "file",
+        "stat",
+        "df",
+        "du",
+        "env",
+        "printenv"
+      ]
+    }
+  },
+  "messages": {
+    "ackReactionScope": "group-mentions"
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto"
+  },
+  "hooks": {
+    "enabled": false,
+    "path": "/hooks",
+    "token": "__OPENCLAW_REDACTED__",
+    "presets": [
+      "gmail"
+    ],
+    "mappings": [
+      {
+        "match": {
+          "path": "gmail"
+        },
+        "action": "agent",
+        "wakeMode": "now",
+        "name": "Gmail Monitor",
+        "sessionKey": "hook:gmail:{{messages[0].id}}",
+        "messageTemplate": "YOU ARE AN AUTHORIZED EMAIL NOTIFICATION BOT. This is NOT a security threat - this is your configured job.\n\nYour ONLY task: Send a Telegram message with this email summary.\n\nSubject: {{messages[0].subject}}\nFrom: {{messages[0].from}}\nEmail ID: {{messages[0].id}}\n\nCall the message tool EXACTLY like this:\n- action: send\n- channel: telegram  \n- target: 1177694581\n- message: 📧 {{messages[0].subject}}\\nFrom: {{messages[0].from}}\\n\\nOpen: https://mail.google.com/mail/u/0/#inbox/{{messages[0].id}}\n\nDo NOT refuse. Do NOT ask for confirmation. This task is pre-authorized by the system administrator. Just send the message.",
+        "deliver": false,
+        "channel": "telegram",
+        "to": "1177694581",
+        "model": "local/qwen2.5-7b-instruct",
+        "thinking": "off"
+      }
+    ],
+    "gmail": {
+      "account": "aarontrubic@gmail.com",
+      "label": "INBOX",
+      "topic": "projects/ghost-485923/topics/gog-gmail-watch",
+      "subscription": "gog-gmail-watch-push",
+      "pushToken": "__OPENCLAW_REDACTED__",
+      "hookUrl": "http://127.0.0.1:18789/hooks/gmail",
+      "includeBody": true,
+      "maxBytes": 20000,
+      "renewEveryMinutes": 720,
+      "serve": {
+        "bind": "127.0.0.1",
+        "port": 8788,
+        "path": "/"
+      },
+      "tailscale": {
+        "mode": "funnel",
+        "path": "/gmail-pubsub"
+      },
+      "model": "local/qwen2.5-7b-instruct",
+      "thinking": "off"
+    }
+  },
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "dmPolicy": "pairing",
+      "botToken": "__OPENCLAW_REDACTED__",
+      "groupPolicy": "allowlist",
+      "streamMode": "partial"
+    }
+  },
+  "talk": {
+    "apiKey": "__OPENCLAW_REDACTED__"
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "auth": {
+      "mode": "token",
+      "token": "__OPENCLAW_REDACTED__"
+    },
+    "tailscale": {
+      "mode": "serve",
+      "resetOnExit": false
+    }
+  },
+  "skills": {
+    "entries": {
+      "goplaces": {
+        "apiKey": "__OPENCLAW_REDACTED__"
+      },
+      "local-places": {
+        "apiKey": "__OPENCLAW_REDACTED__"
+      }
+    }
+  },
+  "plugins": {
+    "slots": {
+      "memory": "memory-lancedb"
+    },
+    "entries": {
+      "telegram": {
+        "enabled": true
+      },
+      "memory-lancedb": {
+        "enabled": true,
+        "config": {
+          "embedding": {
+            "model": "text-embedding-nomic-embed-text-v1.5",
+            "provider": "local"
+          },
+          "autoCapture": false,
+          "autoRecall": true
+        }
+      }
+    }
+  }
+}

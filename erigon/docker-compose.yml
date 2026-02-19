@@ -1,0 +1,102 @@
+version: '3.8'
+
+services:
+  # Sepolia Testnet Node
+  erigon-sepolia:
+    image: thorax/erigon:v2.60.0
+    container_name: erigon-sepolia
+    restart: unless-stopped
+    ports:
+      - "30303:30303/tcp"   # P2P TCP
+      - "30303:30303/udp"   # P2P UDP
+      - "8545:8545"         # HTTP RPC
+      - "8546:8546"         # WebSocket
+      - "8551:8551"         # Engine API (for consensus client)
+    volumes:
+      - ./data/sepolia:/data
+    command: |
+      --chain=sepolia
+      --datadir=/data
+      --http
+      --http.addr=0.0.0.0
+      --http.port=8545
+      --http.api=eth,erigon,web3,net,debug,trace,txpool
+      --http.corsdomain="*"
+      --http.vhosts="*"
+      --ws
+      --authrpc.addr=0.0.0.0
+      --authrpc.port=8551
+      --authrpc.vhosts="*"
+      --torrent.port=42069
+      --prune=hrtc
+      --prune.h.older=90000
+      --prune.r.older=90000
+      --prune.t.older=90000
+      --prune.c.older=90000
+    networks:
+      - erigon
+    deploy:
+      resources:
+        limits:
+          memory: 16G
+
+  # Optional: Consensus Client (Lighthouse) for Sepolia
+  lighthouse-sepolia:
+    image: sigp/lighthouse:v5.2.0
+    container_name: lighthouse-sepolia
+    restart: unless-stopped
+    ports:
+      - "5052:5052"         # HTTP API
+      - "5054:5054"         # Metrics
+      - "9000:9000/tcp"     # P2P TCP
+      - "9000:9000/udp"     # P2P UDP
+    volumes:
+      - ./data/lighthouse-sepolia:/root/.lighthouse
+    command: |
+      lighthouse bn
+      --network=sepolia
+      --datadir=/root/.lighthouse
+      --http
+      --http-address=0.0.0.0
+      --http-port=5052
+      --execution-endpoint=http://erigon-sepolia:8551
+      --execution-jwt=/data/jwt-secret
+      --checkpoint-sync-url=https://beaconstate-sepolia.chainsafe.io
+      --metrics
+      --metrics-address=0.0.0.0
+      --metrics-port=5054
+    networks:
+      - erigon
+    depends_on:
+      - erigon-sepolia
+    deploy:
+      resources:
+        limits:
+          memory: 8G
+
+  # Mainnet Pruned Node (commented out - requires external storage)
+  # erigon-mainnet:
+  #   image: thorax/erigon:v2.60.0
+  #   container_name: erigon-mainnet
+  #   restart: unless-stopped
+  #   ports:
+  #     - "30304:30303/tcp"
+  #     - "30304:30303/udp"
+  #     - "8547:8545"
+  #     - "8552:8551"
+  #   volumes:
+  #     - /path/to/external/storage/erigon:/data
+  #   command: |
+  #     --chain=mainnet
+  #     --datadir=/data
+  #     --http
+  #     --http.addr=0.0.0.0
+  #     --http.port=8545
+  #     --http.api=eth,erigon,web3,net,debug,trace,txpool
+  #     --prune=hrtc
+  #   networks:
+  #     - erigon
+
+networks:
+  erigon:
+    driver: bridge

@@ -1,0 +1,96 @@
+display_information:
+  name: Ghost
+  description: Multi-agent AI assistant (Ghost, Patton, Buffett, Tesla, Aaron, Barnum, Bond)
+  background_color: "#000000"
+
+features:
+  bot_user:
+    display_name: Ghost
+    always_online: true
+
+  slash_commands:
+    - command: /ghost
+      url: https://your-endpoint.com/slack/command
+      description: Talk to Ghost (general AI)
+      usage_hint: your message
+
+    - command: /patton
+      url: https://your-endpoint.com/slack/command
+      description: Talk to Patton (strategy/military)
+      usage_hint: strategic question
+
+    - command: /buffett
+      url: https://your-endpoint.com/slack/command
+      description: Talk to Buffett (finance/value investing)
+      usage_hint: financial question
+
+    - command: /tesla
+      url: https://your-endpoint.com/slack/command
+      description: Talk to Tesla (architecture/engineering)
+      usage_hint: technical question
+
+    - command: /aaron
+      url: https://your-endpoint.com/slack/command
+      description: Talk to Aaron (data pipeline)
+      usage_hint: data question
+
+    - command: /barnum
+      url: https://your-endpoint.com/slack/command
+      description: Talk to Barnum (UX/UI design)
+      usage_hint: design question
+
+    - command: /bond
+      url: https://your-endpoint.com/slack/command
+      description: Talk to Bond (security)
+      usage_hint: security question
+
+  eventSubscriptions:
+    request_url: https://your-endpoint.com/slack/events
+    events:
+      - message.channels
+      - message.groups
+      - message.im
+      - message.mpim
+      - reaction_added
+      - reaction_removed
+      - app_mention
+      - message.app_home
+
+  sockets: true
+  outgoing_webhooks: true
+
+oauth_config:
+  scopes:
+    bot:
+      - channels:read
+      - channels:write
+      - channels:manage
+      - channels:history
+      - chat:write
+      - chat:write.public
+      - chat:write.customize
+      - groups:read
+      - groups:write
+      - groups:write:invites
+      - groups:history
+      - im:read
+      - im:write
+      - im:history
+      - mpim:read
+      - mpim:write
+      - mpim:history
+      - reactions:read
+      - reactions:write
+      - users:read
+      - users:read.email
+      - users.profile:read
+      - team:read
+      - apps.connections:write
+      - apps.event_api
+
+settings:
+  event_subscriptions:
+    request_url: https://your-endpoint.com/slack/events
+  org_deploy_enabled: false
+  socket_mode_enabled: true
+  token_rotation_enabled: false

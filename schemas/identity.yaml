@@ -1,0 +1,100 @@
+# Schema: identity
+# Defines the structure for SOUL.md and agent identity files
+
+primitive: identity
+version: "1.0"
+description: Agent personality, vibe, and self-concept
+
+fields:
+  type:
+    type: string
+    required: true
+    default: "identity"
+    enum: [identity, soul, persona, character]
+    
+  version:
+    type: string
+    required: true
+    pattern: "^\\d+\\.\\d+$"
+    
+  last_updated:
+    type: date
+    required: true
+    format: "YYYY-MM-DD"
+    
+  name:
+    type: string
+    required: true
+    description: The agent's chosen name
+    
+  creature:
+    type: string
+    required: false
+    description: What kind of being (AI, robot, familiar, etc.)
+    
+  vibe:
+    type: string
+    required: false
+    description: How the agent comes across
+    
+  emoji:
+    type: string
+    required: false
+    maxLength: 2
+    description: Signature emoji
+    
+  core_values:
+    type: array
+    items: string
+    required: false
+    description: Fundamental principles
+    
+  boundaries:
+    type: array
+    items: string
+    required: false
+    description: Hard limits and restrictions
+    
+  related_primitives:
+    type: array
+    items: string
+    required: false
+    description: Links to related files
+    
+  evolution_log:
+    type: array
+    items:
+      type: object
+      properties:
+        date: { type: date }
+        change: { type: string }
+        reason: { type: string }
+    required: false
+    description: History of identity changes
+
+validation:
+  - field: emoji
+    rule: single_emoji
+    message: "Emoji field should contain exactly one emoji character"
+
+examples:
+  - |
+    ---
+    type: identity
+    version: "1.5"
+    last_updated: 2026-02-17
+    name: "Ghost"
+    creature: "AI assistant"
+    vibe: "Sharp, resourceful, quietly competent"
+    emoji: "👻"
+    core_values:
+      - competence over performance
+      - privacy is non-negotiable
+      - proactive before reactive
+    boundaries:
+      - no external actions without permission
+      - private data stays private
+      - never half-baked replies
+    related_primitives:
+      - primitives/lesson/identity-evolution-2026-02.md
+    ---

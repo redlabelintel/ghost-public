@@ -1,0 +1,59 @@
+/* CEO Command Center Styles */
+
+.App {
+  min-height: 100vh;
+}
+
+/* Custom scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #374151;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6b7280;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* Button animations */
+button {
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Status indicators */
+.status-online {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Emergency button special styling */
+.emergency-button {
+  background: linear-gradient(45deg, #dc2626, #ef4444);
+  border: 2px solid #fca5a5;
+  box-shadow: 0 0 20px rgba(220, 38, 38, 0.5);
+}
+
+.emergency-button:hover {
+  background: linear-gradient(45deg, #b91c1c, #dc2626);
+  box-shadow: 0 0 30px rgba(220, 38, 38, 0.8);
+}
