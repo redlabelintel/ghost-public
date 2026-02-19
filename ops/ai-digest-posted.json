@@ -1,0 +1,26 @@
+[
+  {
+    "date": "2026-02-19",
+    "title": "AI Agents in 2026: From hype to enterprise reality",
+    "url": "https://www.kore.ai/blog/ai-agents-in-2026-from-hype-to-enterprise-reality",
+    "topic": "deterministic vs agentic workflows"
+  },
+  {
+    "date": "2026-02-19",
+    "title": "Multi-Hop AI Agent Suite - Architecture",
+    "url": "https://www.researchsquare.com/article/rs-8880566/v1",
+    "topic": "execution control and stateless agents"
+  },
+  {
+    "date": "2026-02-19",
+    "title": "Evaluating AI agents: Real-world lessons from Amazon",
+    "url": "https://aws.amazon.com/blogs/machine-learning/evaluating-ai-agents-real-world-lessons-from-building-agentic-systems-at-amazon/",
+    "topic": "system evaluation vs model benchmarks"
+  },
+  {
+    "date": "2026-02-19",
+    "title": "LLM Stats - Reasoning model trends",
+    "url": "https://llm-stats.com/llm-updates",
+    "topic": "reasoning models trading speed for accuracy"
+  }
+]
