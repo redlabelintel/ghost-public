@@ -49,14 +49,20 @@ const result = await visualQA(options);
 
 ---
 
+## Active Skills
+
+| Skill ID | Name | Status | Description |
+|----------|------|--------|-------------|
+| `visual-qa` | Visual QA | ✅ Active | AI-powered UI screenshot review |
+| `apple-design-system` | Apple Design System | ✅ Active | 10 prompts for complete design systems |
+
 ## Skill Roadmap
 
 | Priority | Skill | Source |
 |----------|-------|--------|
-| 🔴 High | AI Design System | Hamza Khalid bookmark |
 | 🔴 High | Skill Architecture Framework | Boring Marketer bookmark |
 | 🟡 Medium | Content Generation | Various |
-| 🟡 Medium | Data Pipeline | Aaron's domain |
+| 🟡 Medium | Data Pipeline | Various |
 | 🟢 Low | Marketing Automation | J.B. bookmark |
 
 ---
