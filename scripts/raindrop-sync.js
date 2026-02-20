@@ -68,24 +68,36 @@ function request(url, options = {}) {
   });
 }
 
-// Get or create collection
-async function getCollection() {
+// Get all collections with bookmarks
+async function getAllCollections() {
   const { items: collections } = await request(`${RAINDROP_API}/collections`);
   
-  let collection = collections.find(c => c.title === COLLECTION_NAME);
+  // Filter to collections that likely contain bookmarks (exclude system/default)
+  const bookmarkCollections = collections.filter(c => 
+    c.title.toLowerCase().includes('bookmark') ||
+    c.title.toLowerCase().includes('ai') ||
+    c.title.toLowerCase().includes('x') ||
+    c.title.toLowerCase().includes('read') ||
+    c.count > 0  // Any collection with items
+  );
   
-  if (!collection) {
-    console.log(`Creating collection: ${COLLECTION_NAME}`);
-    collection = await request(`${RAINDROP_API}/collection`, {
-      method: 'POST',
-      body: {
-        title: COLLECTION_NAME,
-        public: false
-      }
-    });
+  if (bookmarkCollections.length === 0) {
+    // Fall back to default collection
+    console.log(`No bookmark collections found, using: ${COLLECTION_NAME}`);
+    let defaultCol = collections.find(c => c.title === COLLECTION_NAME);
+    if (!defaultCol) {
+      defaultCol = await request(`${RAINDROP_API}/collection`, {
+        method: 'POST',
+        body: { title: COLLECTION_NAME, public: false }
+      });
+    }
+    return [defaultCol];
   }
   
-  return collection;
+  console.log(`Found ${bookmarkCollections.length} collections with bookmarks:`);
+  bookmarkCollections.forEach(c => console.log(`  - ${c.title} (${c.count} items)`));
+  
+  return bookmarkCollections;
 }
 
 // Fetch bookmarks from collection
