@@ -14,6 +14,31 @@ const RAINDROP_API = 'https://api.raindrop.io/rest/v1';
 const RAINDROP_TOKEN = process.env.RAINDROP_TOKEN;
 const COLLECTION_NAME = 'X Bookmarks AI';
 const ANALYSIS_DIR = path.join(__dirname, '..', 'analysis');
+const TRACKER_FILE = path.join(__dirname, '..', 'ops', 'bookmark-tracker.md');
+
+// Load tracker to check for already-analyzed bookmarks
+function loadTracker() {
+  try {
+    const content = fs.readFileSync(TRACKER_FILE, 'utf8');
+    // Extract bookmark IDs from tracker (simplified)
+    const analyzed = [];
+    const lines = content.split('\n');
+    lines.forEach(line => {
+      // Look for Raindrop IDs in the tracker
+      const match = line.match(/_id:\s*(\d+)/);
+      if (match) analyzed.push(match[1]);
+    });
+    return analyzed;
+  } catch {
+    return [];
+  }
+}
+
+// Check if bookmark already tracked
+function isTracked(raindropId) {
+  const tracker = loadTracker();
+  return tracker.includes(String(raindropId));
+}
 
 // Simple HTTP request wrapper
 function request(url, options = {}) {
@@ -167,9 +192,10 @@ async function sync(options = {}) {
     let alreadyAnalyzed = 0;
     
     for (const bookmark of bookmarks) {
-      const analyzed = isAnalyzed(bookmark.link);
+      const fileAnalyzed = isAnalyzed(bookmark.link);
+      const trackerAnalyzed = isTracked(bookmark._id);
       
-      if (analyzed) {
+      if (fileAnalyzed || trackerAnalyzed) {
         alreadyAnalyzed++;
         console.log(`✓ Already analyzed: ${bookmark.title?.substring(0, 60) || 'Untitled'}...`);
         continue;
