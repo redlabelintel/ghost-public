@@ -55,6 +55,7 @@ const result = await visualQA(options);
 |----------|------|--------|-------------|
 | `visual-qa` | Visual QA | ✅ Active | AI-powered UI screenshot review |
 | `apple-design-system` | Apple Design System | ✅ Active | 10 prompts for complete design systems |
+| `agent-readability-audit` | Agent Readability Audit | ✅ Active | Evaluate brand optimization for AI agents |
 
 ## Skill Roadmap
 
