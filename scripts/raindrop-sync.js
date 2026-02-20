@@ -68,6 +68,18 @@ function request(url, options = {}) {
   });
 }
 
+// Tag a bookmark in Raindrop
+async function tagBookmark(bookmarkId, tags) {
+  try {
+    await request(`${RAINDROP_API}/raindrop/${bookmarkId}`, {
+      method: 'PUT',
+      body: { tags }
+    });
+  } catch (error) {
+    console.error(`   ⚠️  Failed to tag bookmark ${bookmarkId}:`, error.message);
+  }
+}
+
 // Get all collections with bookmarks
 async function getAllCollections() {
   const { items: collections } = await request(`${RAINDROP_API}/collections`);
@@ -191,25 +203,35 @@ async function sync(options = {}) {
   }
   
   try {
-    // Get collection
-    const collection = await getCollection();
-    console.log(`Collection: ${collection?.title || 'X Bookmarks AI'} (ID: ${collection?._id || 67175824})`);
+    // Get Unsorted collection (ID: -1) where new bookmarks arrive
+    const unsortedId = -1;
+    console.log('Collection: Unsorted (ID: -1) - New bookmarks land here untagged');
+    console.log(`Collection: Unsorted (ID: -1) - New bookmarks land here untagged`);
     
-    // Fetch bookmarks
-    const bookmarks = await fetchBookmarks(collection._id);
+    // Fetch bookmarks from Unsorted
+    const bookmarks = await fetchBookmarks(unsortedId);
     console.log(`Found ${bookmarks.length} bookmarks`);
     console.log('');
     
     let newBookmarks = 0;
     let alreadyAnalyzed = 0;
     
-    for (const bookmark of bookmarks) {
+    // Filter to bookmarks with NO tags (unprocessed)
+    const untaggedBookmarks = bookmarks.filter(b => !b.tags || b.tags.length === 0);
+    console.log(`Found ${untaggedBookmarks.length} untagged bookmarks to analyze`);
+    console.log('');
+    
+    for (const bookmark of untaggedBookmarks) {
       const fileAnalyzed = isAnalyzed(bookmark.link);
       const trackerAnalyzed = isTracked(bookmark._id);
       
       if (fileAnalyzed || trackerAnalyzed) {
         alreadyAnalyzed++;
         console.log(`✓ Already analyzed: ${bookmark.title?.substring(0, 60) || 'Untitled'}...`);
+        // Still tag it if not tagged
+        if (!dryRun && bookmark._id) {
+          await tagBookmark(bookmark._id, ['analyzed', 'ghost-ai']);
+        }
         continue;
       }
       
@@ -223,6 +245,12 @@ async function sync(options = {}) {
         
         fs.writeFileSync(filepath, analysis);
         console.log(`   → Created: ${filename}`);
+        
+        // Tag the bookmark in Raindrop
+        if (bookmark._id) {
+          await tagBookmark(bookmark._id, ['analyzed', 'ghost-ai']);
+          console.log(`   → Tagged: analyzed, ghost-ai`);
+        }
       }
     }
     
