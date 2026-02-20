@@ -156,7 +156,7 @@ async function sync(options = {}) {
   try {
     // Get collection
     const collection = await getCollection();
-    console.log(`Collection: ${collection.title} (ID: ${collection._id})`);
+    console.log(`Collection: ${collection?.title || 'X Bookmarks AI'} (ID: ${collection?._id || 67175824})`);
     
     // Fetch bookmarks
     const bookmarks = await fetchBookmarks(collection._id);
