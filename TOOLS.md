@@ -37,17 +37,16 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 
 ---
 
-## Email Service
+### Skills
 
-**Account:** aarontrubic@gmail.com  
-**Method:** Gmail SMTP with app password  
-**Config:** `~/.config/himalaya/config.toml`  
-**Docs:** `EMAIL_SERVICE.md`
-
-**Quick send:**
-```bash
-python3 send_email.py [to] [subject] [body]
-```
+- **visual-qa** → Design review skill (from Dylan Feltus). Location: `~/ghost-repo/skills/visual-qa/SKILL.md`
+  - Use for: Screenshot review, design QA, implementation vs mockup comparison
+  - 7 review categories: Layout/Spacing, Typography, Color/Contrast, Visual Hierarchy, Component Quality, Polish, Responsive
+  
+- **harness-audit** → Trace analysis skill for self-improvement
+  - Use for: Session failure diagnosis, harness optimization, pattern detection
+  - Parallel analysis: Tool Call, Context Window, Memory Retrieval, Session Flow
+  - Output: Specific harness fixes with evidence
 
 ---
 

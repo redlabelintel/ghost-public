@@ -1,0 +1,23 @@
+tool_timeouts:
+  browser:
+    default: 60000
+    screenshot: 30000
+    navigate: 45000
+    actions: 60000
+  web_search:
+    default: 15000
+    brave: 15000
+  image:
+    default: 30000
+    analysis: 30000
+  exec:
+    default: 30000
+    long_running: 120000
+  cron:
+    default: 300000
+  
+retry_policy:
+  max_retries: 3
+  backoff: exponential
+  base_delay_ms: 1000
+  max_delay_ms: 30000
