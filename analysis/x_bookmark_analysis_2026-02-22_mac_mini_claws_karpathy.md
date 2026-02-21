@@ -12,6 +12,14 @@
 
 **"Claws"**: Industry shorthand for AI coding assistants (Cursor, Claude, GitHub Copilot, OpenClaw, etc.) — tools with "claw" in the name or concept.
 
+**Critical Context from Excerpt**: Karpathy specifically notes: *"I'm definitely a bit sus'd to run OpenClaw specifically - giving my private data/keys to 400K lines of vibe coded"*
+
+This reveals:
+1. **OpenClaw is on his radar** — top AI engineers are evaluating it
+2. **Security concern** — 400K lines of "vibe coded" code raises trust issues
+3. **The barrier** — Private data/keys exposure is the hesitation
+4. **Validation** — He's considering local setup precisely to isolate these tools
+
 ---
 
 ## Key Insights
@@ -39,6 +47,13 @@ Karpathy's term "claws" captures the new workflow:
 - If Karpathy is setting up a dedicated rig, the tooling is maturing
 - Hardware demand precedes mainstream awareness
 
+### 5. The OpenClaw Security Perception
+Karpathy's hesitation reveals a critical market dynamic:
+- **Awareness**: OpenClaw has mindshare among elite AI engineers
+- **Friction**: "Vibe coded" concerns block adoption at the highest levels
+- **Solution**: Local/isolated deployment addresses the trust gap
+- **Opportunity**: First to solve the security UX wins the Karpathy-tier users
+
 ---
 
 ## Strategic Relevance
@@ -57,6 +72,12 @@ Karpathy's term "claws" captures the new workflow:
 - Weekend tinkerers with local AI rigs → next wave of AI-native builders
 - Karpathy-level engineers optimizing for local workflow = validation
 - Cloud dependency may decrease as local capability increases
+
+**For OpenClaw Specifically**:
+- Karpathy's "sus'd" comment = valuable product feedback
+- 400K lines of vibe-coded perception needs addressing
+- Local/isolated deployment is the trust bridge
+- This is the objection to overcome for top-tier adoption
 
 ---
 
