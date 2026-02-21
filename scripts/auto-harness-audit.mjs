@@ -40,7 +40,7 @@ function checkSessionLogs() {
   return failures;
 }
 
-function triggerHarnessAudit(sessionId) {
+async function triggerHarnessAudit(sessionId) {
   console.log(`🔧 Auto-triggering harness audit for ${sessionId}`);
   
   try {
