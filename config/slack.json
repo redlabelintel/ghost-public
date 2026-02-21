@@ -1,0 +1,21 @@
+{
+  "slack": {
+    "enabled": true,
+    "workspace": "nettedapp.slack.com",
+    "botToken": "xoxb-10539925674352-10533574019778-s0h95bxJbjdGakSF22IFI5h5",
+    "signingSecret": "fe88cc08206ed4c1cfedb581b005529a",
+    "appToken": "xapp-1-A0AGHRQ07U0-10537216989716-71d0b8bce512abaeff5474a280d8dd3cdfab83a650aefd1625be26013567c986",
+    "socketMode": true,
+    "defaultChannel": "#ghost",
+    "events": {
+      "appMention": true,
+      "directMessage": true,
+      "channelMessage": false
+    },
+    "features": {
+      "autoReply": true,
+      "threadedReplies": true,
+      "typingIndicator": false
+    }
+  }
+}
