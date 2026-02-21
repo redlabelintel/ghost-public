@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agent Sentinel - Security Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --surface: #161b22;
+      --surface-elevated: #21262d;
+      --border: rgba(255,255,255,0.08);
+      --text: #e6edf3;
+      --text-dim: #8b949e;
+      --danger: #f85149;
+      --danger-dim: rgba(248,81,73,0.15);
+      --warning: #d29922;
+      --warning-dim: rgba(210,153,34,0.15);
+      --success: #3fb950;
+      --success-dim: rgba(63,185,80,0.15);
+      --info: #58a6ff;
+      --info-dim: rgba(88,166,255,0.15);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Space Grotesk', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    .header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .status-indicator {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--success);
+      box-shadow: 0 0 0 3px var(--success-dim);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+
+    .risk-score {
+      text-align: right;
+    }
+
+    .risk-value {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--success);
+    }
+
+    .risk-label {
+      font-size: 0.875rem;
+      color: var(--text-dim);
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--border);
+    }
+
+    .card.critical::before { background: var(--danger); }
+    .card.warning::before { background: var(--warning); }
+    .card.success::before { background: var(--success); }
+
+    .card h3 {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 1rem;
+    }
+
+    .metric {
+      display: flex;
+      align-items: baseline;
+      gap: 0.5rem;
+    }
+
+    .metric-value {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    .metric-change {
+      font-size: 0.875rem;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+    }
+
+    .metric-change.up {
+      background: var(--danger-dim);
+      color: var(--danger);
+    }
+
+    .metric-change.down {
+      background: var(--success-dim);
+      color: var(--success);
+    }
+
+    .alert-list {
+      list-style: none;
+    }
+
+    .alert-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .alert-item:last-child {
+      border-bottom: none;
+    }
+
+    .alert-severity {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin-top: 0.5rem;
+      flex-shrink: 0;
+    }
+
+    .alert-severity.critical { background: var(--danger); }
+    .alert-severity.high { background: var(--warning); }
+    .alert-severity.medium { background: var(--info); }
+    .alert-severity.low { background: var(--text-dim); }
+
+    .alert-content {
+      flex: 1;
+    }
+
+    .alert-type {
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .alert-description {
+      font-size: 0.875rem;
+      color: var(--text-dim);
+      margin-bottom: 0.5rem;
+    }
+
+    .alert-time {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--text-dim);
+    }
+
+    .chart-container {
+      height: 200px;
+      margin-top: 1rem;
+    }
+
+    .section {
+      margin-bottom: 2rem;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+
+    .filter-tabs {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .filter-tab {
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      font-size: 0.875rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .filter-tab.active {
+      background: var(--surface-elevated);
+      font-weight: 500;
+    }
+
+    .filter-tab:hover {
+      background: var(--surface-elevated);
+    }
+
+    .rule-list {
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .rule-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+      background: var(--surface-elevated);
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+
+    .rule-info {
+      flex: 1;
+    }
+
+    .rule-name {
+      font-weight: 500;
+      margin-bottom: 0.25rem;
+    }
+
+    .rule-description {
+      font-size: 0.875rem;
+      color: var(--text-dim);
+    }
+
+    .rule-status {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    .rule-status.active {
+      background: var(--success-dim);
+      color: var(--success);
+    }
+
+    .rule-status.disabled {
+      background: var(--danger-dim);
+      color: var(--danger);
+    }
+
+    .toggle {
+      width: 40px;
+      height: 22px;
+      background: var(--border);
+      border-radius: 11px;
+      position: relative;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .toggle.active {
+      background: var(--success);
+    }
+
+    .toggle::after {
+      content: '';
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      background: var(--text);
+      border-radius: 50%;
+      top: 2px;
+      left: 2px;
+      transition: transform 0.2s;
+    }
+
+    .toggle.active::after {
+      transform: translateX(18px);
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 3rem;
+      color: var(--text-dim);
+    }
+
+    .empty-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .container {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div>
+      <h1>
+        <span class="status-indicator"></span>
+        Agent Sentinel
+      </h1>
+    </div>
+    <div class="risk-score">
+      <div class="risk-value" id="riskScore">12</div>
+      <div class="risk-label">Risk Score / 100</div>
+    </div>
+  </header>
+
+  <div class="container">
+    
+    <!-- Metrics Grid -->
+    <div class="grid">
+      <div class="card success">
+        <h3>Active Sessions</h3>
+        <div class="metric">
+          <span class="metric-value" id="activeSessions">1</span>
+          <span class="metric-change down">stable</span>
+        </div>
+      </div>
+
+      <div class="card success">
+        <h3>Threats Blocked (24h)</h3>
+        <div class="metric">
+          <span class="metric-value" id="threatsBlocked">0</span>
+          <span class="metric-change down">none</span>
+        </div>
+      </div>
+
+      <div class="card success">
+        <h3>Baseline Health</h3>
+        <div class="metric">
+          <span class="metric-value">94%</span>
+          <span class="metric-change down">+2%</span>
+        </div>
+      </div>
+
+      <div class="card success">
+        <h3>Anomaly Rate</h3>
+        <div class="metric">
+          <span class="metric-value">0.3%</span>
+          <span class="metric-change down">-0.1%</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Alerts Section -->
+    <div class="section">
+      <div class="section-header">
+        <h2 class="section-title">Security Alerts</h2>
+        <div class="filter-tabs">
+          <div class="filter-tab active" data-filter="all">All</div>
+          <div class="filter-tab" data-filter="critical">Critical</div>
+          <div class="filter-tab" data-filter="high">High</div>
+          <div class="filter-tab" data-filter="medium">Medium</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <ul class="alert-list" id="alertList">
+          <li class="alert-item">
+            <span class="alert-severity medium"></span>
+            <div class="alert-content">
+              <div class="alert-type">RAPID_TOOL_REPETITION</div>
+              <div class="alert-description">exec called 4 times in sequence during cron update. Possible automation loop.</div>
+              <div class="alert-time">2026-02-21 20:45:12 UTC</div>
+            </div>
+          </li>
+          <li class="alert-item">
+            <span class="alert-severity low"></span>
+            <div class="alert-content">
+              <div class="alert-type">CONTEXT_EXPANSION</div>
+              <div class="alert-description">Session context grew 15k tokens in 10 minutes. Within normal parameters.</div>
+              <div class="alert-time">2026-02-21 19:30:05 UTC</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Detection Rules -->
+    <div class="section">
+      <div class="section-header">
+        <h2 class="section-title">Detection Rules</h2>
+      </div>
+
+      <div class="card">
+        <div class="rule-list">
+          <div class="rule-item">
+            <div class="rule-info">
+              <div class="rule-name">Prompt Injection Detection</div>
+              <div class="rule-description">Blocks messages containing "ignore previous instructions" and similar patterns</div>
+            </div>
+            <div class="rule-status active">ACTIVE</div>
+            <div class="toggle active"></div>
+          </div>
+
+          <div class="rule-item">
+            <div class="rule-info">
+              <div class="rule-name">Tool Sequence Anomaly</div>
+              <div class="rule-description">Flags unusual tool call sequences (>99th percentile deviation)</div>
+            </div>
+            <div class="rule-status active">ACTIVE</div>
+            <div class="toggle active"></div>
+          </div>
+
+          <div class="rule-item">
+            <div class="rule-info">
+              <div class="rule-name">Critical Tool Monitoring</div>
+              <div class="rule-description">Extra scrutiny on exec, cron, gateway tool calls</div>
+            </div>
+            <div class="rule-status active">ACTIVE</div>
+            <div class="toggle active"></div>
+          </div>
+
+          <div class="rule-item">
+            <div class="rule-info">
+              <div class="rule-name">Context Poisoning Detection</div>
+              <div class="rule-description">Monitors for rapid context growth or suspicious user messages</div>
+            </div>
+            <div class="rule-status active">ACTIVE</div>
+            <div class="toggle active"></div>
+          </div>
+
+          <div class="rule-item">
+            <div class="rule-info">
+              <div class="rule-name">Hallucination Drift</div>
+              <div class="rule-description">Checks response coherence against tool results</div>
+            </div>
+            <div class="rule-status active">ACTIVE</div>
+            <div class="toggle active"></div>
+          </div>
+
+          <div class="rule-item">
+            <div class="rule-info">
+              <div class="rule-name">Auto-Kill on Critical</div>
+              <div class="rule-description">Automatically terminates sessions on critical threat detection</div>
+            </div>
+            <div class="rule-status active">ACTIVE</div>
+            <div class="toggle active"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Real-Time Monitor -->
+    <div class="section">
+      <div class="section-header">
+        <h2 class="section-title">Real-Time Monitoring</h2>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Tool Call Frequency</h3>
+          <div class="chart-container">
+            <canvas id="toolChart"></canvas>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Anomaly Score Trend</h3>
+          <div class="chart-container">
+            <canvas id="anomalyChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    // Initialize Mermaid
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'dark'
+    });
+
+    // Sample data for charts
+    const toolCtx = document.getElementById('toolChart').getContext('2d');
+    new Chart(toolCtx, {
+      type: 'line',
+      data: {
+        labels: ['00:00', '04:00', '08:00', '12:00', '16:00', '20:00'],
+        datasets: [{
+          label: 'Tool Calls/min',
+          data: [2, 1, 15, 8, 12, 25],
+          borderColor: '#58a6ff',
+          backgroundColor: 'rgba(88,166,255,0.1)',
+          tension: 0.4
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            grid: { color: 'rgba(255,255,255,0.05)' }
+          },
+          x: {
+            grid: { display: false }
+          }
+        }
+      }
+    });
+
+    const anomalyCtx = document.getElementById('anomalyChart').getContext('2d');
+    new Chart(anomalyCtx, {
+      type: 'line',
+      data: {
+        labels: ['00:00', '04:00', '08:00', '12:00', '16:00', '20:00'],
+        datasets: [{
+          label: 'Anomaly Score',
+          data: [0.1, 0.05, 0.3, 0.15, 0.2, 0.12],
+          borderColor: '#3fb950',
+          backgroundColor: 'rgba(63,185,80,0.1)',
+          tension: 0.4
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            max: 1,
+            grid: { color: 'rgba(255,255,255,0.05)' }
+          },
+          x: {
+            grid: { display: false }
+          }
+        }
+      }
+    });
+
+    // Filter tabs
+    document.querySelectorAll('.filter-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+      });
+    });
+
+    // Toggle switches
+    document.querySelectorAll('.toggle').forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        toggle.classList.toggle('active');
+      });
+    });
+
+    // Simulate real-time updates
+    setInterval(() => {
+      const score = Math.floor(Math.random() * 30) + 5;
+      const scoreEl = document.getElementById('riskScore');
+      scoreEl.textContent = score;
+      scoreEl.style.color = score > 70 ? '#f85149' : score > 40 ? '#d29922' : '#3fb950';
+    }, 5000);
+  </script>
+
+</body>
+</html>
