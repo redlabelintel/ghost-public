@@ -48,6 +48,11 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
   - Parallel analysis: Tool Call, Context Window, Memory Retrieval, Session Flow
   - Output: Specific harness fixes with evidence
 
+- **visual-explainer** → Rich HTML diagram generation (from Nico Bailon)
+  - Use for: Architecture diagrams, diff reviews, plan audits, data tables
+  - Output: Self-contained HTML with Mermaid diagrams, dark/light themes
+  - Commands: /diff-review, /plan-review, /project-recap, /fact-check
+
 ---
 
 Add whatever helps you do your job. This is your cheat sheet.
