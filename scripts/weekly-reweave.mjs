@@ -7,8 +7,8 @@
  */
 
 import { promises as fs } from 'fs';
-import { glob } from 'glob';
 import path from 'path';
+import { readdir } from 'fs/promises';
 
 const MEMORY_DIR = '/Users/ghost/.openclaw/workspace-ghost/memory';
 const ARCHIVE_DIR = path.join(MEMORY_DIR, 'archive');
@@ -21,8 +21,11 @@ async function main() {
   const today = new Date();
   const weekAgo = new Date(today - 7 * 24 * 60 * 60 * 1000);
   
-  const datePattern = '2026-02-??.md'; // Simplified for current month
-  const dailyNotes = await glob(path.join(MEMORY_DIR, datePattern));
+  // Get all .md files matching YYYY-MM-DD pattern
+  const files = await readdir(MEMORY_DIR);
+  const dailyNotes = files
+    .filter(f => /^\d{4}-\d{2}-\d{2}\.md$/.test(f))
+    .map(f => path.join(MEMORY_DIR, f));
   
   console.log(`Found ${dailyNotes.length} daily notes`);
 
