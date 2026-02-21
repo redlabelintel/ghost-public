@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ghost Memory & Learning System Architecture</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <style>
+    :root {
+      /* Dark-first: Terminal/IDE aesthetic */
+      --bg: #0d1117;
+      --surface: #161b22;
+      --surface-elevated: #21262d;
+      --border: rgba(255,255,255,0.08);
+      --text: #e6edf3;
+      --text-dim: #8b949e;
+      --accent-primary: #58a6ff;
+      --accent-primary-dim: rgba(88,166,255,0.15);
+      --accent-success: #3fb950;
+      --accent-success-dim: rgba(63,185,80,0.15);
+      --accent-warning: #d29922;
+      --accent-warning-dim: rgba(210,153,34,0.15);
+      --accent-danger: #f85149;
+      --accent-danger-dim: rgba(248,81,73,0.15);
+      --code-bg: #0d1117;
+    }
+
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f6f8fa;
+        --surface: #ffffff;
+        --surface-elevated: #f3f4f6;
+        --border: rgba(0,0,0,0.08);
+        --text: #24292f;
+        --text-dim: #57606a;
+        --accent-primary: #0969da;
+        --accent-primary-dim: rgba(9,105,218,0.1);
+        --accent-success: #1a7f37;
+        --accent-success-dim: rgba(26,127,55,0.1);
+        --accent-warning: #9a6700;
+        --accent-warning-dim: rgba(154,103,0,0.1);
+        --accent-danger: #cf222e;
+        --accent-danger-dim: rgba(207,34,46,0.1);
+        --code-bg: #f6f8fa;
+      }
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Space Grotesk', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, var(--surface) 0%, var(--bg) 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 4rem 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 100%;
+      background: radial-gradient(ellipse at top right, var(--accent-primary-dim), transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    .hero .subtitle {
+      color: var(--text-dim);
+      font-size: 1.125rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .stat-card {
+      background: var(--surface-elevated);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.25rem;
+      text-align: center;
+    }
+
+    .stat-value {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--accent-primary);
+    }
+
+    .stat-label {
+      font-size: 0.875rem;
+      color: var(--text-dim);
+      margin-top: 0.25rem;
+    }
+
+    /* Navigation */
+    .nav {
+      position: sticky;
+      top: 0;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 2rem;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+    }
+
+    .nav-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      gap: 1.5rem;
+      overflow-x: auto;
+    }
+
+    .nav a {
+      color: var(--text-dim);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      white-space: nowrap;
+      padding: 0.5rem 0;
+      border-bottom: 2px solid transparent;
+      transition: all 0.2s;
+    }
+
+    .nav a:hover, .nav a.active {
+      color: var(--text);
+      border-bottom-color: var(--accent-primary);
+    }
+
+    /* Main Content */
+    .content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .section {
+      margin-bottom: 3rem;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-header h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    .section-badge {
+      background: var(--accent-primary-dim);
+      color: var(--accent-primary);
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Architecture Cards */
+    .architecture-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1rem;
+    }
+
+    .arch-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      position: relative;
+    }
+
+    .arch-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--accent-primary);
+      border-radius: 12px 12px 0 0;
+    }
+
+    .arch-card.success::before { background: var(--accent-success); }
+    .arch-card.warning::before { background: var(--accent-warning); }
+    .arch-card.danger::before { background: var(--accent-danger); }
+
+    .arch-card h3 {
+      font-size: 1.125rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .arch-card p {
+      color: var(--text-dim);
+      font-size: 0.9375rem;
+      margin-bottom: 1rem;
+    }
+
+    .component-list {
+      list-style: none;
+    }
+
+    .component-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 0;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.875rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .component-list li:last-child {
+      border-bottom: none;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+
+    .status-dot.active { background: var(--accent-success); }
+    .status-dot.pending { background: var(--accent-warning); }
+    .status-dot.archived { background: var(--text-dim); }
+
+    /* Mermaid Container */
+    .mermaid-wrap {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      position: relative;
+    }
+
+    .mermaid {
+      display: flex;
+      justify-content: center;
+    }
+
+    /* Table Styles */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9375rem;
+    }
+
+    .data-table th {
+      text-align: left;
+      padding: 0.75rem 1rem;
+      font-weight: 600;
+      color: var(--text-dim);
+      border-bottom: 1px solid var(--border);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .data-table td {
+      padding: 1rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    .data-table tr:hover {
+      background: var(--surface-elevated);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    .badge-success { background: var(--accent-success-dim); color: var(--accent-success); }
+    .badge-warning { background: var(--accent-warning-dim); color: var(--accent-warning); }
+    .badge-info { background: var(--accent-primary-dim); color: var(--accent-primary); }
+
+    /* Code Blocks */
+    code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.875em;
+      background: var(--code-bg);
+      padding: 0.125rem 0.375rem;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 1.75rem; }
+      .hero-stats { grid-template-columns: repeat(2, 1fr); }
+      .architecture-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Ghost Memory & Learning System</h1>
+      <p class="subtitle">Architecture overview of knowledge persistence and recurring learning patterns</p>
+      
+      <div class="hero-stats">
+        <div class="stat-card">
+          <div class="stat-value">26</div>
+          <div class="stat-label">Memories Stored</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">8</div>
+          <div class="stat-label">AI Digest Items</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">5</div>
+          <div class="stat-label">Active Skills</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">$0</div>
+          <div class="stat-label">Daily Cost</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav">
+    <div class="nav-content">
+      <a href="#architecture" class="active">Architecture</a>
+      <a href="#data-flow">Data Flow</a>
+      <a href="#learning-loop">Learning Loop</a>
+      <a href="#components">Components</a>
+      <a href="#status">Status</a>
+    </div>
+  </nav>
+
+  <main class="content">
+    
+    <section id="architecture" class="section">
+      <div class="section-header">
+        <h2>System Architecture</h2>
+        <span class="section-badge">Hybrid</span>
+      </div>
+      
+      <div class="architecture-grid">
+        <div class="arch-card success">
+          <h3>📄 Markdown Source</h3>
+          <p>Human-readable source of truth. Git-tracked, portable, editor-agnostic.</p>
+          <ul class="component-list">
+            <li><span class="status-dot active"></span><code>memory/YYYY-MM-DD.md</code></li>
+            <li><span class="status-dot active"></span><code>MEMORY.md</code></li>
+            <li><span class="status-dot active"></span><code>AGENTS.md</code></li>
+            <li><span class="status-dot active"></span><code>TOOLS.md</code></li>
+          </ul>
+        </div>
+
+        <div class="arch-card">
+          <h3>🗄️ Supabase Cache</h3>
+          <p>Vector search, pattern detection, decision graph. Tables: <code>ghostmemory_*</code></p>
+          <ul class="component-list">
+            <li><span class="status-dot active"></span>Semantic search</li>
+            <li><span class="status-dot active"></span>Pattern detection</li>
+            <li><span class="status-dot pending"></span>Decision graph</li>
+          </ul>
+        </div>
+
+        <div class="arch-card warning">
+          <h3>🧠 Session Context</h3>
+          <p>Active working memory. Limited by token budget, pruned automatically.</p>
+          <ul class="component-list">
+            <li><span class="status-dot active"></span>Context: 89k/131k</li>
+            <li><span class="status-dot active"></span>Model: qwen2.5-7b</li>
+            <li><span class="status-dot active"></span>Cost: $0/day</li>
+          </ul>
+        </div>
+
+        <div class="arch-card danger">
+          <h3>⚠️ External Cache</h3>
+          <p>Airtable (currently down). Degraded to local-first mode.</p>
+          <ul class="component-list">
+            <li><span class="status-dot archived"></span>Operational status: DOWN</li>
+            <li><span class="status-dot active"></span>Fallback: Markdown</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="data-flow" class="section">
+      <div class="section-header">
+        <h2>Data Flow Diagram</h2>
+        <span class="section-badge">Live</span>
+      </div>
+      
+      <div class="mermaid-wrap">
+        <div class="mermaid">
+graph TD
+    subgraph Input["📝 Input Layer"]
+        User["User Messages"]
+        Cron["Cron Jobs"]
+        Heartbeat["Heartbeat Checks"]
+    end
+
+    subgraph Processing["⚙️ Processing Layer"]
+        Ghost["Ghost Agent"]
+        Skills["Skill Library"]
+        Harness["Harness Control"]
+    end
+
+    subgraph Storage["💾 Storage Layer"]
+        Markdown["Daily Notes<br/>memory/*.md"]
+        Git["Git Repo"]
+        Supabase[("Supabase<br/>ghostmemory_*")]
+    end
+
+    subgraph Learning["🎯 Learning Layer"]
+        Digest["AI Digest"]
+        Audit["Harness Audit"]
+        Visual["Visual Explainer"]
+    end
+
+    User --> Ghost
+    Cron --> Ghost
+    Heartbeat --> Ghost
+    
+    Ghost --> Skills
+    Skills --> Harness
+    
+    Ghost --> Markdown
+    Markdown --> Git
+    Ghost -.-> Supabase
+    
+    Git --> Digest
+    Git --> Audit
+    Git --> Visual
+    
+    Digest --> Ghost
+    Audit --> Ghost
+    Visual --> Ghost
+    
+    style Ghost fill:#58a6ff,stroke:#0969da,color:#fff
+    style Markdown fill:#3fb950,stroke:#1a7f37,color:#fff
+    style Supabase fill:#d29922,stroke:#9a6700,color:#fff
+        </div>
+      </div>
+    </section>
+
+    <section id="learning-loop" class="section">
+      <div class="section-header">
+        <h2>Recurring Learning Loop</h2>
+        <span class="section-badge">Auto</span>
+      </div>
+      
+      <div class="mermaid-wrap">
+        <div class="mermaid">
+sequenceDiagram
+    participant Cron as "8:30 AM Cron"
+    participant Brave as "Brave Search"
+    participant Ghost as "Ghost Agent"
+    participant Memory as "memory/*.md"
+    participant JSON as "ai-digest-posted.json"
+
+    Cron->>Brave: Search 3-4 sources
+    Brave-->>Cron: Results
+    Cron->>Ghost: Generate digest
+    Ghost->>Memory: Fetch posted history
+    Memory-->>Ghost: Already posted items
+    Ghost->>Ghost: Deduplicate & filter
+    Ghost->>Memory: Write evening log
+    Ghost->>JSON: Append new items
+    Ghost->>Telegram: Deliver digest
+        </div>
+      </div>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Component</th>
+            <th>Schedule</th>
+            <th>Status</th>
+            <th>Last Run</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>AI Digest</code></td>
+            <td>Daily 8:30 AM</td>
+            <td><span class="badge badge-success">✓ Active</span></td>
+            <td>Feb 21, 2026</td>
+          </tr>
+          <tr>
+            <td><code>Harness Audit</code></td>
+            <td>On demand</td>
+            <td><span class="badge badge-info">Manual</span></td>
+            <td>Skill deployed</td>
+          </tr>
+          <tr>
+            <td><code>Session Guardian</code></td>
+            <td>Daily 9:00 AM</td>
+            <td><span class="badge badge-success">✓ Active</span></td>
+            <td>Feb 21, 2026</td>
+          </tr>
+          <tr>
+            <td><code>Auto-Save</code></td>
+            <td>Daily 9:00 AM</td>
+            <td><span class="badge badge-success">✓ Active</span></td>
+            <td>Feb 21, 2026</td>
+          </tr>
+          <tr>
+            <td><code>Visual Explainer</code></td>
+            <td>On demand</td>
+            <td><span class="badge badge-info">Manual</span></td>
+            <td>Just now</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="components" class="section">
+      <div class="section-header">
+        <h2>Active Skills Inventory</h2>
+        <span class="section-badge">5</span>
+      </div>
+      
+      <div class="architecture-grid">
+        <div class="arch-card">
+          <h3>🔍 Visual QA</h3>
+          <p>Design review skill from Dylan Feltus. 7 review categories.</p>
+          <ul class="component-list">
+            <li><span class="status-dot active"></span>Layout/Spacing</li>
+            <li><span class="status-dot active"></span>Typography</li>
+            <li><span class="status-dot active"></span>Color/Contrast</li>
+          </ul>
+        </div>
+
+        <div class="arch-card">
+          <h3>🔧 Harness Audit</h3>
+          <p>Trace analysis for self-improvement. Parallel 4-agent pattern.</p>
+          <ul class="component-list">
+            <li><span class="status-dot active"></span>Tool Call Auditor</li>
+            <li><span class="status-dot active"></span>Context Window</li>
+            <li><span class="status-dot active"></span>Memory Validator</li>
+          </ul>
+        </div>
+
+        <div class="arch-card">
+          <h3>🎨 Visual Explainer</h3>
+          <p>Rich HTML diagram generation. Mermaid + CSS Grid.</p>
+          <ul class="component-list">
+            <li><span class="status-dot active"></span>/diff-review</li>
+            <li><span class="status-dot active"></span>/plan-review</li>
+            <li><span class="status-dot active"></span>/project-recap</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="status" class="section">
+      <div class="section-header">
+        <h2>System Health</h2>
+        <span class="section-badge">Feb 21</span>
+      </div>
+      
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Metric</th>
+            <th>Value</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Session Context</td>
+            <td>89k / 131k tokens (68%)</td>
+            <td><span class="badge badge-success">Healthy</span></td>
+          </tr>
+          <tr>
+            <td>Current Model</td>
+            <td><code>local/qwen2.5-7b-instruct</code></td>
+            <td><span class="badge badge-success">$0/day</span></td>
+          </tr>
+          <tr>
+            <td>Git Status</td>
+            <td>4 commits today (skills deployed)</td>
+            <td><span class="badge badge-success">Synced</span></td>
+          </tr>
+          <tr>
+            <td>Airtable</td>
+            <td>Degraded (15+ hours down)</td>
+            <td><span class="badge badge-warning">Fallback active</span></td>
+          </tr>
+          <tr>
+            <td>Memory System</td>
+            <td>v2.0 hybrid (Markdown + Supabase)</td>
+            <td><span class="badge badge-success">Operational</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'base',
+      themeVariables: {
+        primaryColor: '#161b22',
+        primaryTextColor: '#e6edf3',
+        primaryBorderColor: 'rgba(255,255,255,0.08)',
+        lineColor: '#8b949e',
+        secondaryColor: '#21262d',
+        tertiaryColor: '#0d1117',
+        fontFamily: 'Space Grotesk, system-ui, sans-serif'
+      },
+      flowchart: {
+        useMaxWidth: true,
+        htmlLabels: true,
+        curve: 'basis'
+      },
+      sequence: {
+        useMaxWidth: true,
+        actorFontFamily: 'Space Grotesk, system-ui, sans-serif',
+        noteFontFamily: 'JetBrains Mono, monospace'
+      }
+    });
+  </script>
+
+</body>
+</html>
