@@ -29,6 +29,28 @@
         "open": 0,
         "settled": 0
       }
+    },
+    "2026-02-21": {
+      "timestamp": "2026-02-21T03:00:54.042Z",
+      "balance": {
+        "initial": "10000.00",
+        "current": "10000.00",
+        "totalReturn": "0.00",
+        "returnPercent": "0.00%"
+      },
+      "trades": {
+        "total": 0,
+        "winning": 0,
+        "losing": 0,
+        "winRate": "0%",
+        "totalProfit": "0.00",
+        "totalLoss": "0.00",
+        "netProfit": "0.00"
+      },
+      "positions": {
+        "open": 0,
+        "settled": 0
+      }
     }
   }
 }
