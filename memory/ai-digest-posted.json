@@ -1,59 +1,50 @@
-{
-  "posted": [
-    {
-      "date": "2026-02-17",
-      "title": "Effective Harnesses for Long-Running Agents (TEST)",
-      "url": "https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents",
-      "topic": "session checkpointing"
-    },
-    {
-      "date": "2026-02-18",
-      "title": "Cursor: Towards Self-Driving Codebases",
-      "url": "https://cursor.com/blog/self-driving-codebases",
-      "topic": "multi-agent coordination"
-    },
-    {
-      "date": "2026-02-18",
-      "title": "Cursor: Expanding Long-Running Agents Research Preview",
-      "url": "https://cursor.com/blog/long-running-agents",
-      "topic": "long-running agents"
-    },
-    {
-      "date": "2026-02-18",
-      "title": "Rodney v0.4.0 - CLI Browser Automation Tool",
-      "url": "https://github.com/simonw/rodney/releases/tag/v0.4.0",
-      "topic": "browser automation tools"
-    },
-    {
-      "date": "2026-02-18",
-      "title": "Claude Sonnet 4.6 Released",
-      "url": "https://www.anthropic.com/news/claude-sonnet-4-6",
-      "topic": "model updates"
-    }
-  ],
-  "experiments": [
-    {
-      "date": "2026-02-17",
-      "fromArticle": "effective-harnesses",
-      "experiment": "Add session checkpoint primitive before context compaction",
-      "outcome": "pending",
-      "learned": null
-    },
-    {
-      "date": "2026-02-18",
-      "fromArticle": "cursor-multi-agent",
-      "experiment": "Add judge/monitoring primitive for delegated sub-agent tasks",
-      "outcome": "pending",
-      "learned": null
-    }
-  ],
-  "skillsEvaluated": [],
-  "setupChanges": [
-    {
-      "date": "2026-02-17",
-      "change": "Update digest cron job with rate limit handling",
-      "reason": "Brave Search 429 errors on multiple rapid requests",
-      "status": "implemented"
-    }
-  ]
-}
+[
+  {
+    "date": "2026-02-20",
+    "title": "Building a C compiler with a team of parallel Claudes",
+    "url": "https://www.anthropic.com/engineering/building-c-compiler",
+    "topic": "multi-agent teams, harness design, parallel execution"
+  },
+  {
+    "date": "2026-02-20",
+    "title": "Effective harnesses for long-running agents",
+    "url": "https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents",
+    "topic": "context management, session bridging, initializer/coding agent pattern"
+  },
+  {
+    "date": "2026-02-20",
+    "title": "Prompt caching for long-running agentic products",
+    "url": "https://twitter.com/trq212/status/2024574133011673516",
+    "topic": "prompt caching, cost optimization, latency reduction"
+  },
+  {
+    "date": "2026-02-20",
+    "title": "The 'think' tool: Enabling Claude to stop and think",
+    "url": "https://www.anthropic.com/engineering/claude-think-tool",
+    "topic": "reasoning tools, structured thinking, policy compliance"
+  },
+  {
+    "date": "2026-02-21",
+    "title": "Improving Deep Agents with Harness Engineering",
+    "url": "https://blog.langchain.com/improving-deep-agents-with-harness-engineering/",
+    "topic": "trace analysis skills, iterative harness improvement, self-verification"
+  },
+  {
+    "date": "2026-02-21",
+    "title": "Agent Harnesses: Why 2026 Isn't About More Agents — It's About Controlling Them",
+    "url": "https://dev.to/htekdev/agent-harnesses-why-2026-isnt-about-more-agents-its-about-controlling-them-1f24",
+    "topic": "agent harness as control plane, agent sprawl governance"
+  },
+  {
+    "date": "2026-02-21",
+    "title": "How to Build a Self-Organizing Agent Memory System for Long-Term AI Reasoning",
+    "url": "https://www.marktechpost.com/2026/02/14/how-to-build-a-self-organizing-agent-memory-system-for-long-term-ai-reasoning/",
+    "topic": "scene-based memory, structured storage, reasoning/memory separation"
+  },
+  {
+    "date": "2026-02-21",
+    "title": "Evaluating AI agents: Real-world lessons from building agentic systems at Amazon",
+    "url": "https://aws.amazon.com/blogs/machine-learning/evaluating-ai-agents-real-world-lessons-from-building-agentic-systems-at-amazon/",
+    "topic": "three-layer evaluation, component testing, intent detection validation"
+  }
+]
