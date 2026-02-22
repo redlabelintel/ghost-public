@@ -76,9 +76,16 @@ class DataCollector:
 class MomentumStrategy:
     """Momentum strategy with history tracking"""
     
-    def __init__(self, volume_threshold=2.0, momentum_period=3):
+    def __init__(self, volume_threshold=1.0, momentum_period=3, momentum_threshold=0.01):
+        """
+        Args:
+            volume_threshold: Z-score threshold for volume spike (lower = more sensitive)
+            momentum_period: Periods for momentum calculation
+            momentum_threshold: Minimum price change % to trigger (lower = more sensitive)
+        """
         self.volume_threshold = volume_threshold
         self.momentum_period = momentum_period
+        self.momentum_threshold = momentum_threshold
         
     def generate_signal(self, market_id, prices, volumes):
         """Generate signal from price and volume data"""
@@ -89,20 +96,20 @@ class MomentumStrategy:
         price_momentum = (prices[-1] - prices[-self.momentum_period]) / prices[-self.momentum_period]
         
         # Volume z-score
-        if len(volumes) >= 20:
+        if len(volumes) >= 10:  # Lower requirement from 20 to 10
             recent_vol = volumes[-1]
-            avg_vol = sum(volumes[-20:]) / 20
-            std_vol = (sum((v - avg_vol) ** 2 for v in volumes[-20:]) / 20) ** 0.5
+            avg_vol = sum(volumes[-10:]) / 10  # Use 10-period average
+            std_vol = (sum((v - avg_vol) ** 2 for v in volumes[-10:]) / 10) ** 0.5
             volume_zscore = (recent_vol - avg_vol) / std_vol if std_vol > 0 else 0
         else:
             volume_zscore = 0
         
-        # Combined signal
-        if volume_zscore > self.volume_threshold:
-            if price_momentum > 0.02:
+        # Combined signal - LOWERED THRESHOLDS
+        if volume_zscore > self.volume_threshold:  # Was 2.0, now 1.0
+            if price_momentum > self.momentum_threshold:  # Was 0.02, now 0.01
                 confidence = min(0.55 + (volume_zscore / 10) + (price_momentum * 10), 0.95)
                 return 'BUY_YES', confidence
-            elif price_momentum < -0.02:
+            elif price_momentum < -self.momentum_threshold:
                 confidence = min(0.55 + (volume_zscore / 10) + (abs(price_momentum) * 10), 0.95)
                 return 'BUY_NO', confidence
         
@@ -188,7 +195,12 @@ def main():
     client = ClobClient(host, creds=creds)
     
     collector = DataCollector()
-    strategy = MomentumStrategy()
+    # LOWERED THRESHOLDS for more frequent signals
+    strategy = MomentumStrategy(
+        volume_threshold=1.0,      # Was 2.0 - more sensitive to volume
+        momentum_period=3,         # Keep same
+        momentum_threshold=0.01    # Was 0.02 - 1% move triggers (was 2%)
+    )
     kelly = KellyCalculator()
     trader = PaperTrader(initial_bankroll=1000.0)
     
