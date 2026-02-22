@@ -225,29 +225,35 @@ def main():
                 if not market_id:
                     continue
                 
-                # Get current price (from best bid/ask)
+                # Get current price (from last trade)
                 try:
-                    book = client.get_order_book(market_id)
-                    bids = book.get('bids', [])
-                    asks = book.get('asks', [])
+                    # Market has tokens - get YES token ID
+                    tokens = market.get('tokens', [])
+                    if not tokens:
+                        continue
                     
-                    if bids and asks:
-                        best_bid = float(bids[0]['price'])
-                        best_ask = float(asks[0]['price'])
-                        mid_price = (best_bid + best_ask) / 2
+                    # Get first token (YES side usually)
+                    token_id = tokens[0].get('token_id') if isinstance(tokens[0], dict) else tokens[0]
+                    if not token_id:
+                        continue
+                    
+                    # Get last trade price
+                    price_data = client.get_last_trade_price(token_id)
+                    if price_data and 'price' in price_data:
+                        last_price = float(price_data['price'])
                         
                         # Simulate volume (in real implementation, would get from trades)
                         simulated_volume = 100  # Placeholder
                         
                         # Update strategy with data
-                        strategy.update_market_data(market_id, mid_price, simulated_volume)
+                        strategy.update_market_data(market_id, last_price, simulated_volume)
                         
                         # Generate signal
                         signal, confidence = strategy.generate_signal(market_id)
                         
                         if signal and market_id not in trader.positions:
                             # Calculate Kelly size
-                            odds = (1 - mid_price) / mid_price if mid_price < 0.5 else mid_price / (1 - mid_price)
+                            odds = (1 - last_price) / last_price if last_price < 0.5 else last_price / (1 - last_price)
                             position_size = kelly.calculate(
                                 p_win=confidence,
                                 odds=odds,
@@ -257,7 +263,7 @@ def main():
                             )
                             
                             if position_size >= 1.0:  # Minimum $1
-                                trader.execute_trade(market_id, signal, position_size, mid_price)
+                                trader.execute_trade(market_id, signal, position_size, last_price)
                                 logger.info(f"  Signal: {signal} | Confidence: {confidence:.1%} | Size: ${position_size:.2f}")
                 
                 except Exception as e:
