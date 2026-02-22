@@ -1,0 +1,17 @@
+bot:
+  initial_bankroll: 1000.0
+  paper_trading: true
+  poll_interval: 60  # seconds between iterations
+
+strategy:
+  volume_threshold: 2.0       # Z-score threshold for volume spike
+  momentum_period: 3          # Periods for momentum calculation
+  confidence_threshold: 0.55  # Minimum confidence to generate signal
+
+kelly:
+  kelly_fraction: 0.5         # Half-Kelly (0.5) for drawdown tolerance
+  max_position_pct: 0.10      # Maximum 10% of bankroll per position
+
+risk:
+  max_daily_loss_pct: 0.05    # Stop trading after 5% daily loss
+  max_drawdown_pct: 0.20      # Stop trading after 20% drawdown from peak
